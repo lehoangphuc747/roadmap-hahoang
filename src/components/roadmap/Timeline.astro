@@ -1,0 +1,98 @@
+---
+import type { Session } from '../../data/roadmapData';
+import TimelineItem from './TimelineItem.astro';
+
+interface Props {
+  events: Session[];
+}
+
+const { events } = Astro.props;
+
+interface GroupedEvents {
+    [key: string]: Session[];
+}
+
+// Group by Month Year
+const groupedEvents = events.reduce((acc, event) => {
+  const date = new Date(event.date);
+  const monthYear = new Intl.DateTimeFormat('vi-VN', { month: 'long', year: 'numeric' }).format(date);
+  const formattedTitle = monthYear.charAt(0).toUpperCase() + monthYear.slice(1);
+  
+  if (!acc[formattedTitle]) {
+    acc[formattedTitle] = [];
+  }
+  acc[formattedTitle].push(event);
+  return acc;
+}, {} as GroupedEvents);
+---
+
+<div class="max-w-6xl mx-auto px-4 pb-20">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+      
+      {Object.entries(groupedEvents).map(([monthTitle, sessions], index) => {
+        const monthId = `month-${index}`;
+        return (
+        <div class="break-inside-avoid">
+            <!-- Month Card -->
+            <div class="bg-white rounded-2xl p-4 md:p-6 border border-slate-200 shadow-md shadow-slate-200/50 sticky top-4 transition-all duration-300 hover:shadow-xl hover:shadow-slate-200/40">
+                <div class="flex items-center justify-between mb-4 group cursor-pointer" onclick={`toggleMonth('${monthId}')`}>
+                    <h2 class="text-xl font-bold font-heading text-slate-800 flex items-center gap-2 select-none">
+                        <span class="w-2 h-6 bg-indigo-600 rounded-full"></span>
+                        {monthTitle}
+                    </h2>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-bold text-slate-400 bg-white px-2 py-1 rounded-md border border-slate-100 shadow-sm">
+                            {sessions.length} buổi
+                        </span>
+                        <button 
+                            class="p-1 rounded-md hover:bg-slate-200 text-slate-400 transition-transform duration-200"
+                            id={`btn-${monthId}`}
+                            aria-label="Toggle month"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div id={monthId} class="space-y-2 transition-all duration-300 overflow-hidden">
+                    {sessions.map(session => (
+                        <TimelineItem 
+                            id={session.id} 
+                            date={session.date} 
+                            status={session.status} 
+                            content={session.content} 
+                        />
+                    ))}
+                </div>
+            </div>
+        </div>
+      )})}
+      
+      <script is:inline>
+        function toggleMonth(id) {
+            const content = document.getElementById(id);
+            const btn = document.getElementById(`btn-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                // Open
+                content.classList.remove('hidden');
+                btn.style.transform = 'rotate(0deg)';
+            } else {
+                // Close
+                content.classList.add('hidden');
+                btn.style.transform = 'rotate(-90deg)';
+            }
+        }
+      </script>
+
+  </div>
+  
+  <div class="mt-16 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-full text-slate-500 text-sm">
+        <span>🏁</span>
+        <span>Kết thúc lộ trình. Chúc bạn thi tốt!</span>
+      </div>
+  </div>
+</div>

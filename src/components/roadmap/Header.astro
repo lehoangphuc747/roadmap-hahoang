@@ -1,0 +1,157 @@
+---
+import { getRoadmapData, TODAY, EXAM_DATE } from "../../data/roadmapData";
+
+const sessions = getRoadmapData();
+const totalSessions = sessions.filter((s) => s.status !== "holiday").length;
+const completedSessions = sessions
+    .filter((s) => s.status === "completed" || s.status === "today")
+    .filter((s) => s.status !== "holiday").length;
+const progressPercent = Math.round((completedSessions / totalSessions) * 100);
+
+const TARGET_DATE = EXAM_DATE;
+---
+
+<header class="bg-surface border-b border-border py-8 md:py-12 mb-8">
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+        <!-- Top Row: Identification -->
+        <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4"
+        >
+            <div>
+                <h1
+                    class="text-3xl md:text-4xl font-bold font-heading text-slate-800"
+                >
+                    Lộ Trình TOPIK <span class="text-primary">105</span>
+                </h1>
+                <p class="text-slate-500 mt-1">
+                    Học viên: <span class="font-semibold text-slate-700"
+                        >Hà Hoàng</span
+                    > • Giáo viên: <span class="font-semibold text-slate-700"
+                        >Phúc Lee</span
+                    >
+                </p>
+            </div>
+
+            <div class="text-right hidden md:block">
+                <p
+                    class="text-sm font-bold text-slate-400 uppercase tracking-widest"
+                >
+                    MỤC TIÊU
+                </p>
+                <p class="text-2xl font-bold font-accent text-slate-800">
+                    Tháng 4 / 2026
+                </p>
+            </div>
+        </div>
+
+        <!-- Dashboard Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+            <!-- Card 1: Countdown -->
+            <div
+                class="bg-white p-6 rounded-2xl border-2 border-slate-300 flex flex-col justify-between hover:border-slate-400 transition-all"
+            >
+                <div class="flex justify-between items-start">
+                    <span
+                        class="text-slate-500 text-xs font-bold uppercase tracking-wider"
+                        >Đếm ngược</span
+                    >
+                    <span class="text-2xl text-slate-500">⏳</span>
+                </div>
+                <div class="mt-4">
+                    <div class="flex items-baseline gap-1">
+                        <span
+                            class="text-4xl font-bold text-slate-800 tabular-nums"
+                            id="countdown-days">--</span
+                        >
+                        <span class="text-slate-600 font-medium">ngày</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-1 font-semibold">
+                        Đến ngày thi (11/04/2026)
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2: Progress -->
+            <div
+                class="bg-white p-6 rounded-2xl border-2 border-slate-300 flex flex-col justify-between hover:border-slate-400 transition-all"
+            >
+                <div class="flex justify-between items-start">
+                    <span
+                        class="text-slate-500 text-xs font-bold uppercase tracking-wider"
+                        >Tiến độ</span
+                    >
+                    <span class="text-2xl text-slate-500">🚀</span>
+                </div>
+                <div class="mt-4 w-full">
+                    <div class="flex justify-between items-end mb-2">
+                        <span class="text-3xl font-bold text-slate-800"
+                            >{progressPercent}%</span
+                        >
+                        <span class="text-xs text-slate-400 pb-1"
+                            >{completedSessions}/{totalSessions} buổi</span
+                        >
+                    </div>
+                    <div
+                        class="h-2 w-full bg-slate-200 rounded-full overflow-hidden"
+                    >
+                        <div
+                            class="h-full bg-primary rounded-full"
+                            style={`width: ${progressPercent}%`}
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Action -->
+            <div
+                class="bg-indigo-50 p-6 rounded-2xl border border-indigo-100 flex flex-col justify-between hover:shadow-md transition-shadow group cursor-pointer relative overflow-hidden"
+            >
+                <div
+                    class="absolute -right-4 -top-4 w-24 h-24 bg-indigo-100 rounded-full blur-2xl group-hover:bg-indigo-200 transition-colors"
+                >
+                </div>
+
+                <div class="original-icon-placeholder hidden"></div>
+                <div class="relative z-10 flex justify-between items-start">
+                    <span
+                        class="text-indigo-600 text-xs font-bold uppercase tracking-wider"
+                        >Lớp học</span
+                    >
+                    <span class="text-2xl text-indigo-400">📹</span>
+                </div>
+
+                <div class="relative z-10 mt-4">
+                    <p
+                        class="text-indigo-950 font-bold text-lg mb-1 group-hover:translate-x-1 transition-transform"
+                    >
+                        Vào Lớp Ngay →
+                    </p>
+                    <p class="text-indigo-600 text-xs font-medium">
+                        Mở Google Meet (20:30 - 22:00)
+                    </p>
+                    <a
+                        href="https://meet.google.com/mpi-aucf-tis"
+                        target="_blank"
+                        class="absolute inset-0 z-20"
+                        aria-label="Join Class"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script define:vars={{ TARGET_DATE }}>
+    // Similar Countdown Logic
+    const countEl = document.getElementById("countdown-days");
+    const examTime = new Date(TARGET_DATE).getTime();
+
+    function updateCountdown() {
+        if (!countEl) return;
+        const now = new Date().getTime();
+        const distance = examTime - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        countEl.textContent = days > 0 ? days : "0";
+    }
+    updateCountdown();
+</script>

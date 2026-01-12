@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import RoadmapLayout from "../layouts/RoadmapLayout.astro";
+import Header from "../components/roadmap/Header.astro";
+import ExamCard from "../components/roadmap/ExamCard.astro";
+import Timeline from "../components/roadmap/Timeline.astro";
+import { getRoadmapData } from "../data/roadmapData";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const events = getRoadmapData();
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<RoadmapLayout title="Lộ Trình Ôn Thi TOPIK - Hà Hoàng">
+	<main class="min-h-screen">
+		<Header />
+		<ExamCard />
+		<Timeline events={events} />
+
+		<!-- Footer -->
+		<footer class="text-center py-8 text-slate-600 text-sm">
+			<p>&copy; 2026 Phuc Lee x Ha Hoang. All rights reserved.</p>
+		</footer>
+	</main>
+</RoadmapLayout>
