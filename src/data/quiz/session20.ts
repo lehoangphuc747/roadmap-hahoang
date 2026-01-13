@@ -147,7 +147,7 @@ export const quizQuestions: Question[] = [
         id: 16,
         type: 'multiple-choice',
         grammarPoint: 'Honorifics',
-        question: '가: 할아버지가 지금 뭐 해요?\n나: 방에서 _______.',
+        question: '가: 할아버지께서 지금 뭐 하세요?\n나: 할아버지께서 방에서 _______.',
         options: ['주무세요', '자요', '있어요', '먹어요'],
         correctAnswer: '주무세요',
         explanation: 'Chủ ngữ là "ông" (người lớn) -> dùng kính ngữ "주무시다" (ngủ).'
@@ -304,8 +304,8 @@ export const quizQuestions: Question[] = [
         id: 33, // Renumbered from 35
         type: 'multiple-choice',
         grammarPoint: 'Irregular ㅂ',
-        question: '날씨가 ______ (춥다).',
-        options: ['추워요', '춥어요', '추와요', '춥습니다'],
+        question: '날씨가 ______ ().',
+        options: ['추워요', '춥어요', '추와요', '춥니다'],
         correctAnswer: '추워요',
         explanation: 'Bất quy tắc ㅂ: 춥다 -> 추우 + 어요 -> 추워요.'
     },
@@ -314,7 +314,7 @@ export const quizQuestions: Question[] = [
         type: 'multiple-choice',
         grammarPoint: 'Irregular ㄷ',
         question: '음악을 ______ (듣다).',
-        options: ['들어요', '듣어요', '드러요', '듣습니다'],
+        options: ['들어요', '듣어요', '드러요', '들읍니다'],
         correctAnswer: '들어요',
         explanation: 'Bất quy tắc ㄷ: 듣다 -> 들 + 어요 -> 들어요.'
     },
@@ -330,7 +330,7 @@ export const quizQuestions: Question[] = [
         id: 36, // From 38: Modified as requested (Busan)
         type: 'multiple-choice',
         grammarPoint: '-(으)로 (Direction)',
-        question: 'Tôi đi đến Busan. -> "저는 부산______ 가요."',
+        question: 'Tôi đi về phía Busan. -> "저는 부산______ 가요."',
         options: ['으로', '에', '에서', '을'],
         correctAnswer: '으로',
         explanation: '부산 (Busan) có patchim ㄴ -> dùng "으로" để chỉ hướng đến.'
