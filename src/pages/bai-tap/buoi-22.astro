@@ -3,7 +3,7 @@ import RoadmapLayout from "../../layouts/RoadmapLayout.astro";
 import Quiz from "../../components/roadmap/Quiz";
 ---
 
-<RoadmapLayout title="Bài tập Buổi 20 - Lộ Trình TOPIK">
+<RoadmapLayout title="Bài tập Buổi 22 - Lộ Trình TOPIK">
     <main class="h-screen bg-white overflow-hidden flex flex-col">
         <!-- Compact Header -->
         <div
@@ -16,18 +16,18 @@ import Quiz from "../../components/roadmap/Quiz";
                 <span>←</span> Quay về Lộ trình
             </a>
             <h1 class="text-lg font-bold text-slate-800 font-heading">
-                Ôn tập Ngữ pháp Tổng hợp
+                Ôn tập Kính ngữ + Ngữ pháp Tổng hợp
             </h1>
             <span
                 class="px-3 py-1 bg-indigo-100 text-primary rounded-full text-xs font-bold tracking-widest uppercase border-l-2 border-r-2 border-indigo-300"
             >
-                Buổi 20
+                Buổi 22
             </span>
         </div>
 
         <!-- Quiz Container -->
         <div class="flex-1 overflow-auto p-4 md:p-6">
-            <Quiz client:only="react" sessionId={20} />
+            <Quiz client:only="react" sessionId={22} />
         </div>
     </main>
 </RoadmapLayout>

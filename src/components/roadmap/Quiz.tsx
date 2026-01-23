@@ -1,17 +1,49 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
-import { quizQuestions } from '../../data/quiz/session20';
+import type { Question } from '../../data/quiz/session20';
 
-// Type for storing user answer state
-interface UserAnswer {
-    questionId: number;
-    selectedOption: string | null;
-    textInput: string;
-    isCorrect: boolean | null; // null = not answered/checked yet
-    isChecked: boolean;
+interface QuizProps {
+    sessionId?: number;
 }
 
-export default function Quiz() {
+// Dynamic quiz data loader
+const getQuizData = async (sessionId: number = 20) => {
+    try {
+        const module = await import(`../../data/quiz/session${sessionId}.ts`);
+        return module.quizQuestions;
+    } catch (error) {
+        console.error(`Failed to load session${sessionId}:`, error);
+        // Fallback to session 20
+        const module = await import('../../data/quiz/session20.ts');
+        return module.quizQuestions;
+    }
+};
+
+export default function Quiz({ sessionId = 20 }: QuizProps) {
+    const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    // Load quiz data on mount or when sessionId changes
+    useEffect(() => {
+        const loadQuiz = async () => {
+            console.log('[Quiz] Loading session:', sessionId);
+            setIsLoading(true);
+            const questions = await getQuizData(sessionId);
+            console.log('[Quiz] Loaded questions:', questions.length, 'questions');
+            setQuizQuestions(questions);
+            setIsLoading(false);
+        };
+        loadQuiz();
+    }, [sessionId]);
+
+    // Type for storing user answer state
+    interface UserAnswer {
+        questionId: number;
+        selectedOption: string | null;
+        textInput: string;
+        isCorrect: boolean | null; // null = not answered/checked yet
+        isChecked: boolean;
+    }
 
     // Persistent state for ALL questions
     // Map questionIndex (0 to N) -> UserAnswer
@@ -19,52 +51,60 @@ export default function Quiz() {
 
     const [isFinished, setIsFinished] = useState(false);
 
-    // Safe accessors for CURRENT question state
-    // Provide defaults if not yet visited
-    const currentAnswerState = answers[currentIndex] || {
-        questionId: quizQuestions[currentIndex].id,
-        selectedOption: null,
-        textInput: '',
-        isCorrect: null,
-        isChecked: false
-    };
-
-    const { selectedOption, textInput, isChecked } = currentAnswerState;
+    //  Element refs for focus management
+    const inputRef = useRef<HTMLInputElement>(null);
+    const nextBtnRef = useRef<HTMLButtonElement>(null);
 
     // Derived stats
     const score = Object.values(answers).filter(a => a.isCorrect === true).length;
 
-    // Element refs for focus management
-    const inputRef = useRef<HTMLInputElement>(null);
-    const nextBtnRef = useRef<HTMLButtonElement>(null);
+    // Current question - guaranteed to exist after loading check below
+    const question = quizQuestions[currentIndex] || null;
 
-    const question = quizQuestions[currentIndex];
+    // Safe accessors for CURRENT question state
+    const currentAnswerState: UserAnswer | null = question && answers[currentIndex] ? answers[currentIndex] : (question ? {
+        questionId: question.id,
+        selectedOption: null,
+        textInput: '',
+        isCorrect: null,
+        isChecked: false
+    } : null);
+
+    const selectedOption = currentAnswerState?.selectedOption || null;
+    const textInput = currentAnswerState?.textInput || '';
+    const isChecked = currentAnswerState?.isChecked || false;
 
     // Shuffle options only once per question
     const shuffledOptions = useMemo(() => {
-        if (question.type === 'multiple-choice' && question.options) {
+        if (question && question.type === 'multiple-choice' && question.options) {
             return [...question.options].sort(() => Math.random() - 0.5);
         }
         return [];
-    }, [currentIndex, question]); // Note: In a real persistent app, shuffle might need persistence too, but re-shuffle on revisit is acceptable for now or usually minor. 
+    }, [currentIndex, question]); // Note: In a real persistent app,  shuffle might need persistence too, but re-shuffle on revisit is acceptable for now or usually minor. 
     // Actually, re-shuffling might be annoying if user goes back. 
     // Ideally shuffled options should be static or memoized by question ID globally, 
     // but for simplicity let's accept re-shuffle on mount/remount of index if simple.
 
     // Focus input automatically on new question
     useEffect(() => {
-        if (question.type === 'fill-input' && !isChecked) {
+        if (question && question.type === 'fill-input' && !isChecked) {
             // slightly delay to ensure render
             setTimeout(() => inputRef.current?.focus(), 50);
         }
-    }, [currentIndex, isChecked, question.type]);
+    }, [currentIndex, isChecked, question]);
 
     // Update LOCAL answer state helper
     const updateCurrentAnswer = (updates: Partial<UserAnswer>) => {
+        if (!question) return; // Safety check
+
         setAnswers(prev => ({
             ...prev,
             [currentIndex]: {
-                ...currentAnswerState,
+                questionId: question.id,
+                selectedOption: currentAnswerState?.selectedOption || null,
+                textInput: currentAnswerState?.textInput || '',
+                isCorrect: currentAnswerState?.isCorrect || null,
+                isChecked: currentAnswerState?.isChecked || false,
                 ...updates
             }
         }));
@@ -152,6 +192,18 @@ export default function Quiz() {
     };
 
     // --- RENDERERS ---
+
+    // Loading state
+    if (isLoading || quizQuestions.length === 0) {
+        return (
+            <div className="flex items-center justify-center h-96">
+                <div className="text-center">
+                    <div className="text-4xl mb-4">⏳</div>
+                    <div className="text-slate-600 font-medium">Đang tải câu hỏi...</div>
+                </div>
+            </div>
+        );
+    }
 
     if (isFinished) {
         // ... (Same finish screen logic, but using `answers` state)

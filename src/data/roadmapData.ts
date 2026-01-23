@@ -34,23 +34,42 @@ const fixedSessions2025 = [
         content: ['AV-았/었/했-', '-지 않다', '안 V', 'V-지 못하다']
     },
     { id: 16, date: '2025-12-29' },
-    // Jan 2026 (Fixed before regular schedule)
+    // Jan 2026 (Fixed before auto-generation)
     { id: 17, date: '2026-01-02', content: ['Kính ngữ -(으)시'] },
     { id: 18, date: '2026-01-05', content: ['Kính ngữ -(으)시 (tiếp)'] },
     { id: 19, date: '2026-01-09', content: ['Kính ngữ -(으)시 (luyện tập)'] },
 ];
 
+// Content mapping for auto-generated sessions
+const sessionContentMap: { [key: number]: string[] } = {
+    20: ['Ôn tập kính ngữ'],
+    21: ['-지 말다', '-고 (Sequential)', '-고 (Simultaneous)'],
+    22: ['-고 싶다', '-고 싶어 하다', '-(으)러', '-(으)려고'],
+    23: ['-아/어서 (1)', '-아/어서 (2)'],
+};
+
 export const EXAM_DATE = '2026-04-11';
 export const REG_START = '2026-01-27';
 export const REG_END = '2026-02-02';
-export const TODAY = '2026-01-12'; // As per user context
+export const TODAY = '2026-01-22'; // Hôm nay là 22/1/2026
 
 // Tet Holiday Range: Feb 16 (29 Tet) - Feb 22 (Mung 5 Tet), 2026
 const TET_START = new Date('2026-02-16');
 const TET_END = new Date('2026-02-22');
 
+// Danh sách ngày nghỉ đặc biệt
+const specialHolidays: { [key: string]: string } = {
+    '2026-01-12': 'Buổi 20 off', // 12/1/2026 - buổi 20 off
+    '2026-01-14': 'Hà bận nên off không học', // 14/1/2026 - Hà bận
+    '2026-01-21': 'Hà OT 했어요' // 21/1/2026 - Buổi 22 off (OT)
+};
+
 function isTetHoliday(date: Date): boolean {
     return date >= TET_START && date <= TET_END;
+}
+
+function isSpecialHoliday(dateStr: string): string | null {
+    return specialHolidays[dateStr] || null;
 }
 
 function getStatus(dateStr: string): Session['status'] {
@@ -64,10 +83,11 @@ export function getRoadmapData(): Session[] {
         status: getStatus(s.date)
     }));
 
-    // Start Extrapolation from Session 20 (Jan 12, 2026)
+    // Start Extrapolation from Session 20 (Jan 12, 2026 - nhưng off)
     // Schedule: Mon (1), Wed (3), Fri (5)
+    // Lưu ý: 12/1 off, 14/1 off, 16/1 mới có học (buổi 20 thực sự)
     let currentId = 20;
-    let currentDate = new Date('2026-01-12'); // Starting from Today
+    let currentDate = new Date('2026-01-12'); // Bắt đầu từ 12/1 (nhưng off)
     const endDate = new Date('2026-04-10'); // Day before exam
 
     while (currentDate <= endDate) {
@@ -77,24 +97,32 @@ export function getRoadmapData(): Session[] {
         if (dayOfWeek === 1 || dayOfWeek === 3 || dayOfWeek === 5) {
             const dateStr = currentDate.toISOString().split('T')[0];
 
-            if (isTetHoliday(currentDate)) {
+            // Kiểm tra ngày nghỉ đặc biệt trước (Hà bận)
+            const specialHolidayReason = isSpecialHoliday(dateStr);
+            if (specialHolidayReason) {
                 sessions.push({
-                    id: currentId, // Keep ID sequence reserved or just mark as holiday? 
-                    // Let's increment ID but enable "Holiday" status to visually skip
+                    id: currentId, // Giữ ID hiện tại nhưng không tăng (để đánh dấu vị trí trong timeline)
+                    date: dateStr,
+                    status: 'holiday',
+                    content: [specialHolidayReason]
+                });
+                // Không tăng ID vì đây là ngày nghỉ, không phải buổi học thực sự
+            } else if (isTetHoliday(currentDate)) {
+                sessions.push({
+                    id: currentId, // Giữ ID hiện tại nhưng không tăng
                     date: dateStr,
                     status: 'holiday',
                     content: ['Nghỉ Tết Nguyên Đán']
                 });
-                // Don't increment currentId if we treat holiday as "no class"
-                // But usually roadmap numbers imply class sessions. Let's NOT increment ID for holidays.
+                // Không tăng ID vì đây là ngày nghỉ, không phải buổi học thực sự
             } else {
                 sessions.push({
                     id: currentId,
                     date: dateStr,
                     status: getStatus(dateStr),
-                    content: []
+                    content: sessionContentMap[currentId] || [] // Apply content mapping
                 });
-                currentId++;
+                currentId++; // Chỉ tăng ID khi có buổi học thực sự
             }
         }
 

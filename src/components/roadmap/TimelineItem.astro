@@ -25,20 +25,34 @@ const isHoliday = status === "holiday";
     isHoliday ? (
         <div class="p-4 mb-3 rounded-xl bg-red-50 border border-red-200 flex items-center justify-between shadow-sm relative overflow-hidden group">
             <div class="absolute -right-6 -top-6 w-20 h-20 bg-red-100 rounded-full blur-xl opacity-50" />
-            <div class="flex items-center gap-4 relative z-10">
+            <div class="flex items-center gap-4 relative z-10 flex-1">
                 <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-xl shadow-inner border border-red-200">
-                    🧧
+                    {content && content[0]?.includes("Tết") ? "🧧" : "🚫"}
                 </div>
-                <div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="text-xs font-bold text-red-700 bg-red-100 px-2 py-0.5 rounded">
+                            {dayStr}
+                        </span>
+                        <span class="text-xs font-bold text-red-600 uppercase">
+                            {weekDay}
+                        </span>
+                    </div>
                     <span class="block text-sm font-bold text-red-800 font-heading uppercase tracking-wider">
-                        Nghỉ Tết
+                        {content && content[0]?.includes("Tết")
+                            ? "Nghỉ Tết"
+                            : "Nghỉ học"}
                     </span>
                     <span class="text-xs text-red-600 font-medium">
-                        Chúc Mừng Năm Mới 2026!
+                        {content && content.length > 0
+                            ? content[0]
+                            : "Nghỉ học"}
                     </span>
                 </div>
             </div>
-            <div class="text-2xl opacity-80 z-10">🌸</div>
+            <div class="text-2xl opacity-80 z-10">
+                {content && content[0]?.includes("Tết") ? "🌸" : "📅"}
+            </div>
         </div>
     ) : (
         <div
@@ -103,7 +117,17 @@ const isHoliday = status === "holiday";
                     href="/bai-tap/buoi-20"
                     class="block w-full py-2 bg-indigo-50 hover:bg-indigo-100 text-primary text-center rounded-lg font-bold text-sm transition-colors mb-3 border border-indigo-100"
                 >
-                    📝 Làm bài tập (44 câu)
+                    📝 Làm bài tập (59 câu)
+                </a>
+            )}
+
+            {/* Special Action for Session 22 */}
+            {id === 22 && (
+                <a
+                    href="/bai-tap/buoi-22"
+                    class="block w-full py-2 bg-indigo-50 hover:bg-indigo-100 text-primary text-center rounded-lg font-bold text-sm transition-colors mb-3 border border-indigo-100"
+                >
+                    📝 Làm bài tập (60 câu)
                 </a>
             )}
 
