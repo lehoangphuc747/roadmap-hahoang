@@ -45,7 +45,8 @@ const sessionContentMap: { [key: number]: string[] } = {
     20: ['Ôn tập kính ngữ'],
     21: ['-지 말다', '-고 (Sequential)', '-고 (Simultaneous)'],
     22: ['-고 싶다', '-고 싶어 하다', '-(으)러', '-(으)려고'],
-    23: ['-아/어서 (1)', '-아/어서 (2)'],
+    23: ['-(으)러', '-(으)려고'],
+    24: ['-아/어서 (1)', '-아/어서 (2)'], // Buổi 24 (02/02) học -아/어서 1, 2
 };
 
 export const EXAM_DATE = '2026-04-11';
@@ -61,7 +62,9 @@ const TET_END = new Date('2026-02-22');
 const specialHolidays: { [key: string]: string } = {
     '2026-01-12': 'Buổi 20 off', // 12/1/2026 - buổi 20 off
     '2026-01-14': 'Hà bận nên off không học', // 14/1/2026 - Hà bận
-    '2026-01-21': 'Hà OT 했어요' // 21/1/2026 - Buổi 22 off (OT)
+    '2026-01-21': 'Hà OT 했어요', // 21/1/2026 - Buổi 22 off (OT)
+    '2026-01-28': 'Buổi 24 nghỉ', // 28/1/2026 - Thứ 4, Buổi 24 nghỉ
+    '2026-01-30': 'Buổi 25 nghỉ đi YEP', // 30/1/2026 - Thứ 6, Buổi 25 nghỉ đi YEP
 };
 
 function isTetHoliday(date: Date): boolean {
