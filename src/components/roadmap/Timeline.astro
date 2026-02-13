@@ -24,6 +24,17 @@ const groupedEvents = events.reduce((acc, event) => {
   acc[formattedTitle].push(event);
   return acc;
 }, {} as GroupedEvents);
+
+// Các tháng mặc định thu gọn (tháng 11, 12/2025 và tháng 1/2026)
+const defaultCollapsedTitles = new Set([
+  'Tháng 11 năm 2025',
+  'Tháng 12 năm 2025',
+  'Tháng 1 năm 2026',
+  'Tháng Một năm 2026', // Locale có thể dùng "Một" thay vì "1"
+]);
+function isMonthCollapsedByDefault(monthTitle: string): boolean {
+  return defaultCollapsedTitles.has(monthTitle);
+}
 ---
 
 <div class="max-w-6xl mx-auto px-4 pb-20">
@@ -31,6 +42,7 @@ const groupedEvents = events.reduce((acc, event) => {
       
       {Object.entries(groupedEvents).map(([monthTitle, sessions], index) => {
         const monthId = `month-${index}`;
+        const startCollapsed = isMonthCollapsedByDefault(monthTitle);
         return (
         <div class="break-inside-avoid">
             <!-- Month Card -->
@@ -48,6 +60,7 @@ const groupedEvents = events.reduce((acc, event) => {
                             class="p-1 rounded-md hover:bg-slate-200 text-slate-400 transition-transform duration-200"
                             id={`btn-${monthId}`}
                             aria-label="Toggle month"
+                            style={startCollapsed ? 'transform: rotate(-90deg)' : ''}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -56,7 +69,7 @@ const groupedEvents = events.reduce((acc, event) => {
                     </div>
                 </div>
                 
-                <div id={monthId} class="space-y-2 transition-all duration-300 overflow-hidden">
+                <div id={monthId} class={"space-y-2 transition-all duration-300 overflow-hidden" + (startCollapsed ? " hidden" : "")}>
                     {sessions.map(session => (
                         <TimelineItem 
                             id={session.id} 
