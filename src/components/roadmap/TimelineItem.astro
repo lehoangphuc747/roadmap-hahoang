@@ -131,6 +131,16 @@ const isHoliday = status === "holiday";
                 </a>
             )}
 
+            {/* Special Action for Session 29 - Ôn tập 13/2/2026 */}
+            {id === 29 && (
+                <a
+                    href="/bai-tap/buoi-29"
+                    class="block w-full py-2 bg-indigo-50 hover:bg-indigo-100 text-primary text-center rounded-lg font-bold text-sm transition-colors mb-3 border border-indigo-100"
+                >
+                    📝 Làm bài tập (50 câu)
+                </a>
+            )}
+
             {status === "today" && (
                 <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
                     <span class="flex items-center gap-1 text-primary font-bold">
