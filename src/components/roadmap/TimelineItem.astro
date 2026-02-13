@@ -131,14 +131,38 @@ const isHoliday = status === "holiday";
                 </a>
             )}
 
-            {/* Special Action for Session 29 - Ôn tập 13/2/2026 */}
+            {/* Special Action for Buổi 29 - Reading Dạng 01 */}
             {id === 29 && (
                 <a
                     href="/bai-tap/buoi-29"
                     class="block w-full py-2 bg-indigo-50 hover:bg-indigo-100 text-primary text-center rounded-lg font-bold text-sm transition-colors mb-3 border border-indigo-100"
                 >
-                    📝 Làm bài tập (50 câu)
+                    📝 Làm bài tập Reading Dạng 01 (12 câu)
                 </a>
+            )}
+
+            {/* Special Action for Buổi 28 (13/2/2026) - 3 bài tập hiển thị trên timeline */}
+            {id === 28 && (
+                <div class="space-y-2 mb-3">
+                    <a
+                        href="/bai-tap/buoi-28"
+                        class="block w-full py-2 bg-indigo-50 hover:bg-indigo-100 text-primary text-center rounded-lg font-bold text-sm transition-colors border border-indigo-100"
+                    >
+                        📝 Bài 1 · Ôn tổng hợp (50 câu)
+                    </a>
+                    <a
+                        href="/bai-tap/buoi-28-grammar"
+                        class="block w-full py-2 bg-indigo-50 hover:bg-indigo-100 text-primary text-center rounded-lg font-bold text-sm transition-colors border border-indigo-100"
+                    >
+                        📝 Bài 2 · Tên cấu trúc → Chọn nghĩa (18 câu)
+                    </a>
+                    <a
+                        href="/bai-tap/buoi-28-meaning"
+                        class="block w-full py-2 bg-indigo-50 hover:bg-indigo-100 text-primary text-center rounded-lg font-bold text-sm transition-colors border border-indigo-100"
+                    >
+                        📝 Bài 3 · Nghĩa → Chọn cấu trúc (18 câu)
+                    </a>
+                </div>
             )}
 
             {status === "today" && (

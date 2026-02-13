@@ -4,8 +4,10 @@ export interface Question {
     grammarPoint: string;
     question: string;
     description?: string; // For context/instruction like "Chia động từ"
+    /** Dịch tiếng Việt (optional): chỉ hiển thị sau khi chọn đáp án; nếu xem trước thì trừ 0,5 điểm */
+    translationVi?: string;
     options?: string[];
-    correctAnswer: string;
+    correctAnswer: string | string[]; // string[] = nhiều đáp án đều chấp nhận
     explanation: string;
 }
 

@@ -1,14 +1,25 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
+import { marked } from 'marked';
 import type { Question } from '../../data/quiz/session20';
 
 interface QuizProps {
     sessionId?: number;
+    /** Buổi 28: "grammar" = tên cấu trúc → chọn nghĩa; "grammar-reverse" = nghĩa → chọn cấu trúc */
+    quizSet?: 'default' | 'grammar' | 'grammar-reverse';
 }
 
 // Dynamic quiz data loader
-const getQuizData = async (sessionId: number = 20) => {
+const getQuizData = async (sessionId: number = 20, quizSet: 'default' | 'grammar' | 'grammar-reverse' = 'default') => {
     try {
         const module = await import(`../../data/quiz/session${sessionId}.ts`);
+        // Buổi 28: bài ôn tên cấu trúc (tên → nghĩa)
+        if (sessionId === 28 && quizSet === 'grammar' && 'grammarNameQuizQuestions' in module) {
+            return (module as { grammarNameQuizQuestions: Question[] }).grammarNameQuizQuestions;
+        }
+        // Buổi 28: bài ôn nghĩa → chọn cấu trúc (dạng ngược)
+        if (sessionId === 28 && quizSet === 'grammar-reverse' && 'grammarMeaningToNameQuizQuestions' in module) {
+            return (module as { grammarMeaningToNameQuizQuestions: Question[] }).grammarMeaningToNameQuizQuestions;
+        }
         return module.quizQuestions;
     } catch (error) {
         console.error(`Failed to load session${sessionId}:`, error);
@@ -18,23 +29,23 @@ const getQuizData = async (sessionId: number = 20) => {
     }
 };
 
-export default function Quiz({ sessionId = 20 }: QuizProps) {
+export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps) {
     const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Load quiz data on mount or when sessionId changes
+    // Load quiz data on mount or when sessionId / quizSet changes
     useEffect(() => {
         const loadQuiz = async () => {
-            console.log('[Quiz] Loading session:', sessionId);
+            console.log('[Quiz] Loading session:', sessionId, quizSet);
             setIsLoading(true);
-            const questions = await getQuizData(sessionId);
+            const questions = await getQuizData(sessionId, quizSet);
             console.log('[Quiz] Loaded questions:', questions.length, 'questions');
             setQuizQuestions(questions);
             setIsLoading(false);
         };
         loadQuiz();
-    }, [sessionId]);
+    }, [sessionId, quizSet]);
 
     // Type for storing user answer state
     interface UserAnswer {
@@ -51,12 +62,42 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
 
     const [isFinished, setIsFinished] = useState(false);
 
+    /** Câu nào đã xem dịch tiếng Việt trước khi chọn đáp án → trừ 0,5 điểm (chỉ áp dụng khi question có translationVi) */
+    const [translationPeeked, setTranslationPeeked] = useState<Record<number, boolean>>({});
+
     //  Element refs for focus management
     const inputRef = useRef<HTMLInputElement>(null);
     const nextBtnRef = useRef<HTMLButtonElement>(null);
 
-    // Derived stats
-    const score = Object.values(answers).filter(a => a.isCorrect === true).length;
+    // Derived stats (có translationVi + peek → trừ 0,5 điểm mỗi câu)
+    const score = useMemo(() => {
+        let total = 0;
+        quizQuestions.forEach((q, idx) => {
+            const a = answers[idx];
+            if (!a?.isCorrect) return;
+            const peeked = (q as Question & { translationVi?: string }).translationVi && translationPeeked[idx];
+            total += peeked ? 0.5 : 1;
+        });
+        return total;
+    }, [answers, quizQuestions, translationPeeked]);
+
+    // Helper: đáp án đúng (hiển thị / so sánh) — hỗ trợ cả string và string[]
+    const getCorrectAnswers = (q: Question): string[] =>
+        Array.isArray(q.correctAnswer) ? q.correctAnswer : [q.correctAnswer];
+    const getCorrectAnswerDisplay = (q: Question): string =>
+        getCorrectAnswers(q).join(' / ');
+
+    /** Chuyển **text** trong câu hỏi thành chữ in đậm (màu nổi bật) */
+    const renderQuestionWithBold = (text: string): React.ReactNode => {
+        const parts = text.split(/\*\*(.*?)\*\*/g);
+        return parts.map((part, i) =>
+            i % 2 === 1 ? (
+                <strong key={i} className="text-indigo-600 font-bold">{part}</strong>
+            ) : (
+                part
+            )
+        );
+    };
 
     // Current question - guaranteed to exist after loading check below
     const question = quizQuestions[currentIndex] || null;
@@ -150,13 +191,14 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
 
     const handleCheck = () => {
         let isCorrect = false;
+        const correct = question.correctAnswer;
 
         if (question.type === 'multiple-choice') {
-            if (selectedOption === question.correctAnswer) isCorrect = true;
+            isCorrect = Array.isArray(correct) ? correct.includes(selectedOption ?? '') : selectedOption === correct;
         } else {
             const normalizedInput = textInput.trim().toLowerCase();
-            const normalizedAnswer = question.correctAnswer.toLowerCase();
-            if (normalizedInput === normalizedAnswer) isCorrect = true;
+            const answerStr = Array.isArray(correct) ? correct[0] : correct;
+            if (answerStr && normalizedInput === answerStr.toLowerCase()) isCorrect = true;
         }
 
         updateCurrentAnswer({
@@ -181,6 +223,7 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
 
     const handleRestart = () => {
         setAnswers({});
+        setTranslationPeeked({});
         setCurrentIndex(0);
         setIsFinished(false);
     };
@@ -208,10 +251,12 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
     if (isFinished) {
         // ... (Same finish screen logic, but using `answers` state)
         const totalQ = quizQuestions.length;
+        const peekCountForDownload = Object.values(translationPeeked).filter(Boolean).length;
         const downloadHtmlResult = () => {
             const dateStr = new Intl.DateTimeFormat('vi-VN', { dateStyle: 'full', timeStyle: 'short' }).format(new Date());
             const wrongCount = Object.values(answers).filter(a => a.isChecked && !a.isCorrect).length;
             const skippedCount = quizQuestions.length - Object.values(answers).filter(a => a.isChecked).length;
+            const scoreDisplay = typeof score === 'number' && score % 1 !== 0 ? score.toFixed(1) : score;
 
             const html = `
 <!DOCTYPE html>
@@ -244,6 +289,11 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
         .val.user-correct { color: #16a34a; }
         .val.correct-ans { color: #16a34a; }
         .explanation { margin-top: 12px; font-size: 0.9em; background: #f8fafc; padding: 12px; border-radius: 6px; color: #64748b; border: 1px dashed #cbd5e1; }
+        .explanation h3 { font-weight: bold; font-size: 1em; margin: 0.75em 0 0.25em; }
+        .explanation strong { color: #4f46e5; }
+        .explanation code { background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+        .explanation ul { margin: 0.5em 0; padding-left: 1.5em; }
+        .explanation hr { margin: 0.75em 0; border: none; border-top: 1px solid #e2e8f0; }
     </style>
 </head>
 <body>
@@ -252,11 +302,12 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
         <div class="header-meta">Ngày làm bài: ${dateStr}</div>
         
         <div class="score-box">
-            <span class="score-num">${score} / ${quizQuestions.length}</span>
+            <span class="score-num">${scoreDisplay} / ${quizQuestions.length}</span>
             <span class="score-detail">Chính xác: ${Math.round((score / quizQuestions.length) * 100)}%</span>
             <div style="margin-top: 10px; font-size: 0.9em; color: #64748b;">
-                Đúng: ${score} | Sai: ${wrongCount} | Bỏ qua: ${skippedCount}
+                Đúng: ${scoreDisplay} | Sai: ${wrongCount} | Bỏ qua: ${skippedCount}
             </div>
+            ${peekCountForDownload > 0 ? `<div style="margin-top: 8px; font-size: 0.85em; color: #b45309;">Đã trừ ${peekCountForDownload * 0.5} điểm do xem dịch trước khi trả lời (${peekCountForDownload} câu)</div>` : ''}
         </div>
     </div>
 
@@ -274,7 +325,7 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
                     <span class="q-num">Câu ${idx + 1} (${q.grammarPoint})</span>
                     <span class="status ${statusClass}">${statusText}</span>
                 </div>
-                <div class="q-text">${q.question}</div>
+                <div class="q-text">${q.question.replace(/\*\*(.*?)\*\*/g, '<strong style="color:#4f46e5;font-weight:bold">$1</strong>')}</div>
                 
                 <div class="answer-row">
                     <span class="label">Bạn chọn:</span>
@@ -283,11 +334,11 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
                 ${!isCorrect ? `
                 <div class="answer-row">
                     <span class="label">Đáp án:</span>
-                    <span class="val correct-ans">${q.correctAnswer}</span>
+                    <span class="val correct-ans">${getCorrectAnswerDisplay(q)}</span>
                 </div>` : ''}
                 
                 <div class="explanation">
-                    💡 ${q.explanation}
+                    💡 ${marked.parse(q.explanation, { async: false })}
                 </div>
             </div>`;
             }).join('')}
@@ -306,6 +357,7 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
             URL.revokeObjectURL(url);
         };
         const percentage = Math.round((score / totalQ) * 100);
+        const peekCount = Object.values(translationPeeked).filter(Boolean).length;
         // Find wrong using `answers`
         const wrongIds = Object.values(answers)
             .filter(a => a.isChecked && !a.isCorrect)
@@ -320,10 +372,15 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
 
                     <div className="bg-slate-50 rounded-xl p-6 mb-8 inline-block w-full max-w-sm">
                         <div className="text-sm text-slate-400 font-bold uppercase tracking-wider mb-2">Điểm số của bạn</div>
-                        <div className="text-5xl font-bold text-indigo-600 mb-2">{score} / {totalQ}</div>
+                        <div className="text-5xl font-bold text-indigo-600 mb-2">{Number(score) === score && score % 1 !== 0 ? score.toFixed(1) : score} / {totalQ}</div>
                         <div className={`font-bold ${percentage >= 80 ? 'text-emerald-500' : 'text-slate-600'}`}>
                             {percentage}% Chính xác
                         </div>
+                        {peekCount > 0 && (
+                            <div className="mt-2 text-amber-600 text-sm">
+                                Đã trừ {peekCount * 0.5} điểm do xem dịch trước khi trả lời ({peekCount} câu)
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -361,9 +418,11 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
                                             <span>#{id} {q.grammarPoint}</span>
                                             <span className="text-rose-500 text-[10px] bg-rose-50 px-2 py-0.5 rounded uppercase tracking-wider">Sai</span>
                                         </div>
-                                        <div className="text-slate-500 mb-2 line-clamp-2" title={q.question}>{q.question.replace(/\n/g, ' ')}</div>
+                                        <div className="text-slate-500 mb-2 line-clamp-2" title={q.question}>
+                                            {renderQuestionWithBold(q.question.replace(/\n/g, ' '))}
+                                        </div>
                                         <div className="text-emerald-600 font-medium bg-emerald-50 inline-block px-2 py-1 rounded mb-1 text-xs">
-                                            Đ.án: {q.correctAnswer}
+                                            Đ.án: {getCorrectAnswerDisplay(q)}
                                         </div>
                                     </div>
                                 )
@@ -419,12 +478,35 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
                                 </div>
                             </div>
 
-                            {/* Question Text */}
+                            {/* Question Text (hỗ trợ **cấu trúc** → in đậm màu indigo) */}
                             <div className="mb-4">
                                 <h3 className="text-lg font-bold text-slate-900 leading-relaxed whitespace-pre-line">
-                                    {question.question}
+                                    {renderQuestionWithBold(question.question)}
                                 </h3>
-                                {question.description && (
+                                {/* Dịch tiếng Việt: chỉ hiển thị sau khi chọn đáp án; xem trước = trừ 0,5 điểm */}
+                                {question.translationVi && (
+                                    <div className="mt-3">
+                                        {isChecked ? (
+                                            <p className="text-slate-600 text-sm bg-slate-50 p-3 rounded-lg border border-slate-200">
+                                                🇻🇳 <span className="font-medium">Dịch:</span> {question.translationVi}
+                                            </p>
+                                        ) : translationPeeked[currentIndex] ? (
+                                            <p className="text-amber-800 text-sm bg-amber-50 p-3 rounded-lg border border-amber-200">
+                                                🇻🇳 <span className="font-medium">Dịch:</span> {question.translationVi}
+                                                <span className="block mt-1 text-amber-600 text-xs font-medium">⚠️ Đã xem trước khi trả lời – trừ 0,5 điểm</span>
+                                            </p>
+                                        ) : (
+                                            <button
+                                                type="button"
+                                                onClick={() => setTranslationPeeked(prev => ({ ...prev, [currentIndex]: true }))}
+                                                className="text-sm text-indigo-600 hover:text-indigo-700 font-medium py-2 px-3 rounded-lg border border-indigo-200 bg-indigo-50/50 hover:bg-indigo-50 transition-colors"
+                                            >
+                                                📖 Xem dịch tiếng Việt (trừ 0,5 điểm nếu xem trước khi trả lời)
+                                            </button>
+                                        )}
+                                    </div>
+                                )}
+                                {question.description && !question.translationVi && (
                                     <p className="text-slate-500 text-sm mt-2 italic bg-slate-50 p-2 rounded-lg border border-slate-100 inline-block">
                                         💡 {question.description}
                                     </p>
@@ -440,7 +522,7 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
                                             let btnClass = "w-full text-left p-4 rounded-xl border-2 transition-all font-medium flex justify-between items-center group relative overflow-hidden ";
 
                                             if (isChecked) {
-                                                if (opt === question.correctAnswer) {
+                                                if (getCorrectAnswers(question).includes(opt)) {
                                                     btnClass += "border-emerald-500 bg-emerald-50 text-emerald-800 shadow-sm";
                                                 } else if (opt === selectedOption) {
                                                     btnClass += "border-rose-200 bg-rose-50 text-rose-800";
@@ -464,15 +546,15 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
                                                 >
                                                     <span className="flex items-center gap-4 relative z-10">
                                                         <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold border transition-colors ${isChecked
-                                                            ? (opt === question.correctAnswer ? 'border-emerald-500 bg-emerald-500 text-white' : 'border-slate-200 bg-white text-slate-300')
+                                                            ? (getCorrectAnswers(question).includes(opt) ? 'border-emerald-500 bg-emerald-500 text-white' : 'border-slate-200 bg-white text-slate-300')
                                                             : (selectedOption === opt ? 'border-indigo-600 bg-indigo-600 text-white' : 'border-slate-200 bg-white text-slate-400 group-hover:border-indigo-300 group-hover:text-indigo-400')
                                                             }`}>
                                                             {idx + 1}
                                                         </span>
                                                         <span className="text-lg">{opt}</span>
                                                     </span>
-                                                    {isChecked && opt === question.correctAnswer && <span className="text-xl">✅</span>}
-                                                    {isChecked && opt === selectedOption && opt !== question.correctAnswer && <span className="text-xl">❌</span>}
+                                                    {isChecked && getCorrectAnswers(question).includes(opt) && <span className="text-xl">✅</span>}
+                                                    {isChecked && opt === selectedOption && !getCorrectAnswers(question).includes(opt) && <span className="text-xl">❌</span>}
                                                 </button>
                                             );
                                         })}
@@ -507,7 +589,7 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
                                                 <span className="text-xl">💡</span>
                                                 <div>
                                                     <div className="text-xs font-bold text-emerald-600 uppercase mb-1">Đáp án đúng</div>
-                                                    <div className="font-bold text-emerald-900 text-lg">{question.correctAnswer}</div>
+                                                    <div className="font-bold text-emerald-900 text-lg">{getCorrectAnswerDisplay(question)}</div>
                                                 </div>
                                             </div>
                                         )}
@@ -523,7 +605,10 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
                                     <div className="font-bold mb-2 flex items-center gap-2 text-lg">
                                         {currentAnswerState.isCorrect ? '🎉 Chính xác!' : '😢 Rất tiếc!'}
                                     </div>
-                                    <p className="opacity-90 leading-relaxed">{question.explanation}</p>
+                                    <div
+                                        className="explanation-markdown text-sm leading-relaxed opacity-90 [&_h3]:font-bold [&_h3]:text-base [&_h3]:mt-3 [&_h3]:mb-1 [&_strong]:text-indigo-600 [&_code]:bg-slate-200 [&_code]:px-1.5 [&_code]:rounded [&_code]:text-slate-800 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:my-2 [&_li]:my-0.5 [&_hr]:my-3 [&_hr]:border-slate-200 [&_p]:my-1"
+                                        dangerouslySetInnerHTML={{ __html: marked.parse(question.explanation, { async: false }) }}
+                                    />
                                 </div>
                             )}
 
@@ -560,7 +645,7 @@ export default function Quiz({ sessionId = 20 }: QuizProps) {
                     <div className="bg-white rounded-xl border-2 border-slate-400 p-3 sticky top-4">
                         <div className="flex justify-between items-center mb-3">
                             <span className="font-bold text-slate-700 text-sm">Câu hỏi</span>
-                            <span className="text-xs font-bold px-2 py-0.5 bg-indigo-100 text-indigo-700 rounded">Điểm: {score}</span>
+                            <span className="text-xs font-bold px-2 py-0.5 bg-indigo-100 text-indigo-700 rounded">Điểm: {typeof score === 'number' && score % 1 !== 0 ? score.toFixed(1) : score}</span>
                         </div>
 
                         {/* Question Grid */}
