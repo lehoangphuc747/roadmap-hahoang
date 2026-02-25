@@ -70,6 +70,7 @@ const specialHolidays: { [key: string]: string } = {
     '2026-01-28': 'Buổi 24 nghỉ', // 28/1/2026 - Thứ 4, Buổi 24 nghỉ
     '2026-01-30': 'Buổi 25 nghỉ đi YEP', // 30/1/2026 - Thứ 6, Buổi 25 nghỉ đi YEP
     '2026-02-06': 'Phúc 선생님은 바빠요', // 06/02/2026 - Thứ 6, Buổi 26 nghỉ
+    '2026-02-23': 'NGHỈ', // 23/2/2026 - Buổi 29 nghỉ
 };
 
 function isTetHoliday(date: Date): boolean {
