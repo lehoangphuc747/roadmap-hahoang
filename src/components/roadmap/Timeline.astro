@@ -25,12 +25,14 @@ const groupedEvents = events.reduce((acc, event) => {
   return acc;
 }, {} as GroupedEvents);
 
-// Các tháng mặc định thu gọn (tháng 11, 12/2025 và tháng 1/2026)
+// Các tháng mặc định thu gọn (tháng 11, 12/2025 và tháng 1, 2/2026)
 const defaultCollapsedTitles = new Set([
   'Tháng 11 năm 2025',
   'Tháng 12 năm 2025',
   'Tháng 1 năm 2026',
   'Tháng Một năm 2026', // Locale có thể dùng "Một" thay vì "1"
+  'Tháng 2 năm 2026',
+  'Tháng Hai năm 2026', // Locale có thể dùng "Hai" thay vì "2"
 ]);
 function isMonthCollapsedByDefault(monthTitle: string): boolean {
   return defaultCollapsedTitles.has(monthTitle);

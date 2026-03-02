@@ -141,6 +141,30 @@ const isHoliday = status === "holiday";
                 </a>
             )}
 
+            {/* Special Action for Buổi 30 - Ôn tập nghĩa cấu trúc tổng hợp */}
+            {id === 30 && (
+                <div class="space-y-2 mb-3">
+                    <a
+                        href="/bai-tap/buoi-30"
+                        class="block w-full py-2 bg-indigo-50 hover:bg-indigo-100 text-primary text-center rounded-lg font-bold text-sm transition-colors border border-indigo-100"
+                    >
+                        📝 Bài 1: Ôn tập Tổng hợp (67 câu)
+                    </a>
+                    <a
+                        href="/bai-tap/buoi-30-2"
+                        class="block w-full py-2 bg-purple-50 hover:bg-purple-100 text-purple-700 text-center rounded-lg font-bold text-sm transition-colors border border-purple-100"
+                    >
+                        📝 Bài 2: Ôn -어 보다 (20 câu)
+                    </a>
+                    <a
+                        href="/bai-tap/buoi-30-3"
+                        class="block w-full py-2 bg-cyan-50 hover:bg-cyan-100 text-cyan-700 text-center rounded-lg font-bold text-sm transition-colors border border-cyan-100"
+                    >
+                        📖 Bài 3: Reading TOPIK (12 câu)
+                    </a>
+                </div>
+            )}
+
             {/* Special Action for Buổi 28 (13/2/2026) - 3 bài tập hiển thị trên timeline */}
             {id === 28 && (
                 <div class="space-y-2 mb-3">

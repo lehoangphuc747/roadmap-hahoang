@@ -5,13 +5,23 @@ import type { Question } from '../../data/quiz/session20';
 interface QuizProps {
     sessionId?: number;
     /** Buổi 28: "grammar" = tên cấu trúc → chọn nghĩa; "grammar-reverse" = nghĩa → chọn cấu trúc */
-    quizSet?: 'default' | 'grammar' | 'grammar-reverse';
+    /** Buổi 30: "quiz2" = bài tập số 2; "quiz3" = bài tập số 3 */
+    quizSet?: 'default' | 'grammar' | 'grammar-reverse' | 'quiz2' | 'quiz3';
 }
 
 // Dynamic quiz data loader
-const getQuizData = async (sessionId: number = 20, quizSet: 'default' | 'grammar' | 'grammar-reverse' = 'default') => {
+const getQuizData = async (sessionId: number = 20, quizSet: 'default' | 'grammar' | 'grammar-reverse' | 'quiz2' | 'quiz3' = 'default') => {
     try {
-        const module = await import(`../../data/quiz/session${sessionId}.ts`);
+        // Buổi 30: bài tập số 2 (ôn -어 보다)
+        if (sessionId === 30 && quizSet === 'quiz2') {
+            const module = await import(`../../data/quiz/session${sessionId}-2.ts`);
+            return module.quizQuestions;
+        }
+        // Buổi 30: bài tập số 3 (Reading Dạng 1 TOPIK)
+        if (sessionId === 30 && quizSet === 'quiz3') {
+            const module = await import(`../../data/quiz/session${sessionId}-3.ts`);
+            return module.quizQuestions;
+        }
         // Buổi 28: bài ôn tên cấu trúc (tên → nghĩa)
         if (sessionId === 28 && quizSet === 'grammar' && 'grammarNameQuizQuestions' in module) {
             return (module as { grammarNameQuizQuestions: Question[] }).grammarNameQuizQuestions;
@@ -20,6 +30,8 @@ const getQuizData = async (sessionId: number = 20, quizSet: 'default' | 'grammar
         if (sessionId === 28 && quizSet === 'grammar-reverse' && 'grammarMeaningToNameQuizQuestions' in module) {
             return (module as { grammarMeaningToNameQuizQuestions: Question[] }).grammarMeaningToNameQuizQuestions;
         }
+        
+        const module = await import(`../../data/quiz/session${sessionId}.ts`);
         return module.quizQuestions;
     } catch (error) {
         console.error(`Failed to load session${sessionId}:`, error);
@@ -34,6 +46,9 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
     const [isLoading, setIsLoading] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // Generate storage key based on sessionId and quizSet
+    const storageKey = `quiz_session${sessionId}_${quizSet}`;
+
     // Load quiz data on mount or when sessionId / quizSet changes
     useEffect(() => {
         const loadQuiz = async () => {
@@ -42,10 +57,26 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
             const questions = await getQuizData(sessionId, quizSet);
             console.log('[Quiz] Loaded questions:', questions.length, 'questions');
             setQuizQuestions(questions);
+            
+            // Load persisted state from localStorage
+            try {
+                const savedState = localStorage.getItem(storageKey);
+                if (savedState) {
+                    const { currentIndex: savedIndex, answers: savedAnswers, translationPeeked: savedPeeked, isFinished: savedFinished } = JSON.parse(savedState);
+                    setCurrentIndex(savedIndex ?? 0);
+                    setAnswers(savedAnswers || {});
+                    setTranslationPeeked(savedPeeked || {});
+                    setIsFinished(savedFinished ?? false);
+                    console.log('[Quiz] Restored state from localStorage');
+                }
+            } catch (e) {
+                console.error('[Quiz] Error loading saved state:', e);
+            }
+            
             setIsLoading(false);
         };
         loadQuiz();
-    }, [sessionId, quizSet]);
+    }, [sessionId, quizSet, storageKey]);
 
     // Type for storing user answer state
     interface UserAnswer {
@@ -64,6 +95,24 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
 
     /** Câu nào đã xem dịch tiếng Việt trước khi chọn đáp án → trừ 0,5 điểm (chỉ áp dụng khi question có translationVi) */
     const [translationPeeked, setTranslationPeeked] = useState<Record<number, boolean>>({});
+
+    // Save state to localStorage whenever answers, translationPeeked, currentIndex, or isFinished changes
+    useEffect(() => {
+        if (quizQuestions.length === 0) return; // Don't save until questions are loaded
+        
+        try {
+            const stateToSave = {
+                currentIndex,
+                answers,
+                translationPeeked,
+                isFinished
+            };
+            localStorage.setItem(storageKey, JSON.stringify(stateToSave));
+            console.log('[Quiz] Saved state to localStorage');
+        } catch (e) {
+            console.error('[Quiz] Error saving state:', e);
+        }
+    }, [answers, translationPeeked, currentIndex, isFinished, storageKey, quizQuestions.length]);
 
     //  Element refs for focus management
     const inputRef = useRef<HTMLInputElement>(null);
@@ -226,6 +275,33 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
         setTranslationPeeked({});
         setCurrentIndex(0);
         setIsFinished(false);
+        // Clear localStorage
+        try {
+            localStorage.removeItem(storageKey);
+            console.log('[Quiz] Cleared localStorage');
+        } catch (e) {
+            console.error('[Quiz] Error clearing localStorage:', e);
+        }
+    };
+
+    const handleResetCurrentQuestion = () => {
+        if (!question) return;
+        
+        // Remove answer for current question
+        setAnswers(prev => {
+            const newAnswers = { ...prev };
+            delete newAnswers[currentIndex];
+            return newAnswers;
+        });
+        
+        // Remove translation peek status
+        setTranslationPeeked(prev => {
+            const newPeeked = { ...prev };
+            delete newPeeked[currentIndex];
+            return newPeeked;
+        });
+        
+        console.log('[Quiz] Reset question', currentIndex + 1);
     };
 
     const jumpToQuestion = (index: number) => {
@@ -322,7 +398,7 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
                 return `
             <div class="q-item">
                 <div class="q-header">
-                    <span class="q-num">Câu ${idx + 1} (${q.grammarPoint})</span>
+                    <span class="q-num">Câu ${idx + 1}</span>
                     <span class="status ${statusClass}">${statusText}</span>
                 </div>
                 <div class="q-text">${q.question.replace(/\*\*(.*?)\*\*/g, '<strong style="color:#4f46e5;font-weight:bold">$1</strong>')}</div>
@@ -415,7 +491,7 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
                                 return (
                                     <div key={id} className="text-sm bg-white p-4 rounded-lg border border-rose-100 shadow-sm h-full">
                                         <div className="font-bold text-slate-700 mb-2 flex justify-between items-start">
-                                            <span>#{id} {q.grammarPoint}</span>
+                                            <span>#{id}</span>
                                             <span className="text-rose-500 text-[10px] bg-rose-50 px-2 py-0.5 rounded uppercase tracking-wider">Sai</span>
                                         </div>
                                         <div className="text-slate-500 mb-2 line-clamp-2" title={q.question}>
@@ -466,9 +542,6 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
                                     <span className="text-lg font-bold text-slate-800">
                                         <span className="text-indigo-600">{currentIndex + 1}</span>
                                         <span className="text-slate-400 font-normal text-sm"> / {quizQuestions.length}</span>
-                                    </span>
-                                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold border border-indigo-100">
-                                        📖 {question.grammarPoint}
                                     </span>
                                     {question.type === 'fill-input' && (
                                         <span className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full border border-slate-200">
@@ -602,8 +675,15 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
                                     ? 'bg-emerald-50/50 text-emerald-900 border-emerald-400'
                                     : 'bg-rose-50/50 text-rose-900 border-rose-400'
                                     }`}>
-                                    <div className="font-bold mb-2 flex items-center gap-2 text-lg">
-                                        {currentAnswerState.isCorrect ? '🎉 Chính xác!' : '😢 Rất tiếc!'}
+                                    <div className="flex items-center justify-between mb-3">
+                                        <div className="font-bold flex items-center gap-2 text-lg">
+                                            {currentAnswerState.isCorrect ? '🎉 Chính xác!' : '😢 Rất tiếc!'}
+                                        </div>
+                                        {question.grammarPoint && (
+                                            <div className="text-xs font-bold px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full border border-indigo-200">
+                                                📚 {question.grammarPoint}
+                                            </div>
+                                        )}
                                     </div>
                                     <div
                                         className="explanation-markdown text-sm leading-relaxed opacity-90 [&_h3]:font-bold [&_h3]:text-base [&_h3]:mt-3 [&_h3]:mb-1 [&_strong]:text-indigo-600 [&_code]:bg-slate-200 [&_code]:px-1.5 [&_code]:rounded [&_code]:text-slate-800 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:my-2 [&_li]:my-0.5 [&_hr]:my-3 [&_hr]:border-slate-200 [&_p]:my-1"
@@ -612,27 +692,41 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
                                 </div>
                             )}
 
-                            {/* Action Button */}
+                            {/* Action Buttons */}
                             <div className="pt-3 border-t border-slate-100">
-                                <button
-                                    ref={nextBtnRef}
-                                    onClick={isChecked ? handleNext : handleCheck}
-                                    disabled={!isChecked && ((question.type === 'multiple-choice' && !selectedOption) || (question.type === 'fill-input' && !textInput.trim()))}
-                                    className={`w-full py-4 rounded-xl font-bold text-lg transition-all active:scale-[0.99] flex items-center justify-center gap-2 ${!isChecked && ((question.type === 'multiple-choice' && !selectedOption) || (question.type === 'fill-input' && !textInput.trim()))
-                                        ? 'bg-slate-100 text-slate-400 cursor-not-allowed shadow-none border border-slate-200'
-                                        : isChecked
-                                            ? 'bg-slate-800 text-white hover:bg-slate-900 shadow-slate-300'
-                                            : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200 hover:shadow-indigo-300'
-                                        }`}
-                                >
-                                    {isChecked
-                                        ? (currentIndex === quizQuestions.length - 1 ? <span>Xem kết quả 🏁</span> : <span>Câu tiếp theo <span className="opacity-70 text-sm font-normal">(Enter)</span> →</span>)
-                                        : <span>Kiểm tra <span className="opacity-70 text-sm font-normal">(Enter)</span></span>}
-                                </button>
-                                {!isChecked && (
-                                    <div className="text-center mt-3 text-slate-400 text-xs">
-                                        Phím tắt: [1-4] chọn, [Enter] kiểm tra
+                                {isChecked ? (
+                                    <div className="flex gap-3">
+                                        <button
+                                            onClick={handleResetCurrentQuestion}
+                                            className="flex-shrink-0 py-4 px-6 rounded-xl font-bold text-lg transition-all active:scale-[0.99] flex items-center justify-center gap-2 bg-white text-slate-600 hover:bg-slate-50 border-2 border-slate-200 hover:border-slate-300"
+                                        >
+                                            <span>🔄</span>
+                                            <span className="hidden sm:inline">Làm lại</span>
+                                        </button>
+                                        <button
+                                            ref={nextBtnRef}
+                                            onClick={handleNext}
+                                            className="flex-1 py-4 rounded-xl font-bold text-lg transition-all active:scale-[0.99] flex items-center justify-center gap-2 bg-slate-800 text-white hover:bg-slate-900 shadow-slate-300"
+                                        >
+                                            {currentIndex === quizQuestions.length - 1 ? <span>Xem kết quả 🏁</span> : <span>Câu tiếp theo <span className="opacity-70 text-sm font-normal">(Enter)</span> →</span>}
+                                        </button>
                                     </div>
+                                ) : (
+                                    <>
+                                        <button
+                                            onClick={handleCheck}
+                                            disabled={!isChecked && ((question.type === 'multiple-choice' && !selectedOption) || (question.type === 'fill-input' && !textInput.trim()))}
+                                            className={`w-full py-4 rounded-xl font-bold text-lg transition-all active:scale-[0.99] flex items-center justify-center gap-2 ${!isChecked && ((question.type === 'multiple-choice' && !selectedOption) || (question.type === 'fill-input' && !textInput.trim()))
+                                                ? 'bg-slate-100 text-slate-400 cursor-not-allowed shadow-none border border-slate-200'
+                                                : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200 hover:shadow-indigo-300'
+                                                }`}
+                                        >
+                                            <span>Kiểm tra <span className="opacity-70 text-sm font-normal">(Enter)</span></span>
+                                        </button>
+                                        <div className="text-center mt-3 text-slate-400 text-xs">
+                                            Phím tắt: [1-4] chọn, [Enter] kiểm tra
+                                        </div>
+                                    </>
                                 )}
                             </div>
 

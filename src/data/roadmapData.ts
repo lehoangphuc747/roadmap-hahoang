@@ -51,6 +51,13 @@ const sessionContentMap: { [key: number]: string[] } = {
     26: ['-(으)니까 (1)', '-(으)니까 (2)'], // Buổi 26 (04/02)
     27: ['Ôn -(으)니까 (2)', '-(으)면'], // Buổi 27 (11/02) - 11/2
     28: [], // Buổi 28 (13/02) - 13/2
+    29: ['-을 수 밖에 없다', '-아/어 보다 (1)'], // Buổi 29 (23/02) 
+    30: ['Reading Dạng 1 TOPIK - Bài 3 (21 câu)'], // Buổi 30 (02/03) - 02/3 - Reading Dạng 1
+    31: [], // Buổi 31 (27/02) - 27/2 - NGHỈ
+    32: [], // Buổi 32 - Tháng 3 (chưa có học)
+    33: [], // Buổi 33 - Tháng 3 (chưa có học)
+    34: [], // Buổi 34 - Tháng 3 (chưa có học)
+    35: [], // Buổi 35 - Tháng 3 (chưa có học)
 };
 
 export const EXAM_DATE = '2026-04-11';
@@ -67,10 +74,11 @@ const specialHolidays: { [key: string]: string } = {
     '2026-01-12': 'Buổi 20 off', // 12/1/2026 - buổi 20 off
     '2026-01-14': 'Hà bận nên off không học', // 14/1/2026 - Hà bận
     '2026-01-21': 'Hà OT 했어요', // 21/1/2026 - Buổi 22 off (OT)
-    '2026-01-28': 'Buổi 24 nghỉ', // 28/1/2026 - Thứ 4, Buổi 24 nghỉ
+    '2026-01-28': 'Buổi 24 nghỉ - Đóng học phí (Thứ 4)', // 28/1/2026 - Thứ 4, Buổi 24 nghỉ
     '2026-01-30': 'Buổi 25 nghỉ đi YEP', // 30/1/2026 - Thứ 6, Buổi 25 nghỉ đi YEP
     '2026-02-06': 'Phúc 선생님은 바빠요', // 06/02/2026 - Thứ 6, Buổi 26 nghỉ
     '2026-02-23': 'NGHỈ', // 23/2/2026 - Buổi 29 nghỉ
+    '2026-02-27': '선생님은 비행기를 타고 갑니다', // 27/2/2026 - Thứ 6, Buổi 31 nghỉ
 };
 
 function isTetHoliday(date: Date): boolean {
