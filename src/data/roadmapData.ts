@@ -52,7 +52,7 @@ const sessionContentMap: { [key: number]: string[] } = {
     27: ['Ôn -(으)니까 (2)', '-(으)면'], // Buổi 27 (11/02) - 11/2
     28: [], // Buổi 28 (13/02) - 13/2
     29: ['-을 수 밖에 없다', '-아/어 보다 (1)'], // Buổi 29 (23/02) 
-    30: ['📝 Bài 1: Ôn tập Tổng hợp (67 câu)', '📝 Bài 2: Ôn -어 보다 (20 câu)', '📖 Bài 3: Reading TOPIK (12 câu)'], // Buổi 30 (06/03) - 06/3
+    30: ['📝 Bài 1: Ôn tập Tổng hợp (67 câu)', '📝 Bài 2: Ôn -어 보다 (20 câu)', '📖 Bài 3: Reading TOPIK (12 câu)'], // Buổi 30 (09/03) - 09/3 (dời từ 06/03 vì nghỉ)
     31: [], // Buổi 31 (27/02) - 27/2 - NGHỈ
     32: [], // Buổi 32 - Tháng 3 (chưa có học)
     33: [], // Buổi 33 - Tháng 3 (chưa có học)
@@ -81,6 +81,7 @@ const specialHolidays: { [key: string]: string } = {
     '2026-02-27': '선생님은 비행기를 타고 갑니다', // 27/2/2026 - Thứ 6, Buổi 31 nghỉ
     '2026-03-02': 'Sửa timeline buổi này nghỉ do OT', // 02/03/2026
     '2026-03-04': 'Nghỉ do OT, hỏng điện thoại', // 04/03/2026
+    '2026-03-06': 'Buổi 30 nghỉ - dời sang 09/03', // 06/03/2026 - Thứ 6, Buổi 30 nghỉ, dời sang Thứ 2 (09/03)
 };
 
 function isTetHoliday(date: Date): boolean {
