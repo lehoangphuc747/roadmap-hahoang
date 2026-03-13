@@ -53,7 +53,7 @@ const sessionContentMap: { [key: number]: string[] } = {
     28: [], // Buổi 28 (13/02) - 13/2
     29: ['-을 수 밖에 없다', '-아/어 보다 (1)'], // Buổi 29 (23/02) 
     30: ['V-은/는 적이 있다', 'V-아/어 주다', '📝 Bài 1: Ôn tập Tổng hợp (67 câu)', '📝 Bài 2: Ôn -어 보다 (20 câu)', '📖 Bài 3: Reading TOPIK (12 câu)'], // Buổi 30 (09/03) - 09/3 (dời từ 06/03 vì nghỉ) - Đã học 2 ngữ pháp mới
-    31: [], // Buổi 31 (27/02) - 27/2 - NGHỈ
+    31: ['-아/어야 되다'], // Buổi 31 (11/03) - Học ngữ pháp -아/어야 되다
     32: [], // Buổi 32 - Tháng 3 (chưa có học)
     33: [], // Buổi 33 - Tháng 3 (chưa có học)
     34: [], // Buổi 34 - Tháng 3 (chưa có học)
