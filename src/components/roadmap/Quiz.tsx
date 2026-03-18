@@ -63,7 +63,9 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
                 const savedState = localStorage.getItem(storageKey);
                 if (savedState) {
                     const { currentIndex: savedIndex, answers: savedAnswers, translationPeeked: savedPeeked, isFinished: savedFinished } = JSON.parse(savedState);
-                    setCurrentIndex(savedIndex ?? 0);
+                    const maxIndex = Math.max(questions.length - 1, 0);
+                    const safeIndex = typeof savedIndex === 'number' ? Math.min(Math.max(savedIndex, 0), maxIndex) : 0;
+                    setCurrentIndex(safeIndex);
                     setAnswers(savedAnswers || {});
                     setTranslationPeeked(savedPeeked || {});
                     setIsFinished(savedFinished ?? false);
@@ -319,6 +321,24 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
                 <div className="text-center">
                     <div className="text-4xl mb-4">⏳</div>
                     <div className="text-slate-600 font-medium">Đang tải câu hỏi...</div>
+                </div>
+            </div>
+        );
+    }
+
+    if (!question) {
+        return (
+            <div className="flex items-center justify-center h-96">
+                <div className="text-center bg-white border border-slate-200 rounded-xl p-6">
+                    <div className="text-3xl mb-3">⚠️</div>
+                    <div className="text-slate-700 font-semibold mb-2">Không thể tải câu hỏi hiện tại</div>
+                    <p className="text-slate-500 text-sm mb-4">Dữ liệu tiến trình cũ có thể không còn hợp lệ.</p>
+                    <button
+                        onClick={handleRestart}
+                        className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-5 rounded-full transition-all"
+                    >
+                        Làm mới bài
+                    </button>
                 </div>
             </div>
         );

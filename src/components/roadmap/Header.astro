@@ -73,7 +73,8 @@ const TARGET_DATE = EXAM_DATE;
                     <div class="flex items-baseline gap-1">
                         <span
                             class="text-4xl font-bold text-slate-800 tabular-nums"
-                            id="countdown-days">--</span
+                            id="countdown-days"
+                            data-target-date={TARGET_DATE}>--</span
                         >
                         <span class="text-slate-600 font-medium">ngày</span>
                     </div>
@@ -179,9 +180,10 @@ const TARGET_DATE = EXAM_DATE;
     </div>
 </header>
 
-<script define:vars={{ TARGET_DATE }}>
+<script is:inline>
     // Countdown Logic
     const countEl = document.getElementById("countdown-days");
+    const TARGET_DATE = countEl?.dataset.targetDate;
     const examTime = new Date(TARGET_DATE).getTime();
 
     function updateCountdown() {
