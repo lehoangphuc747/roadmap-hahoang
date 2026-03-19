@@ -54,8 +54,8 @@ const sessionContentMap: { [key: number]: string[] } = {
     29: ['-을 수 밖에 없다', '-아/어 보다 (1)'], // Buổi 29 (23/02) 
     30: ['V-은/는 적이 있다', 'V-아/어 주다', '📝 Bài 1: Ôn tập Tổng hợp (67 câu)', '📝 Bài 2: Ôn -어 보다 (20 câu)', '📖 Bài 3: Reading TOPIK (12 câu)'], // Buổi 30 (09/03) - 09/3 (dời từ 06/03 vì nghỉ) - Đã học 2 ngữ pháp mới
     31: ['-아/어야 되다'], // Buổi 31 (11/03) - Học ngữ pháp -아/어야 되다
-    32: [], // Buổi 32 - Tháng 3 (chưa có học)
-    33: [], // Buổi 33 - Tháng 3 (chưa có học)
+    32: ['-아/어도 되다'], // Buổi 32 (13/03)
+    33: ['-고 있다', '-아/어 있다'], // Buổi 33 (16/03)
     34: [], // Buổi 34 - Tháng 3 (chưa có học)
     35: [], // Buổi 35 - Tháng 3 (chưa có học)
 };
@@ -82,6 +82,7 @@ const specialHolidays: { [key: string]: string } = {
     '2026-03-02': 'Sửa timeline buổi này nghỉ do OT', // 02/03/2026
     '2026-03-04': 'Nghỉ do OT, hỏng điện thoại', // 04/03/2026
     '2026-03-06': 'Buổi 30 nghỉ - dời sang 09/03', // 06/03/2026 - Thứ 6, Buổi 30 nghỉ, dời sang Thứ 2 (09/03)
+    '2026-03-18': 'Buổi này dời sang 19/03 (Thứ 5)', // 18/03/2026 - Dời lịch học sang Thứ 5
 };
 
 function isTetHoliday(date: Date): boolean {
@@ -112,10 +113,11 @@ export function getRoadmapData(): Session[] {
 
     while (currentDate <= endDate) {
         const dayOfWeek = currentDate.getDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+        const dateStr = currentDate.toISOString().split('T')[0];
+        const isManualStudyDay = dateStr === '2026-03-19'; // One-off: học bù Thứ 5
 
         // Check if Mon, Wed, Fri
-        if (dayOfWeek === 1 || dayOfWeek === 3 || dayOfWeek === 5) {
-            const dateStr = currentDate.toISOString().split('T')[0];
+        if (dayOfWeek === 1 || dayOfWeek === 3 || dayOfWeek === 5 || isManualStudyDay) {
 
             // Kiểm tra ngày nghỉ đặc biệt trước (Hà bận)
             const specialHolidayReason = isSpecialHoliday(dateStr);
