@@ -1,0 +1,322 @@
+﻿{
+    "source_file":  "on-tap-kien-thuc-bai-01-67-minimalist.md",
+    "document_title":  "Ôn tập Kiến thức - Bài 01-67 (Version Tối Giản)",
+    "lesson_count":  63,
+    "lessons":  [
+                    {
+                        "section":  "01",
+                        "title":  "이다 (là)",
+                        "content":  "**Công thức:** N + 이다\r\n\r\n**Quy tắc:**\r\n- Có 받침: 이에요/입니다 (학생이에요)\r\n- Không 받침: 예요/입니다 (의사예요)  \r\n- Quá khứ: 이었어요/였어요\r\n- Thân mật: 이야/야\r\n\r\n**Ví dụ:** 저는 학생입니다. (Tôi là học sinh)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "02",
+                        "title":  "아니다 (không phải là)",
+                        "content":  "**Công thức:** N + 이/가 + 아니다\r\n\r\n**Quy tắc:**\r\n- Có 받침: 이 아니에요 (학생이 아니에요)\r\n- Không 받침: 가 아니에요 (의사가 아니에요)\r\n\r\n**Phát âm:** 아니에요 → [아녜요]\r\n\r\n---"
+                    },
+                    {
+                        "section":  "03",
+                        "title":  "이/가 (trợ từ chủ ngữ)",
+                        "content":  "**Công thức:** N + 이/가\r\n\r\n**Quy tắc:**\r\n- Có 받침: 이 (책이)\r\n- Không 받침: 가 (의자가)\r\n\r\n**Biến thể đặc biệt:**\r\n- 나 + 가 = 내가\r\n- 저 + 가 = 제가\r\n- 너 + 가 = 네가\r\n- 누구 + 가 = 누가\r\n\r\n**Khi dùng:** Focus vào chủ ngữ (Ai? Cái gì?)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "04",
+                        "title":  "은/는 (trợ từ chủ đề)",
+                        "content":  "**Công thức:** N + 은/는\r\n\r\n**Quy tắc:**\r\n- Có 받침: 은 (책은)\r\n- Không 받침: 는 (의자는)\r\n\r\n**Khi dùng:**\r\n- Giới thiệu, so sánh\r\n- Chủ đề câu chuyện\r\n\r\n**So sánh với 이/가:**\r\n- 이/가: Thông tin mới, nhấn mạnh chủ ngữ\r\n- 은/는: Thông tin cũ, chủ đề\r\n\r\n---"
+                    },
+                    {
+                        "section":  "05",
+                        "title":  "을/를 (trợ từ tân ngữ)",
+                        "content":  "**Công thức:**  N + 을/를\r\n\r\n**Quy tắc:**\r\n- Có 받침: 을 (밥을)\r\n- Không 받침: 를 (커피를)\r\n\r\n**Khi dùng:** Đánh dấu tân ngữ (đối tượng chịu tác động)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "06",
+                        "title":  "에 (1) - Vị trí tồn tại",
+                        "content":  "**Công thức:** N + 에 + 있다/없다\r\n\r\n**Ý nghĩa:** Ở đâu (vị trí tĩnh)\r\n\r\n**Ví dụ:**\r\n- 책상 위에 있어요 (Ở trên bàn)\r\n- 집에 없어요 (Không có ở nhà)\r\n\r\n**So sánh với 에서:**\r\n- 에: Tồn tại, vị trí tĩnh (있다/없다)\r\n- 에서: Hành động diễn ra (먹다, 공부하다...)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "07",
+                        "title":  "에 (2) - Thời gian",
+                        "content":  "**Công thức:** Time + 에\r\n\r\n**Quy tắc:** Không phụ thuộc 받침, luôn dùng 에\r\n\r\n**Ngoại lệ (KHÔNG dùng 에):**\r\n- 어제, 오늘, 내일, 모레 (hôm qua, hôm nay, ngày mai, ngày kia)\r\n- 언제, 지금 (khi nào, bây giờ)\r\n\r\n**Ví dụ:**\r\n- 7시에 일어나요 (Dậy lúc 7 giờ)\r\n- 월요일에 만나요 (Gặp thứ 2)\r\n- 오늘 만나요 (KHÔNG dùng 에)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "08",
+                        "title":  "에 (3) - Điểm đến",
+                        "content":  "**Công thức:** N + 에 + 가다/오다/다니다...\r\n\r\n**Ý nghĩa:** Đến đâu\r\n\r\n**Ví dụ:**\r\n- 학교에 가요 (Đi đến trường)\r\n- 집에 와요 (Đến nhà)\r\n- 서울에 도착했어요 (Đến Seoul)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "09",
+                        "title":  "에서 (1) - Địa điểm hành động",
+                        "content":  "**Công thức:** N + 에서 + Động từ\r\n\r\n**Ý nghĩa:** Ở đâu làm gì (hành động)\r\n\r\n**Ví dụ:**\r\n- 학교에서 공부해요 (Học ở trường)\r\n- 집에서 자요 (Ngủ ở nhà)\r\n\r\n**So sánh:**\r\n- 집에 있어요 (Ở nhà - tồn tại)\r\n- 집에서 자요 (Ngủ ở nhà - hành động)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "10",
+                        "title":  "에서 (2) - Xuất phát",
+                        "content":  "**Công thức:** N + 에서 + 출발/시작...\r\n\r\n**Ý nghĩa:** Từ đâu (xuất phát điểm, nguồn gốc)\r\n\r\n**Ví dụ:**\r\n- 서울에서 왔어요 (Đến từ Seoul)\r\n- 학교에서 출발해요 (Xuất phát từ trường)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "11",
+                        "title":  "(으)로 (1) - Phương hướng",
+                        "content":  "**Công thức:** N + (으)로 + 가다/오다...\r\n\r\n**Quy tắc:**\r\n- Có 받침: 으로 (학교으로 → 학교로 nếu 받침ㄹ)\r\n- Không 받침: 로 (집로)\r\n\r\n**Ý nghĩa:** Về phía (hướng chung chung)\r\n\r\n**So sánh với 에:**\r\n- 에: Điểm đến cụ thể\r\n- (으)로: Phương hướng\r\n\r\n---"
+                    },
+                    {
+                        "section":  "12",
+                        "title":  "(으)로 (2) - Công cụ/Phương tiện",
+                        "content":  "**Công thức:** N + (으)로\r\n\r\n**Ý nghĩa:** Bằng cái gì, dùng gì\r\n\r\n**Ví dụ:**\r\n- 펜으로 써요 (Viết bằng bút)\r\n- 버스로 가요 (Đi bằng xe buýt)\r\n- 한국어로 말해요 (Nói bằng tiếng Hàn)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "13",
+                        "title":  "의 (sở hữu)",
+                        "content":  "**Công thức:** N1 + 의 + N2\r\n\r\n**Ý nghĩa:** Của\r\n\r\n**Ví dụ:**  \r\n- 저의 책 (Sách của tôi)\r\n- 한국의 수도 (Thủ đô của Hàn Quốc)\r\n\r\n**Lưu ý:** Văn nói thường lược bỏ 의\r\n\r\n---"
+                    },
+                    {
+                        "section":  "14",
+                        "title":  "에게/한테 (cho người)",
+                        "content":  "**Công thức:** Người + 에게/한테\r\n\r\n**Ý nghĩa:** Cho ai (người/động vật)\r\n\r\n**Phân biệt:**\r\n- 에게: Trang trọng\r\n- 한테: Thân mật\r\n\r\n**Ví dụ:**\r\n- 친구에게 선물을 줬어요 (Cho bạn quà)\r\n- 강아지한테 밥을 줘요 (Cho chó ăn)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "15",
+                        "title":  "에게서/한테서 (từ người)",
+                        "content":  "**Công thức:** Người + 에게서/한테서  \r\n\r\n**Ý nghĩa:** Từ ai (nhận từ người nào)\r\n\r\n**Ví dụ:**\r\n- 친구에게서 선물을 받았어요 (Nhận quà từ bạn)\r\n- 엄마한테서 전화가 왔어요 (Điện thoại từ mẹ)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "16",
+                        "title":  "께 (cho người - kính ngữ)",
+                        "content":  "**Công thức:** Người (tôn kính) + 께\r\n\r\n**Ý nghĩa:** Cho người lớn tuổi/cấp trên\r\n\r\n**Ví dụ:**\r\n- 선생님께 여쭤봤어요 (Hỏi thầy)\r\n- 할머니께 전화했어요 (Gọi điện cho bà)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "17",
+                        "title":  "하고 (1) - Liệt kê",
+                        "content":  "**Công thức:** N1 + 하고 + N2\r\n\r\n**Ý nghĩa:** Và (liệt kê)\r\n\r\n**Ví dụ:** 사과하고 바나나 (Táo và chuối)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "18",
+                        "title":  "하고 (2) - Cùng với",
+                        "content":  "**Công thức:** N + 하고 + Động từ\r\n\r\n**Ý nghĩa:** Cùng với ai\r\n\r\n**Ví dụ:** 친구하고 영화를 봐요 (Xem phim với bạn)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "19-20",
+                        "title":  "와/과 (và - trang trọng)",
+                        "content":  "**Công thức:** N + 와/과\r\n\r\n**Quy tắc:**\r\n- Có 받침: 과\r\n- Không 받침: 와\r\n\r\n**Ý nghĩa:** Giống 하고 nhưng trang trọng hơn\r\n\r\n---"
+                    },
+                    {
+                        "section":  "21-22",
+                        "title":  "(이)랑 (và - thân mật)",
+                        "content":  "**Công thức:** N + (이)랑\r\n\r\n**Quy tắc:**\r\n- Có 받침: 이랑\r\n- Không 받침: 랑\r\n\r\n**Ý nghĩa:** Giống 하고 nhưng thân mật hơn\r\n\r\n---"
+                    },
+                    {
+                        "section":  "23",
+                        "title":  "부터 (từ - thời gian)",
+                        "content":  "**Công thức:** Time + 부터\r\n\r\n**Ý nghĩa:** Từ lúc nào (điểm bắt đầu)\r\n\r\n**Ví dụ:**\r\n- 9시부터 시작해요 (Bắt đầu từ 9 giờ)\r\n- 내일부터 방학이에요 (Từ ngày mai nghỉ hè)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "24",
+                        "title":  "까지 (đến)",
+                        "content":  "**Công thức:** N + 까지\r\n\r\n**Ý nghĩa:** Đến đâu/khi nào (điểm kết thúc)\r\n\r\n**Ví dụ:**\r\n- 학교까지 가요 (Đi đến trường)\r\n- 5시까지 일해요 (Làm việc đến 5 giờ)\r\n\r\n**Cụm thường gặp:** N1부터 N2까지 (Từ...đến...)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "25",
+                        "title":  "도 (cũng)",
+                        "content":  "**Công thức:** N + 도\r\n\r\n**Ý nghĩa:** Cũng\r\n\r\n**Ví dụ:** 저도 학생이에요 (Tôi cũng là học sinh)\r\n\r\n**Lưu ý:** 도 thay thế 이/가, 은/는, 을/를\r\n\r\n---"
+                    },
+                    {
+                        "section":  "26",
+                        "title":  "만 (chỉ)",
+                        "content":  "**Công thức:** N + 만\r\n\r\n**Ý nghĩa:** Chỉ, mỗi\r\n\r\n**Ví dụ:** 물만 마셔요 (Chỉ uống nước)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "27",
+                        "title":  "밖에 (chỉ - với phủ định)",
+                        "content":  "**Công thức:** N + 밖에 + Phủ định\r\n\r\n**Ý nghĩa:** Chỉ có (nhấn mạnh số lượng ít)\r\n\r\n**Ví dụ:**  \r\n- 천 원밖에 없어요 (Chỉ có 1000 won thôi)\r\n- 한 명밖에 안 왔어요 (Chỉ có 1 người đến)\r\n\r\n**So sánh với 만:**\r\n- 만: Trung tính\r\n- 밖에: Nhấn mạnh ít ỏi + bắt buộc phủ định\r\n\r\n---"
+                    },
+                    {
+                        "section":  "28-30",
+                        "title":  "(이)나 (hoặc/hay là)",
+                        "content":  "**Công thức:** N + (이)나\r\n\r\n**Quy tắc:**\r\n- Có 받침: 이나\r\n- Không 받침: 나\r\n\r\n**Ý nghĩa:**\r\n1. Hoặc (lựa chọn): 커피나 차 (Cà phê hoặc trà)\r\n2. Nhấn mạnh số lượng lớn: 세 시간이나 기다렸어요 (Đợi tới 3 tiếng)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "31",
+                        "title":  "처럼 (như là)",
+                        "content":  "**Công thức:** N + 처럼\r\n\r\n**Ý nghĩa:** Như, giống như\r\n\r\n**Ví dụ:** \r\n- 천사처럼 착해요 (Tốt bụng như thiên thần)\r\n- 언니처럼 되고 싶어요 (Muốn trở thành như chị)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "32",
+                        "title":  "마다 (mỗi)",
+                        "content":  "**Công thức:** N + 마다\r\n\r\n**Ý nghĩa:** Mỗi, từng\r\n\r\n**Ví dụ:**\r\n- 날마다 운동해요 (Tập thể dục mỗi ngày)\r\n- 사람마다 다르다 (Mỗi người khác nhau)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "33",
+                        "title":  "보다 (hơn)",
+                        "content":  "**Công thức:** N + 보다 + Tính từ\r\n\r\n**Ý nghĩa:** So sánh hơn\r\n\r\n**Ví dụ:** \r\n- 오늘이 어제보다 더워요 (Hôm nay nóng hơn hôm qua)\r\n- 저보다 키가 커요 (Cao hơn tôi)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "34-35",
+                        "title":  "Đuôi câu trần thuật/nghi vấn trang trọng",
+                        "content":  "**Trần thuật:** -(스)ㅂ니다\r\n- Có 받침: -습니다 (먹습니다)\r\n- Không 받침: -ㅂ니다 (갑니다)\r\n- Bất quy tắc ㄹ: Bỏ ㄹ + ㅂ니다 (삽니다)\r\n\r\n**Nghi vấn:** -(스)ㅂ니까?\r\n- Có 받침: -습니까? (먹습니까?)\r\n- Không 받침: -ㅂ니까? (갑니까?)\r\n\r\n**Phát âm:** ㅂ + ㄴ → [ㅁ] (합니다 → [함니다])\r\n\r\n---"
+                    },
+                    {
+                        "section":  "36",
+                        "title":  "Thì quá khứ -았/었/했",
+                        "content":  "**Công thức:**\r\n- Nguyên âm cuối ㅏ, ㅗ: -았어요 (가다 → 갔어요)\r\n- Nguyên âm khác: -었어요 (먹다 → 먹었어요)  \r\n- 하다: -했어요 (공부하다 → 공부했어요)\r\n\r\n**Rút gọn:**\r\n- 가 + 았어요 → 갔어요\r\n- 오 + 았어요 → 왔어요\r\n\r\n---"
+                    },
+                    {
+                        "section":  "37",
+                        "title":  "Phủ định dài -지 않다",
+                        "content":  "**Công thức:** V/A + 지 않다\r\n\r\n**Ví dụ:**\r\n- 먹다 → 먹지 않아요 (Không ăn)\r\n- 좋다 → 좋지 않아요 (Không tốt)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "38",
+                        "title":  "Phủ định ngắn 안",
+                        "content":  "**Công thức:** 안 + V/A\r\n\r\n**Ví dụ:**\r\n- 안 먹어요 (Không ăn)\r\n- 안 좋아요 (Không tốt)\r\n\r\n**Lưu ý:** \r\n- 명사 + 하다: 안 trước 하다(운동을 안 해요)\r\n- Không dùng với 이다 (phải dùng 아니다)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "39",
+                        "title":  "Không thể -지 못하다",
+                        "content":  "**Công thức:** V + 지 못하다\r\n\r\n**Ví dụ:**\r\n- 먹다 → 먹지 못해요 (Không thể ăn)\r\n- 가다 → 가지 못해요 (Không thể đi)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "40",
+                        "title":  "Không thể 못",
+                        "content":  "**Công thức:** 못 + V\r\n\r\n**Ví dụ:**\r\n- 못 먹어요 (Không thể ăn)\r\n- 못 가요 (Không thể đi)\r\n\r\n**So sánh phủ định:**\r\n- 안/지 않다: Không muốn làm\r\n- 못/지 못하다: Không có khả năng làm\r\n\r\n---"
+                    },
+                    {
+                        "section":  "41-44",
+                        "title":  "Kính ngữ -(으)시-",
+                        "content":  "**Công thức:** V/A + (으)시-\r\n\r\n**Quy tắc:**\r\n- Không 받침: -시- (가다 → 가시다 → 가세요)\r\n- Có 받침: -으시- (먹다 → 먹으시다 → 드세요)\r\n- Bất quy tắc ㄹ: Bỏ ㄹ + 시- (살다 → 사시다 → 사세요)\r\n\r\n**Động từ kính ngữ đặc biệt (chủ ngữ):**\r\n- 먹다/마시다 → 드시다\r\n- 자다 → 주무시다\r\n- 있다 (ở) → 계시다\r\n- 말하다 → 말씀하시다\r\n- 아프다 → 편찮으시다\r\n- 죽다 → 돌아가시다\r\n\r\n**Động từ kính ngữ tân ngữ:**\r\n- 주다 → 드리다 (Cho người lớn tuổi)\r\n- 묻다 → 여쭙다 (Hỏi người lớn tuổi)\r\n- 보다/만나다 → 뵙다 (Gặp người lớn tuổi)\r\n- 데리다 → 모시다 (Đưa/Đón người lớn tuổi)\r\n\r\n**Danh từ kính ngữ:**\r\n- 밥 → 진지\r\n- 말 → 말씀\r\n- 나이 → 연세\r\n- 이름 → 성함\r\n- 집 → 댁\r\n- 생일 → 생신\r\n\r\n**Trợ từ kính ngữ:**\r\n- 이/가 → 께서 (chủ ngữ)\r\n- 에게/한테 → 께 (tân ngữ)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "45",
+                        "title":  "Tổng hợp Kính ngữ",
+                        "content":  "**3 loại kính ngữ:**\r\n\r\n1. **Kính ngữ chủ ngữ:** Tôn kính người làm hành động\r\n   - Dùng: -(으)시-, động từ đặc biệt, 께서\r\n   - VD: 할머니께서 밥을 드세요\r\n\r\n2. **Kính ngữ tân ngữ:** Tôn kính người nhận hành động  \r\n   - Dùng: 드리다, 여쭙다, 뵙다, 모시다, 께\r\n   - VD: 할머니께 선물을 드렸어요\r\n\r\n3. **Kính ngữ đối tượng:** Tôn kính người nghe\r\n   - Dùng: Đuôi câu lịch sự (-요, -(스)ㅂ니다)\r\n   - VD: 안녕하세요\r\n\r\n**Quy tắc vàng:**\r\n- Người làm hành động (chủ ngữ) → 께서 + -(으)시-\r\n- Người nhận hành động (tân ngữ) → 께 + Động từ kính ngữ\r\n- Không chắc → Dùng -(으)시- (luôn an toàn)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "46-48",
+                        "title":  "-(으)세요 (Kính ngữ thân mật)",
+                        "content":  "**3 cách dùng:**\r\n\r\n1. **Trần thuật:** Nói về người lớn tuổi\r\n2. **Nghi vấn:** Hỏi người lớn tuổi\r\n3. **Mệnh lệnh:** Yêu cầu lịch sự\r\n\r\n**Quy tắc:**\r\n- Có 받침: -으세요 (읽으세요)\r\n- Không 받침: -세요 (가세요)\r\n- 받침 ㄹ: Bỏ ㄹ + 세요 (사세요)\r\n\r\n**Ví dụ:**\r\n- 할아버지께서 신문을 읽으세요 (Ông đọc báo)\r\n- 어디 가세요? (Đi đâu ạ?)\r\n- 여기 앉으세요 (Xin mời ngồi)\r\n\r\n**Động từ kính ngữ đặc biệt:**\r\n- 먹다/마시다 → 드세요\r\n- 자다 → 주무세요\r\n- 있다 → 계세요\r\n\r\n---"
+                    },
+                    {
+                        "section":  "49",
+                        "title":  "-(으)십시오 (Mệnh lệnh trang trọng)",
+                        "content":  "**Công thức:** V + (으)십시오\r\n\r\n**Quy tắc:**\r\n- Có 받침: -으십시오 (읽으십시오)\r\n- Không 받침: -십시오 (가십시오)\r\n- 받침 ㄹ: Bỏ ㄹ + 십시오 (사십시오)\r\n\r\n**Khi dùng:** Biển báo, thông báo công cộng, bài phát biểu trang trọng\r\n\r\n**Ví dụ:**\r\n- 어서 오십시오 (Xin mời vào)\r\n- 안녕히 가십시오 (Xin tạm biệt - người ở nói)\r\n- 안녕히 계십시오 (Xin tạm biệt - người đi nói)\r\n\r\n**Lưu ý:** Chỉ dùng với động từ, không dùng với tính từ\r\n\r\n---"
+                    },
+                    {
+                        "section":  "50",
+                        "title":  "-지 말다 (Cấm chỉ)",
+                        "content":  "**Công thức:** V + 지 말다\r\n\r\n**Quy tắc:** Không phụ thuộc 받침, luôn thêm -지 말다\r\n\r\n**Hình thái thường dùng:**\r\n- -지 마세요 (Lịch sự): 떠들지 마세요\r\n- -지 마십시오 (Trang trọng): 주차하지 마십시오\r\n- -지 마 (Thân mật): 만지지 마\r\n\r\n**Ví dụ:**\r\n- 창문을 열지 마세요 (Đừng mở cửa sổ)\r\n- 늦지 마세요 (Đừng muộn)\r\n\r\n**Lưu ý:** \r\n- Chỉ dùng với động từ\r\n- Không kết hợp với -았/었-\r\n\r\n---"
+                    },
+                    {
+                        "section":  "51",
+                        "title":  "-고1 (Và - liệt kê)",
+                        "content":  "**Công thức:** V/A-고, N이고/고\r\n\r\n**Quy tắc:** Không phụ thuộc 받침\r\n\r\n**Ý nghĩa:** Liệt kê các sự việc đồng đẳng (không theo thứ tự)\r\n\r\n**Ví dụ:**\r\n- 방이 넓고 깨끗해요 (Phòng rộng và sạch)\r\n- 나는 먹고 동생은 자요 (Tôi ăn và em ngủ)\r\n\r\n**Đặc điểm:**\r\n- Có thể đổi vị trí 2 vế\r\n- Chủ ngữ giống hoặc khác đều được\r\n- Thường chỉ thêm -었/겠 ở vế sau\r\n\r\n---"
+                    },
+                    {
+                        "section":  "52",
+                        "title":  "-고2 (Rồi - thứ tự)",
+                        "content":  "**Công thức:** V-고 (CHỈ động từ)\r\n\r\n**Ý nghĩa:** Làm A rồi làm B (theo thứ tự thời gian)\r\n\r\n**Ví dụ:**\r\n- 밥을 먹고 잤어요 (Ăn cơm rồi ngủ)\r\n- 샤워하고 나갔어요 (Tắm rồi ra ngoài)\r\n\r\n**So sánh với -고1:**\r\n- -고1: Đổi vị trí → nghĩa không đổi\r\n- -고2: Đổi vị trí → nghĩa thay đổi\r\n\r\n**Lưu ý:**\r\n- Chủ ngữ phải giống nhau\r\n- Chỉ thêm -었/겠 ở vế sau\r\n\r\n---"
+                    },
+                    {
+                        "section":  "53",
+                        "title":  "-고 싶다 (Muốn)",
+                        "content":  "**Công thức:** V-고 싶다 (CHỈ động từ)\r\n\r\n**Quy tắc:** Không phụ thuộc 받침\r\n\r\n**Ý nghĩa:** Tôi muốn làm gì\r\n\r\n**Ví dụ:**\r\n- 제주도에 가고 싶어요 (Tôi muốn đi Jeju)\r\n- 한국어를 배우고 싶어요 (Tôi muốn học tiếng Hàn)\r\n\r\n**Chủ ngữ:**\r\n- Câu trần thuật: Chỉ người nói (저는)\r\n- Câu hỏi: Chỉ người nghe (너도...?)\r\n\r\n**Lưu ý:** Không dùng với tính từ (trừ khi thêm -어지다)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "54",
+                        "title":  "-고 싶어 하다 (Người khác muốn)",
+                        "content":  "**Công thức:** V-고 싶어 하다\r\n\r\n**Ý nghĩa:** Người khác muốn làm gì\r\n\r\n**Ví dụ:**\r\n- 수지도 제주도에 가고 싶어 해요 (Suji cũng muốn đi Jeju)\r\n- 동생은 피아노를 배우고 싶어 해요 (Em muốn học piano)\r\n\r\n**So sánh với -고 싶다:**\r\n- -고 싶다: Người nói/người nghe\r\n- -고 싶어 하다: Người thứ 3\r\n\r\n---"
+                    },
+                    {
+                        "section":  "55",
+                        "title":  "-지만 (Nhưng)",
+                        "content":  "**Công thức:** V/A/이다/아니다 + 지만\r\n\r\n**Quy tắc:** Không phụ thuộc 받침\r\n\r\n**Ý nghĩa:** Nối hai ý đối lập\r\n\r\n**Ví dụ:**\r\n- 비싸지만 좋아요 (Đắt nhưng tốt)\r\n- 가고 싶지만 시간이 없어요 (Muốn đi nhưng không có thời gian)\r\n\r\n**Kết hợp thì:**\r\n- Hiện tại: -지만\r\n- Quá khứ: -었/았지만\r\n- Tương lai: -겠지만\r\n\r\n**Lưu ý:** Chủ ngữ giống hoặc khác đều được\r\n\r\n---"
+                    },
+                    {
+                        "section":  "56",
+                        "title":  "-(으)러 (Để - di chuyển)",
+                        "content":  "**Công thức:** V-(으)러 + động từ di chuyển\r\n\r\n**Quy tắc:**\r\n- Có 받침: -으러 (먹으러)\r\n- Không 받침: -러 (사러)\r\n- 받침 ㄹ: Bỏ ㄹ + 러 (살러)\r\n\r\n**Ý nghĩa:** Đi đâu để làm gì\r\n\r\n**Ví dụ:**\r\n- 밥 먹으러 가요 (Đi ăn cơm)\r\n- 책 빌리러 도서관에 갔어요 (Đến thư viện để mượn sách)\r\n\r\n**Lưu ý:**\r\n- Phía sau PHẢI là động từ di chuyển (가다/오다/다니다...)\r\n- Vế trước KHÔNG được là động từ di chuyển\r\n- Chủ ngữ phải giống nhau\r\n\r\n---"
+                    },
+                    {
+                        "section":  "57",
+                        "title":  "-(으)려고 (Để - mục đích)",
+                        "content":  "**Công thức:** V-(으)려고\r\n\r\n**Quy tắc:**\r\n- Có 받침: -으려고 (먹으려고)\r\n- Không 받침: -려고 (사려고)\r\n- 받침 ㄹ: Bỏ ㄹ + 려고 (살려고)\r\n\r\n**Ý nghĩa:** Làm gì với mục đích/ý định\r\n\r\n**Ví dụ:**\r\n- 살을 빼려고 운동해요 (Tập thể dục để giảm cân)\r\n- 친구를 만나려고 명동에 가요 (Đi Myeongdong để gặp bạn)\r\n\r\n**So sánh với -(으)러:**\r\n- -(으)러: Chỉ với động từ di chuyển\r\n- -(으)려고: Với mọi động từ (linh hoạt hơn)\r\n\r\n**Lưu ý:** Không kết hợp với -었/-겠\r\n\r\n---"
+                    },
+                    {
+                        "section":  "58",
+                        "title":  "-어서1 (Vì - lý do)",
+                        "content":  "**Công thức:** V/A/이다/아니다 + 어서\r\n\r\n**Quy tắc:**\r\n- Nguyên âm ㅏ/ㅗ: -아서 (좋아서, 가서)\r\n- Nguyên âm khác: -어서 (먹어서, 서서)\r\n- 하다: -해서 (공부해서)\r\n\r\n**Ý nghĩa:** Vì...nên...\r\n\r\n**Ví dụ:**\r\n- 좋아서 샀어요 (Vì thích nên mua)\r\n- 비가 와서 집에 있어요 (Vì mưa nên ở nhà)\r\n\r\n**Lưu ý:**\r\n- KHÔNG dùng với -었/-겠\r\n- KHÔNG dùng với mệnh lệnh/đề nghị\r\n\r\n---"
+                    },
+                    {
+                        "section":  "59",
+                        "title":  "-어서2 (Rồi - thứ tự)",
+                        "content":  "**Công thức:** V-어서 (CHỈ động từ)\r\n\r\n**Ý nghĩa:** Làm A rồi làm B (hai hành động liên quan chặt chẽ)\r\n\r\n**Ví dụ:**\r\n- 도서관에 가서 책을 빌렸어요 (Đi thư viện rồi mượn sách)\r\n- 과일을 씻어서 접시에 담았어요 (Rửa trái cây rồi bày đĩa)\r\n\r\n**So sánh với -어서1:**\r\n- Nếu dùng với tính từ/이다 → -어서1 (lý do)\r\n- Nếu dùng với động từ → Phân biệt theo ngữ cảnh\r\n\r\n**Lưu ý:** Hai hành động phải có quan hệ mật thiết\r\n\r\n---"
+                    },
+                    {
+                        "section":  "60",
+                        "title":  "-으니까1 (Vì - căn cứ chủ quan)",
+                        "content":  "**Công thức:** V/A/이다/아니다 + (으)니까\r\n\r\n**Quy tắc:**\r\n- Có 받침: -으니까 (좋으니까)\r\n- Không 받침: -니까 (가니까)\r\n- 받침 ㄹ: Bỏ ㄹ + 니까 (사니까)\r\n\r\n**Ý nghĩa:** Vì...nên... (chủ quan, căn cứ)\r\n\r\n**Ví dụ:**\r\n- 날씨가 좋으니까 산책합시다 (Vì thời tiết tốt nên đi dạo đi)\r\n- 바쁘니까 다음에 만나요 (Vì bận nên gặp lần sau)\r\n\r\n**So sánh với -어서1:**\r\n- -으니까: CÓ THỂ dùng với -었/-겠, mệnh lệnh/đề nghị\r\n- -어서1: KHÔNG dùng với -었/-겠, mệnh lệnh/đề nghị\r\n\r\n---"
+                    },
+                    {
+                        "section":  "61",
+                        "title":  "-으니까2 (Khi - phát hiện)",
+                        "content":  "**Công thức:** V-(으)니까 (CHỈ động từ)\r\n\r\n**Ý nghĩa:** Khi làm A thì phát hiện B\r\n\r\n**Ví dụ:**\r\n- 일어나니까 8시였어요 (Thức dậy thì đã 8 giờ)\r\n- 창문을 여니까 눈이 오고 있었어요 (Mở cửa sổ thì tuyết đang rơi)\r\n\r\n**So sánh với -으니까1:**\r\n- -으니까1: Lý do (V/A/이다/아니다)\r\n- -으니까2: Phát hiện (CHỈ động từ)\r\n\r\n**Lưu ý:** Chủ ngữ hai vế thường khác nhau\r\n\r\n---"
+                    },
+                    {
+                        "section":  "62",
+                        "title":  "-으면 (Nếu)",
+                        "content":  "**Công thức:** V/A/이다/아니다 + (으)면\r\n\r\n**Quy tắc:**\r\n- Có 받침: -으면 (좋으면)\r\n- Không 받침: -면 (가면)\r\n- 받침 ㄹ: KHÔNG bỏ + 면 (살면)\r\n\r\n**Ý nghĩa:** Nếu...thì...\r\n\r\n**Ví dụ:**\r\n- 날씨가 좋으면 산책할 거예요 (Nếu thời tiết tốt thì sẽ đi dạo)\r\n- 피곤하면 쉬세요 (Nếu mệt thì nghỉ)\r\n\r\n**2 cách dùng:**\r\n1. Điều kiện: Điều kiện để sự việc xảy ra\r\n2. Giả định: Điều chưa chắc chắn\r\n\r\n**Lưu ý:** 받침 ㄹ KHÔNG bỏ (khác -(으)니까, -어서)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "63",
+                        "title":  "-으면서 (Vừa...vừa)",
+                        "content":  "**Công thức:** V/A/이다/아니다 + (으)면서\r\n\r\n**Quy tắc:**\r\n- Có 받침: -으면서 (읽으면서)\r\n- Không 받침: -면서 (가면서)\r\n- 받침 ㄹ: KHÔNG bỏ + 면서 (살면서)\r\n\r\n**Ý nghĩa:** Vừa...vừa... (đồng thời)\r\n\r\n**Ví dụ:**\r\n- 음악을 들으면서 공부해요 (Vừa nghe nhạc vừa học)\r\n- 예쁘면서 똑똑해요 (Vừa đẹp vừa thông minh)\r\n\r\n**2 trường hợp:**\r\n1. Với động từ: 2 hành động đồng thời\r\n2. Với tính từ/이다: 2 trạng thái đồng thời\r\n\r\n**Lưu ý:** Chủ ngữ phải giống nhau\r\n\r\n---"
+                    },
+                    {
+                        "section":  "64",
+                        "title":  "-을 수 있다1 (Có thể - năng lực)",
+                        "content":  "**Công thức:** V-을 수 있다 (CHỈ động từ)\r\n\r\n**Quy tắc:**\r\n- Có 받침: -을 수 있다 (먹을 수 있다)\r\n- Không 받침: -ㄹ 수 있다 (갈 수 있다)\r\n- 받침 ㄹ: Bỏ ㄹ + ㄹ 수 있다 (살 수 있다)\r\n\r\n**Ý nghĩa:** Có khả năng làm gì\r\n\r\n**Ví dụ:**\r\n- 운전할 수 있어요 (Có thể lái xe)\r\n- 한국어를 읽을 수 있어요 (Có thể đọc tiếng Hàn)\r\n\r\n**Phủ định:** -을 수 없다 (KHÔNG dùng 안/지 않다)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "65",
+                        "title":  "-을 수 있다2 (Có thể - khả năng)",
+                        "content":  "**Công thức:** V/A/이다/아니다 + 을 수 있다\r\n\r\n**Ý nghĩa:** Có khả năng xảy ra, tình huống có thể xảy ra\r\n\r\n**Ví dụ:**\r\n- 비가 올 수 있어요 (Có thể mưa)\r\n- 어려울 수 있어요 (Có thể khó)\r\n\r\n**So sánh với -을 수 있다1:**\r\n- -을 수 있다1: Năng lực (CHỈ động từ)\r\n- -을 수 있다2: Khả năng (V/A/이다/아니다)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "66",
+                        "title":  "-을 수밖에 없다 (Không còn cách nào khác)",
+                        "content":  "**Công thức:** V/A/이다/아니다 + 을 수밖에 없다\r\n\r\n**Quy tắc:** Giống -을 수 있다\r\n\r\n**Ý nghĩa:** Không còn cách nào khác, phải, đương nhiên\r\n\r\n**Ví dụ:**\r\n- 택시를 탈 수밖에 없어요 (Không còn cách nào ngoài đi taxi)\r\n- 키가 클 수밖에 없어요 (Đương nhiên phải cao)\r\n\r\n**2 cách dùng:**\r\n1. Không còn lựa chọn khác\r\n2. Kết quả đương nhiên/tất yếu\r\n\r\n---"
+                    },
+                    {
+                        "section":  "67",
+                        "title":  "-어 보다 (Thử)",
+                        "content":  "**Công thức:** V-어 보다 (CHỈ động từ)\r\n\r\n**Quy tắc:**\r\n- Nguyên âm ㅏ/ㅗ: -아 보다 (먹어 보다, 가 보다)\r\n- Nguyên âm khác: -어 보다 (입어 보다)\r\n- 하다: -해 보다 (여행해 보다)\r\n\r\n**Ý nghĩa:** Thử làm gì\r\n\r\n**Ví dụ:**\r\n- 이 옷 입어 보세요 (Thử mặc áo này xem)\r\n- 한국 음식 먹어 봤어요? (Đã thử ăn đồ Hàn chưa?)\r\n- 제주도에 가 보고 싶어요 (Muốn thử đi Jeju)\r\n\r\n**Lưu ý:** Chỉ dùng với động từ, không dùng với tính từ\r\n\r\n---"
+                    },
+                    {
+                        "section":  "68",
+                        "title":  "V-은/는 적이 있다 (Đã từng)",
+                        "content":  "**Công thức:** V-은/는 적이 있다/없다\r\n\r\n**Quy tắc:**\r\n- Quá khứ: -은/ㄴ 적이 있다 (가다 -\u003e 간 적이 있다)\r\n- Hiện tại/future (động từ có 받침): -는 적이 있다 (먹다 -\u003e 먹는 적이 있다, ít dùng hơn)\r\n- Mẫu này thường dùng để nói kinh nghiệm đã từng làm trong quá khứ\r\n\r\n**Ý nghĩa:** Đã từng làm gì / Chưa từng làm gì\r\n\r\n**Ví dụ:**\r\n- 한국에 간 적이 있어요 (Tôi đã từng đi Hàn Quốc)\r\n- 김치를 먹어 본 적이 없어요 (Tôi chưa từng thử kimchi)\r\n\r\n**Lưu ý:** Thực tế giao tiếp thường gặp nhất là dạng quá khứ \"-은/ㄴ 적이 있다/없다\"\r\n\r\n---"
+                    },
+                    {
+                        "section":  "69",
+                        "title":  "V-아/어 주다 (Làm giúp)",
+                        "content":  "**Công thức:** V-아/어 주다\r\n\r\n**Quy tắc:**\r\n- Nguyên âm ㅏ/ㅗ: -아 주다 (도와주다)\r\n- Nguyên âm khác: -어 주다 (읽어 주다)\r\n- 하다: -해 주다 (설명해 주다)\r\n\r\n**Ý nghĩa:** Làm hành động đó cho người khác (giúp người khác)\r\n\r\n**Ví dụ:**\r\n- 문을 열어 주세요 (Làm ơn mở cửa giúp)\r\n- 친구가 숙제를 도와줬어요 (Bạn đã giúp tôi làm bài tập)\r\n\r\n**Lưu ý:** Dùng kính ngữ khi người nhận hành động là người lớn tuổi: V-아/어 드리다\r\n\r\n---"
+                    },
+                    {
+                        "section":  "70",
+                        "title":  "-아/어야 되다 (Phải)",
+                        "content":  "**Công thức:** V/A + 아/어야 되다(하다)\r\n\r\n**Quy tắc:**\r\n- Nguyên âm ㅏ/ㅗ: -아야 되다 (가야 되다)\r\n- Nguyên âm khác: -어야 되다 (먹어야 되다)\r\n- 하다: -해야 되다\r\n\r\n**Ý nghĩa:** Phải làm gì, bắt buộc\r\n\r\n**Ví dụ:**\r\n- 내일 일찍 일어나야 돼요 (Ngày mai phải dậy sớm)\r\n- 약을 먹어야 돼요 (Phải uống thuốc)\r\n\r\n**Lưu ý:** \"-아/어야 하다\" và \"-아/어야 되다\" đều dùng được, nghĩa gần như nhau\r\n\r\n---"
+                    },
+                    {
+                        "section":  "71",
+                        "title":  "-아/어도 되다 (Được phép)",
+                        "content":  "**Công thức:** V + 아/어도 되다\r\n\r\n**Quy tắc:**\r\n- Nguyên âm ㅏ/ㅗ: -아도 되다 (가도 되다)\r\n- Nguyên âm khác: -어도 되다 (먹어도 되다)\r\n- 하다: -해도 되다\r\n\r\n**Ý nghĩa:** Được phép làm gì, có thể làm gì (permission)\r\n\r\n**Ví dụ:**\r\n- 여기 앉아도 돼요? (Tôi ngồi đây được không?)\r\n- 지금 집에 가도 돼요 (Bây giờ về nhà cũng được)\r\n\r\n**Lưu ý:** Phủ định permission: V-으면 안 되다 (không được phép)\r\n\r\n---"
+                    },
+                    {
+                        "section":  "72",
+                        "title":  "-고 있다 (Đang / Tình trạng tiếp diễn)",
+                        "content":  "**Công thức:** V-고 있다\r\n\r\n**Ý nghĩa:**\r\n1. Đang làm gì (hành động đang diễn ra)\r\n2. Trạng thái đang duy trì (mặc, đeo, sống...)\r\n\r\n**Ví dụ:**\r\n- 지금 공부하고 있어요 (Bây giờ đang học)\r\n- 안경을 쓰고 있어요 (Đang đeo kính)\r\n\r\n**Lưu ý:**\r\n- Chủ yếu dùng với động từ\r\n- Một số động từ trạng thái trong tiếng Việt có thể dịch tự nhiên hơn khi không thêm \"đang\"\r\n\r\n---"
+                    },
+                    {
+                        "section":  "73",
+                        "title":  "-아/어 있다 (Trạng thái sau hành động)",
+                        "content":  "**Công thức:** V-아/어 있다\r\n\r\n**Ý nghĩa:** Trạng thái kết quả còn duy trì sau khi hành động đã hoàn tất\r\n\r\n**Ví dụ:**\r\n- 문이 열려 있어요 (Cửa đang mở)\r\n- 불이 켜져 있어요 (Đèn đang bật)\r\n\r\n**So sánh với -고 있다:**\r\n- -고 있다: Nhấn mạnh quá trình đang diễn ra\r\n- -아/어 있다: Nhấn mạnh trạng thái kết quả hiện tại\r\n\r\n**Lưu ý:** Thường dùng với động từ nội động từ/trạng thái kết quả như 열리다, 닫히다, 켜지다, 꺼지다\r\n\r\n---"
+                    }
+                ]
+}

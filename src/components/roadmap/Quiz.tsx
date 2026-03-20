@@ -248,8 +248,10 @@ export default function Quiz({ sessionId = 20, quizSet = 'default' }: QuizProps)
             isCorrect = Array.isArray(correct) ? correct.includes(selectedOption ?? '') : selectedOption === correct;
         } else {
             const normalizedInput = textInput.trim().toLowerCase();
-            const answerStr = Array.isArray(correct) ? correct[0] : correct;
-            if (answerStr && normalizedInput === answerStr.toLowerCase()) isCorrect = true;
+            const validAnswers = (Array.isArray(correct) ? correct : [correct])
+                .map(answer => answer.trim().toLowerCase())
+                .filter(Boolean);
+            isCorrect = validAnswers.includes(normalizedInput);
         }
 
         updateCurrentAnswer({

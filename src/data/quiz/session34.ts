@@ -16,43 +16,43 @@ export const quizQuestions: Question[] = [
         id: 1,
         type: 'multiple-choice',
         grammarPoint: '-고 있다',
-        question: '지금 민수는 물을 마셔요. Cau tu nhien nhat la gi?',
-        options: ['지금 민수는 물을 마시고 있어요.', '지금 민수는 물을 마셔 있어요.', '지금 민수는 물을 마시어 있어요.', '지금 민수는 물을 마시어요.'],
-        correctAnswer: '지금 민수는 물을 마시고 있어요.',
+        question: 'Chọn câu tự nhiên nhất cho nghĩa: "Bây giờ Minsu đang uống nước."',
+        options: ['지금 민수는 물을 마시고 있어요. (Bây giờ Minsu đang uống nước.)', '지금 민수는 물을 마셔 있어요. (Bây giờ Minsu uống nước.)', '지금 민수는 물을 마시어 있어요. (Bây giờ Minsu đang uống nước.)', '지금 민수는 물을 마시어요. (Bây giờ Minsu uống nước.)'],
+        correctAnswer: '지금 민수는 물을 마시고 있어요. (Bây giờ Minsu đang uống nước.)',
         explanation: 'Hanh dong dang xay ra ngay luc noi thi dung -고 있다.'
     },
     {
         id: 2,
         type: 'multiple-choice',
-        grammarPoint: 'Meaning 1 vs Meaning 2 (-고 있다)',
-        question: '수지는 지금 밥을 먹고 있어요. Cau nay thuoc nghia nao?',
-        options: ['Nghia 1: hanh dong dang dien ra', 'Nghia 2: trang thai ket qua duy tri', 'Nghia 3: menh lenh', 'Nghia 4: qua khu'],
-        correctAnswer: 'Nghia 1: hanh dong dang dien ra',
-        explanation: 'Co 지금 va dong tu hanh dong nen la nghia 1.'
+        grammarPoint: 'Nghĩa 1 và Nghĩa 2 (-고 있다)',
+        question: 'Câu "Suji bây giờ đang ăn cơm" thuộc nghĩa nào?',
+        options: ['Nghĩa 1: hành động đang diễn ra', 'Nghĩa 2: trạng thái kết quả duy trì', 'Nghĩa 3: mệnh lệnh', 'Nghĩa 4: quá khứ'],
+        correctAnswer: 'Nghĩa 1: hành động đang diễn ra',
+        explanation: 'Dịch: "Suji bây giờ đang ăn cơm." Có 지금 và động từ hành động nên là Nghĩa 1.'
     },
     {
         id: 3,
         type: 'multiple-choice',
-        grammarPoint: 'Meaning 1 vs Meaning 2 (-고 있다)',
-        question: '수지는 모자를 쓰고 있어요. Cau nay thuoc nghia nao?',
-        options: ['Nghia 1: hanh dong dang dien ra', 'Nghia 2: trang thai ket qua duy tri', 'Nghia 3: phu dinh', 'Nghia 4: de nghi'],
-        correctAnswer: 'Nghia 2: trang thai ket qua duy tri',
-        explanation: 'Voi 쓰다, cau nay thuong hieu la trang thai dang doi mu.'
+        grammarPoint: 'Nghĩa 1 và Nghĩa 2 (-고 있다)',
+        question: 'Câu trong ngoặc (저는 그 사람을 믿고 있어요.) thuộc nghĩa tiếng Việt nào?',
+        options: ['Nghĩa 1: hành động đang diễn ra', 'Nghĩa 2: trạng thái kết quả duy trì', 'Nghĩa 3: phủ định', 'Nghĩa 4: đề nghị'],
+        correctAnswer: 'Nghĩa 2: trạng thái kết quả duy trì',
+        explanation: 'Dịch: "Tôi đang tin người đó." Với 믿다, câu này thể hiện trạng thái đang tin (không phải hành động đang diễn ra trực tiếp).'
     },
     {
         id: 4,
         type: 'multiple-choice',
-        grammarPoint: 'Meaning 1 vs Meaning 2 (-고 있다)',
-        question: '저는 그 비밀번호를 알고 있어요. Cau nay thuoc nghia nao?',
-        options: ['Nghia 1: hanh dong dang dien ra', 'Nghia 2: trang thai ket qua duy tri', 'Nghia 3: qua khu', 'Nghia 4: menh lenh'],
-        correctAnswer: 'Nghia 2: trang thai ket qua duy tri',
-        explanation: '알다 + -고 있다 dien ta trang thai dang biet.'
+        grammarPoint: 'Nghĩa 1 và Nghĩa 2 (-고 있다)',
+        question: 'Câu "저는 그 비밀번호를 알고 있어요." thuộc nghĩa nào?',
+        options: ['Nghĩa 1: hành động đang diễn ra', 'Nghĩa 2: trạng thái kết quả duy trì', 'Nghĩa 3: quá khứ', 'Nghĩa 4: mệnh lệnh'],
+        correctAnswer: 'Nghĩa 2: trạng thái kết quả duy trì',
+        explanation: 'Dịch: "Tôi biết mật khẩu đó." 알다 + -고 있다 diễn tả trạng thái đang biết, nên là Nghĩa 2.'
     },
     {
         id: 5,
         type: 'fill-input',
         grammarPoint: '-고 있다',
-        question: '가: 지금 뭐 해요? 나: 책을 ____. (읽다)',
+        question: '가: 지금 뭐 해요?\n나: 책을 ____. (읽다)',
         correctAnswer: '읽고 있어요',
         explanation: '읽다 -> 읽고 있어요.'
     },
@@ -60,7 +60,7 @@ export const quizQuestions: Question[] = [
         id: 6,
         type: 'fill-input',
         grammarPoint: '-고 있다',
-        question: '가: 왜 전화를 안 받았어요? 나: 지갑을 ____. (찾다)',
+        question: '가: 왜 전화를 안 받았어요?\n나: 지갑을 ____. (찾다)',
         correctAnswer: '찾고 있어요',
         explanation: '찾다 -> 찾고 있어요.'
     },
@@ -75,62 +75,62 @@ export const quizQuestions: Question[] = [
     {
         id: 8,
         type: 'multiple-choice',
-        grammarPoint: '-고 있다 (Phu dinh)',
-        question: '지금 비가 안 와요. Chon dang viet dung.',
-        options: ['지금 비가 오고 있지 않아요.', '지금 비가 오고 없어요.', '지금 비가 오고 안 있어요.', '지금 비가 오어 있지 않아요.'],
+        grammarPoint: '-고 있다 (Phủ định)',
+        question: 'Chọn cách viết đúng cho nghĩa: "Bây giờ trời đang không mưa."',
+        options: ['지금 비가 오고 있지 않아요.', '지금 비가 오고 없어요.', '지금 비가 오고 안 있어요.', '지금 비가 와 있지 않아요.'],
         correctAnswer: '지금 비가 오고 있지 않아요.',
-        explanation: 'Phu dinh dung: -고 있지 않다.'
+        explanation: '### ✅ Đáp án đúng\n\n**지금 비가 오고 있지 않아요.**\n\n- Dịch tự nhiên: **Bây giờ trời không mưa / không đang mưa.**\n- Mẫu phủ định đúng của **-고 있다** là: **-고 있지 않다**.\n\n### 🧠 Ghi nhớ nhanh\n\n- **오고 있다**: đang mưa\n- **오고 있지 않아요**: không đang mưa\n\n### ❌ Vì sao các đáp án khác sai\n\n- **지금 비가 오고 없어요.**: sai cấu trúc phủ định, không dùng **없어요** sau **-고** kiểu này.\n- **지금 비가 오고 안 있어요.**: sai vì không đặt **안** trực tiếp trước **있어요** trong mẫu này.\n- **지금 비가 와 있지 않아요.**: nghiêng về sắc thái trạng thái kết quả, không phù hợp ý "đang mưa" trong ngữ cảnh câu này.'
     },
     {
         id: 9,
         type: 'multiple-choice',
         grammarPoint: '-고 계시다',
-        question: 'Kinh ngu cua cau nay: 할아버지께서 신문을 ____.',
-        options: ['보고 계세요', '보고 있으세요', '보시고 있어요', '보고 있지요'],
-        correctAnswer: '보고 계세요',
-        explanation: 'Khi nang cao chu the, dung -고 계시다.'
+        question: 'Chọn câu kính ngữ đúng: "Ông đang đọc báo."',
+        options: ['할아버지께서 신문을 보고 계세요.', '할아버지는 신문을 보고 있어요.', '할아버지께서 신문이 보고 계세요.', '할아버지께서 신문을 보고 있으세요.'],
+        correctAnswer: '할아버지께서 신문을 보고 계세요.',
+        explanation: '### ✅ Đáp án đúng\n\n**할아버지께서 신문을 보고 계세요.**\n\n- Dịch: **Ông đang đọc báo.**\n- Khi nâng chủ ngữ (ông/bà/thầy/cô...), ưu tiên dùng **께서** + mẫu kính ngữ **-고 계시다**.\n\n### 🧠 Ghi nhớ nhanh\n\n- Trung tính: **보고 있어요**\n- Kính ngữ (nâng chủ ngữ): **보고 계세요**\n\n### ❌ Vì sao các đáp án khác sai\n\n- **할아버지는 신문을 보고 있어요.**: dùng **은/는** và **-고 있어요** (không sai ngữ pháp), nhưng **không phải dạng kính ngữ chuẩn** mà đề yêu cầu.\n- **할아버지께서 신문이 보고 계세요.**: sai trợ từ tân ngữ; ở đây phải là **신문을**.\n- **할아버지께서 신문을 보고 있으세요.**: có thể gặp trong hội thoại, nhưng trong bài này chọn dạng chuẩn dạy học là **보고 계세요**.'
     },
     {
         id: 10,
         type: 'multiple-choice',
         grammarPoint: '-고 있었다',
-        question: '어제 도서관에서 나왔을 때 눈이 ____.',
-        options: ['내리고 있었어요', '내렸고 있었어요', '내리었어요', '내리겠어요'],
-        correctAnswer: '내리고 있었어요',
-        explanation: 'Qua khu tien hanh: -고 있었다.'
+        question: '어제 집에 왔을 때 동생이 ____.',
+        options: ['자고 있었어요', '잤고 있었어요', '자고 있어요', '자겠어요'],
+        correctAnswer: '자고 있었어요',
+        explanation: '### ✅ Đáp án đúng\n\n**자고 있었어요 (lúc đó đang ngủ)**\n\n- Dịch: **Lúc đó em đang ngủ.**\n- Bối cảnh quá khứ: **어제 ... 왔을 때** (hôm qua, khi tôi về nhà).\n- Vì vậy cần dùng **-고 있었다** để diễn tả hành động đang diễn ra tại một thời điểm trong quá khứ.\n\n### 🧠 Ghi nhớ nhanh\n\n- Hiện tại tiếp diễn: **-고 있어요**\n- Quá khứ tiếp diễn: **-고 있었어요**\n\n### ❌ Vì sao các đáp án khác sai\n\n- **잤고 있었어요**: sai cấu trúc, không ghép quá khứ kiểu này với **-고 있었어요**.\n- **자고 있어요**: là hiện tại tiếp diễn, không khớp ngữ cảnh quá khứ.\n- **자겠어요**: diễn tả ý đoán/ý chí tương lai, không phù hợp ngữ cảnh câu.'
     },
     {
         id: 11,
         type: 'fill-input',
-        grammarPoint: 'True/False + Sua loi (-고 있다)',
-        question: 'Cau sau sai. Hay viet lai cho dung: 날씨가 춥고 있어요.',
-        correctAnswer: '날씨가 추워요.',
-        explanation: '-고 있다 khong dung voi tinh tu trong cau nay.'
+        grammarPoint: 'Đúng/Sai + sửa lỗi (-고 있다)',
+        question: 'Câu sau sai. Hãy viết lại cho đúng:\n날씨가 춥고 있어요.',
+        correctAnswer: ['날씨가 추워요.', '날씨가 추워요'],
+        explanation: '### ✅ Câu đúng\n\n**날씨가 추워요.**\n\n### 🧠 Vì sao sai\n\n- **춥다** là tính từ (trạng thái), không dùng với mẫu tiến hành **-고 있다** trong câu này.\n- Vì vậy không nói **춥고 있어요**.'
     },
     {
         id: 12,
         type: 'fill-input',
-        grammarPoint: 'True/False + Sua loi (-고 있다)',
-        question: 'Cau sau sai. Hay viet lai cho dung: 할아버지께서 신문을 보고 있으세요.',
-        correctAnswer: '할아버지께서 신문을 보고 계세요.',
-        explanation: 'Kinh ngu dung la -고 계시다.'
+        grammarPoint: 'Đúng/Sai + sửa lỗi (-고 있다)',
+        question: 'Câu sau sai. Hãy viết lại cho đúng:\n할아버지께서 신문을 보고 있으세요.',
+        correctAnswer: ['할아버지께서 신문을 보고 계세요.', '할아버지께서 신문을 보고 계세요'],
+        explanation: '### ✅ Câu đúng\n\n**할아버지께서 신문을 보고 계세요.**\n\n### 🧠 Vì sao sai\n\n- Với chủ ngữ cần kính ngữ, dạng chuẩn là **-고 계시다**.\n- Vì vậy đổi **보고 있으세요** thành **보고 계세요** trong bài này.'
     },
     {
         id: 13,
         type: 'fill-input',
-        grammarPoint: 'True/False + Sua loi (-고 있다)',
-        question: 'Cau sau sai. Hay viet lai cho dung: 눈이 내렸고 있었어요.',
-        correctAnswer: '눈이 내리고 있었어요.',
-        explanation: 'Qua khu dat sau 있: -고 있었다.'
+        grammarPoint: 'Đúng/Sai + sửa lỗi (-고 있다)',
+        question: 'Câu sau sai. Hãy viết lại cho đúng:\n눈이 내렸고 있었어요.',
+        correctAnswer: ['눈이 내리고 있었어요.', '눈이 내리고 있었어요'],
+        explanation: '### ✅ Câu đúng\n\n**눈이 내리고 있었어요.**\n\n### 🧠 Vì sao sai\n\n- Quá khứ tiếp diễn dùng mẫu **-고 있었다**.\n- Không ghép kiểu **내렸고 있었어요**; dạng đúng là **내리고 있었어요**.'
     },
     {
         id: 14,
         type: 'multiple-choice',
         grammarPoint: '-고 있다',
-        question: '수지는 빨간 모자를 ____.',
-        options: ['쓰고 있어요.', '써 있어요.', '쓰어 있어요.', '썼어요.'],
+        question: 'Chọn cách viết đúng cho nghĩa: "Suji đang đội mũ đỏ."',
+        options: ['쓰고 있어요.', '써 있어요.', '쓰고 있었어요.', '썼어요.'],
         correctAnswer: '쓰고 있어요.',
-        explanation: 'Voi 쓰다, dang tu nhien de mo ta trang thai la -고 있다.'
+        explanation: '### ✅ Đáp án đúng\n\n**쓰고 있어요.**\n\n- Dịch: **(Suji) đang đội mũ đỏ.**\n- Với ngữ cảnh hiện tại đang diễn ra, dùng mẫu **-고 있다**.\n\n### ❌ Vì sao các đáp án khác sai\n\n- **써 있어요.**: không dùng mẫu này trong câu mục tiêu của bài.\n- **쓰고 있었어요.**: là quá khứ tiếp diễn, không khớp nghĩa hiện tại.\n- **썼어요.**: là quá khứ đơn (đã đội), không phải đang đội.'
     },
     {
         id: 15,
@@ -146,54 +146,54 @@ export const quizQuestions: Question[] = [
         id: 16,
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다',
-        question: '지수는 의자에 ____.',
-        options: ['앉아 있어요.', '앉고 있어요.', '앉아요.', '앉었어요.'],
+        question: '지수 씨는 의자에 ____.',
+        options: ['앉아 있어요.', '앉고 있어요.', '앉아요.', '앉았어요.'],
         correctAnswer: '앉아 있어요.',
-        explanation: '앉다 -> 앉아 있다 de ta trang thai ngoi.'
+        explanation: '### ✅ Đáp án đúng\n\n**지수 씨는 의자에 앉아 있어요.**\n\n- Dịch: **Jisu đang ngồi trên ghế.**\n- Với tư thế đang duy trì, dùng mẫu **-아/어 있다**.\n\n### 🧠 Ghi nhớ nhanh\n\n- Tư thế hiện tại: **앉아 있어요** (đang ngồi)\n- Tư thế quá khứ: **앉아 있었어요** (đã ngồi)\n\n### ❌ Vì sao các đáp án khác sai\n\n- **앉고 있어요.**: không dùng mẫu này cho nghĩa tư thế duy trì trong bài.\n- **앉아요.**: hiện tại đơn, không nhấn trạng thái đang duy trì.\n- **앉았어요.**: quá khứ đơn (đã ngồi), không đúng ý câu.'
     },
     {
         id: 17,
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다',
-        question: '선생님은 교실 앞에 ____.',
-        options: ['서 있어요.', '서고 있어요.', '서어요.', '섰어요.'],
-        correctAnswer: '서 있어요.',
-        explanation: '서 있다 dien ta trang thai dang dung.'
+        question: 'Chọn cách viết đúng cho nghĩa: "Thầy giáo đang đứng trước lớp học."',
+        options: ['선생님은 교실 앞에 서 있어요.', '선생님은 교실 앞에 서고 있어요.', '선생님은 교실 앞에 서요.', '선생님은 교실 앞에 섰어요.'],
+        correctAnswer: '선생님은 교실 앞에 서 있어요.',
+        explanation: '### ✅ Đáp án đúng\n\n**선생님은 교실 앞에 서 있어요.**\n\n- Dịch: **Thầy giáo đang đứng trước lớp học.**\n- Với tư thế đứng đang duy trì, dùng mẫu **-아/어 있다**.\n\n### ❌ Vì sao các đáp án khác sai\n\n- **선생님은 교실 앞에 서고 있어요.**: không dùng mẫu **-고 있다** cho nghĩa tư thế duy trì.\n- **선생님은 교실 앞에 서요.**: hiện tại đơn, không nhấn trạng thái đang duy trì.\n- **선생님은 교실 앞에 섰어요.**: quá khứ đơn (đã đứng), không đúng ý câu.'
     },
     {
         id: 18,
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다',
-        question: '아기는 침대에 ____.',
-        options: ['누워 있어요.', '눕고 있어요.', '누워요.', '누웠어요.'],
-        correctAnswer: '누워 있어요.',
-        explanation: '누워 있다 dien ta trang thai dang nam.'
+        question: 'Chọn cách viết đúng cho nghĩa: "Em bé đang nằm trên giường."',
+        options: ['아기는 침대에 누워 있어요.', '아기는 침대에 눕고 있어요.', '아기는 침대에 누워요.', '아기는 침대에 누웠어요.'],
+        correctAnswer: '아기는 침대에 누워 있어요.',
+        explanation: '### ✅ Đáp án đúng\n\n**아기는 침대에 누워 있어요.**\n\n- Dịch: **Em bé đang nằm trên giường.**\n- Với tư thế đang duy trì (nằm), dùng mẫu **-아/어 있다**.\n\n### ❌ Vì sao các đáp án khác sai\n\n- **아기는 침대에 눕고 있어요.**: không dùng mẫu **-고 있다** cho nghĩa tư thế duy trì trong bài này.\n- **아기는 침대에 누워요.**: hiện tại đơn, không nhấn trạng thái đang duy trì.\n- **아기는 침대에 누웠어요.**: quá khứ đơn (đã nằm), không đúng ý câu.'
     },
     {
         id: 19,
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다',
         question: '교실에 학생이 두 명만 ____.',
-        options: ['남아 있어요.', '남고 있어요.', '남아요.', '남았어요.'],
-        correctAnswer: '남아 있어요.',
+        options: ['남아 있어요. (đang còn lại)', '남고 있어요. (đang còn - sai mẫu)', '남아요. (còn lại)', '남았어요. (đã còn lại)'],
+        correctAnswer: '남아 있어요. (đang còn lại)',
         explanation: '남다 -> 남아 있다: con o lai.'
     },
     {
         id: 20,
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다',
-        question: '동생은 지금 집에 ____.',
-        options: ['가 있어요.', '가고 있어요.', '가요.', '갔어요.'],
-        correctAnswer: '가 있어요.',
-        explanation: 'Trong bai nay, 가 있다 duoc dung de nhan manh trang thai dang o nha.'
+        question: 'Chọn cách viết đúng cho nghĩa: "Em trai tôi đã sang Hàn Quốc (và hiện đang ở đó)."',
+        options: ['동생은 지금 한국에 가 있어요.', '동생은 지금 한국에 가고 있어요.', '동생은 지금 한국에 가요.', '동생은 지금 한국에 갔어요.'],
+        correctAnswer: '동생은 지금 한국에 가 있어요.',
+        explanation: '### ✅ Đáp án đúng\n\n**동생은 지금 한국에 가 있어요.**\n\n- Dịch: **Em trai tôi đã sang Hàn Quốc và hiện đang ở đó.**\n- Với nghĩa "đã đi đến nơi đó và đang ở đó", dùng mẫu **가 있다** (thuộc nhóm **-아/어 있다**).\n\n### ❌ Vì sao các đáp án khác sai\n\n- **동생은 지금 한국에 가고 있어요.**: nghĩa là **đang trên đường đi sang Hàn**, không phải đã ở đó.\n- **동생은 지금 한국에 가요.**: hiện tại đơn/thói quen, không thể hiện trạng thái đã đến và đang ở.\n- **동생은 지금 한국에 갔어요.**: chỉ nói đã đi, không nhấn trạng thái hiện đang ở đó.'
     },
     {
         id: 21,
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다',
         question: '친구는 벌써 학교에 ____.',
-        options: ['와 있어요.', '오고 있어요.', '와요.', '왔어요.'],
-        correctAnswer: '와 있어요.',
+        options: ['와 있어요. (đã đến và đang ở đó)', '오고 있어요. (đang đến)', '와요. (đến)', '왔어요. (đã đến)'],
+        correctAnswer: '와 있어요. (đã đến và đang ở đó)',
         explanation: '와 있다 nhan manh trang thai da den va dang o do.'
     },
     {
@@ -224,16 +224,16 @@ export const quizQuestions: Question[] = [
         id: 25,
         type: 'fill-input',
         grammarPoint: '-아/어 있다',
-        question: '민수는 집에 ____. (가다)',
+        question: '민수는 지금 부산에 ____. (가다)',
         correctAnswer: '가 있어요',
-        explanation: '가다 -> 가 있어요.'
+        explanation: '가다 -> 가 있어요 (da di den do va dang o do).'
     },
     {
         id: 26,
         type: 'fill-input',
         grammarPoint: 'True/False + Sua loi (-아/어 있다)',
         question: 'Cau sau sai. Hay viet lai cho dung: 지금 영수는 의자에 앉고 있어요. (trang thai)',
-        correctAnswer: '지금 영수는 의자에 앉아 있어요.',
+        correctAnswer: ['지금 영수는 의자에 앉아 있어요.', '지금 영수는 의자에 앉아 있어요'],
         explanation: 'Mo ta trang thai thi dung 앉아 있다.'
     },
     {
@@ -241,7 +241,7 @@ export const quizQuestions: Question[] = [
         type: 'fill-input',
         grammarPoint: 'True/False + Sua loi (-아/어 있다)',
         question: 'Cau sau sai. Hay viet lai cho dung: 아기는 침대에 눕고 있어요. (trang thai)',
-        correctAnswer: '아기는 침대에 누워 있어요.',
+        correctAnswer: ['아기는 침대에 누워 있어요.', '아기는 침대에 누워 있어요'],
         explanation: 'Mo ta trang thai thi dung 누워 있다.'
     },
     {
@@ -249,7 +249,7 @@ export const quizQuestions: Question[] = [
         type: 'fill-input',
         grammarPoint: 'True/False + Sua loi (-아/어 있다)',
         question: 'Cau sau sai. Hay viet lai cho dung: 교실에 학생이 남고 있어요.',
-        correctAnswer: '교실에 학생이 남아 있어요.',
+        correctAnswer: ['교실에 학생이 남아 있어요.', '교실에 학생이 남아 있어요'],
         explanation: '남다 -> 남아 있다.'
     },
     {
@@ -257,8 +257,8 @@ export const quizQuestions: Question[] = [
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다 vs -고 있다',
         question: 'Trang thai tu the: 학생들은 줄에 ____.',
-        options: ['서 있어요.', '서고 있어요.', '서어요.', '섰어요.'],
-        correctAnswer: '서 있어요.',
+        options: ['서 있어요. (đang đứng)', '서고 있어요. (đang đứng - sai mẫu)', '서어요. (đứng - sai chia)', '섰어요. (đã đứng)'],
+        correctAnswer: '서 있어요. (đang đứng)',
         explanation: 'Voi tu the dang duy tri, uu tien -아/어 있다.'
     },
     {
@@ -266,8 +266,8 @@ export const quizQuestions: Question[] = [
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다',
         question: 'Cau nao dung trong ngu canh "Ban da den truoc va dang o truong"?',
-        options: ['저는 학교에 와 있어요.', '저는 학교에 오고 있어요.', '저는 학교에 와요.', '저는 학교에 왔고 있어요.'],
-        correctAnswer: '저는 학교에 와 있어요.',
+        options: ['저는 학교에 와 있어요. (Tôi đã đến trường trước và đang ở trường.)', '저는 학교에 오고 있어요. (Tôi đang đến trường.)', '저는 학교에 와요. (Tôi đến trường.)', '저는 학교에 왔고 있어요. (Tôi đã đến và đang - sai cấu trúc)'],
+        correctAnswer: '저는 학교에 와 있어요. (Tôi đã đến trường trước và đang ở trường.)',
         explanation: 'Da den truoc va dang o do thi dung 와 있어요.'
     }
 ];

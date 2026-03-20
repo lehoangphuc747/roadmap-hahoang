@@ -28,11 +28,13 @@ Use this skill when creating or editing quiz files under `src/data/quiz/sessionX
 - If the target is selecting Korean sentence from Vietnamese prompt, options should be Korean-only.
 - Do not append Vietnamese glosses/translations to each option when the goal is answer selection; keep translation in explanation after checking.
 - For honorific/sentence-form drills, prefer full sentences with subject/particles (e.g., `께서`, `은/는`, `이/가`, `을/를`) instead of fragments.
+- If the Vietnamese stem expresses a full meaning sentence (e.g., "Chon cach viet dung cho nghia: ..."), options should also be full Korean sentences in the same frame (not fragments like only verb endings).
 
 3. Fill-input answers
 - For sentence-level answers, accept variants with and without final period.
 - Use `correctAnswer` as `string[]` when multiple exact forms are acceptable.
 - Keep acceptable variants semantically identical (avoid mixing different politeness levels unless intended).
+- For rewrite prompts, prefer this stem format: `Cau sau sai. Hay viet lai cho dung:\n...` (or fully accented Vietnamese equivalent).
 
 4. Explanation quality
 - Prefer markdown format:
@@ -46,6 +48,7 @@ Use this skill when creating or editing quiz files under `src/data/quiz/sessionX
 - Vietnamese should use full diacritics.
 - Korean options should be orthographically valid unless intentionally testing typo detection.
 - Keep terminology consistent: "Nghia 1", "Nghia 2" style should be unified inside one set.
+- Keep grammarPoint labels consistent in Vietnamese for rewrite items (e.g., `Dung/Sai + sua loi (...)` or accented equivalent).
 
 ## Pattern by Question Type
 
@@ -62,6 +65,7 @@ Checklist:
 Checklist:
 - Stem in Vietnamese.
 - Four Korean options only.
+- Keep structural parity between stem and options: if stem targets a full sentence, all options should be full sentences with matching subject/location context.
 - Distractors are plausible but wrong by grammar, tense, honorific, or particle.
 - Do not embed explanation hints inside options.
 
@@ -78,6 +82,7 @@ Checklist:
 - Keep object schema aligned with `Question` interface.
 - If adding `correctAnswer: string[]`, ensure checker accepts all variants in `src/components/roadmap/Quiz.tsx`.
 - Dialogue stems should use explicit newlines (`\n`) so UI renders separate lines.
+- Do not put bilingual clues directly in option text for multiple-choice; put translations in `explanation` only.
 
 ## Review Procedure (before finishing)
 
@@ -97,6 +102,7 @@ Checklist:
 4. Technical check
 - Run diagnostics on edited files.
 - Confirm `correctAnswer` strings match option text exactly for multiple-choice.
+- For fill-input, confirm accepted variants are all represented in `correctAnswer` array when needed.
 
 ## Quick Fix Recipes
 
@@ -106,6 +112,11 @@ Checklist:
 
 - Option too obvious:
   - Replace hint-labeled wrong option with naturally plausible distractor.
+
+- Stem-option mismatch (full meaning stem but fragment options):
+  - Rewrite all options into full Korean sentences that share the same sentence frame.
+  - Update `correctAnswer` to the full sentence string exactly matching one option.
+  - Update explanation to show the full correct sentence, not only a fragment.
 
 - Korean prompt too hard:
   - Move instruction to Vietnamese, keep Korean only in target sentence/options.

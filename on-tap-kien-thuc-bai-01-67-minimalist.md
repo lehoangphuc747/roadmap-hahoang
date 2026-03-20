@@ -929,3 +929,115 @@
 
 ---
 
+## Bài 68: V-은/는 적이 있다 (Đã từng)
+
+**Công thức:** V-은/는 적이 있다/없다
+
+**Quy tắc:**
+- Quá khứ: -은/ㄴ 적이 있다 (가다 -> 간 적이 있다)
+- Hiện tại/future (động từ có 받침): -는 적이 있다 (먹다 -> 먹는 적이 있다, ít dùng hơn)
+- Mẫu này thường dùng để nói kinh nghiệm đã từng làm trong quá khứ
+
+**Ý nghĩa:** Đã từng làm gì / Chưa từng làm gì
+
+**Ví dụ:**
+- 한국에 간 적이 있어요 (Tôi đã từng đi Hàn Quốc)
+- 김치를 먹어 본 적이 없어요 (Tôi chưa từng thử kimchi)
+
+**Lưu ý:** Thực tế giao tiếp thường gặp nhất là dạng quá khứ "-은/ㄴ 적이 있다/없다"
+
+---
+
+## Bài 69: V-아/어 주다 (Làm giúp)
+
+**Công thức:** V-아/어 주다
+
+**Quy tắc:**
+- Nguyên âm ㅏ/ㅗ: -아 주다 (도와주다)
+- Nguyên âm khác: -어 주다 (읽어 주다)
+- 하다: -해 주다 (설명해 주다)
+
+**Ý nghĩa:** Làm hành động đó cho người khác (giúp người khác)
+
+**Ví dụ:**
+- 문을 열어 주세요 (Làm ơn mở cửa giúp)
+- 친구가 숙제를 도와줬어요 (Bạn đã giúp tôi làm bài tập)
+
+**Lưu ý:** Dùng kính ngữ khi người nhận hành động là người lớn tuổi: V-아/어 드리다
+
+---
+
+## Bài 70: -아/어야 되다 (Phải)
+
+**Công thức:** V/A + 아/어야 되다(하다)
+
+**Quy tắc:**
+- Nguyên âm ㅏ/ㅗ: -아야 되다 (가야 되다)
+- Nguyên âm khác: -어야 되다 (먹어야 되다)
+- 하다: -해야 되다
+
+**Ý nghĩa:** Phải làm gì, bắt buộc
+
+**Ví dụ:**
+- 내일 일찍 일어나야 돼요 (Ngày mai phải dậy sớm)
+- 약을 먹어야 돼요 (Phải uống thuốc)
+
+**Lưu ý:** "-아/어야 하다" và "-아/어야 되다" đều dùng được, nghĩa gần như nhau
+
+---
+
+## Bài 71: -아/어도 되다 (Được phép)
+
+**Công thức:** V + 아/어도 되다
+
+**Quy tắc:**
+- Nguyên âm ㅏ/ㅗ: -아도 되다 (가도 되다)
+- Nguyên âm khác: -어도 되다 (먹어도 되다)
+- 하다: -해도 되다
+
+**Ý nghĩa:** Được phép làm gì, có thể làm gì (permission)
+
+**Ví dụ:**
+- 여기 앉아도 돼요? (Tôi ngồi đây được không?)
+- 지금 집에 가도 돼요 (Bây giờ về nhà cũng được)
+
+**Lưu ý:** Phủ định permission: V-으면 안 되다 (không được phép)
+
+---
+
+## Bài 72: -고 있다 (Đang / Tình trạng tiếp diễn)
+
+**Công thức:** V-고 있다
+
+**Ý nghĩa:**
+1. Đang làm gì (hành động đang diễn ra)
+2. Trạng thái đang duy trì (mặc, đeo, sống...)
+
+**Ví dụ:**
+- 지금 공부하고 있어요 (Bây giờ đang học)
+- 안경을 쓰고 있어요 (Đang đeo kính)
+
+**Lưu ý:**
+- Chủ yếu dùng với động từ
+- Một số động từ trạng thái trong tiếng Việt có thể dịch tự nhiên hơn khi không thêm "đang"
+
+---
+
+## Bài 73: -아/어 있다 (Trạng thái sau hành động)
+
+**Công thức:** V-아/어 있다
+
+**Ý nghĩa:** Trạng thái kết quả còn duy trì sau khi hành động đã hoàn tất
+
+**Ví dụ:**
+- 문이 열려 있어요 (Cửa đang mở)
+- 불이 켜져 있어요 (Đèn đang bật)
+
+**So sánh với -고 있다:**
+- -고 있다: Nhấn mạnh quá trình đang diễn ra
+- -아/어 있다: Nhấn mạnh trạng thái kết quả hiện tại
+
+**Lưu ý:** Thường dùng với động từ nội động từ/trạng thái kết quả như 열리다, 닫히다, 켜지다, 꺼지다
+
+---
+
