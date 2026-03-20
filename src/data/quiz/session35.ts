@@ -1,4 +1,4 @@
-export interface Question {
+﻿export interface Question {
     id: number;
     type: 'multiple-choice' | 'fill-input';
     grammarPoint: string;
@@ -11,164 +11,264 @@ export interface Question {
 }
 
 export const quizQuestions: Question[] = [
+    // ===== PHAN A: -GO ITDA (15 CAU) =====
     {
         id: 1,
         type: 'multiple-choice',
-        grammarPoint: 'V-는 김에',
-        question: '가 : 이거 못 보던 시계인데 새로 샀어요?\n나 : 아니요. 고장 나서 (       ) 시곗줄을 바꾼 거예요.',
-        translationVi: 'A: Cái đồng hồ này lạ quá, bạn mới mua à?\nB: Không. Nó bị hỏng nên nhân tiện đi sửa tôi đã thay dây luôn.',
-        options: ['수리하자마자', '수리하다시피', '수리하는 김에', '수리한 나머지'],
-        correctAnswer: '수리하는 김에',
-        explanation: '### ✅ Đáp án đúng\n\n**수리하는 김에** — 🎯 `V-는 김에`: nhân tiện làm việc này thì làm luôn việc khác\n\n⚡ **Hiểu nhanh:** "nhân tiện" → nhân tiện sửa thì thay dây luôn.\n\n---\n\n### ❌ Các đáp án sai\n\n- **수리하자마자:** nối tiếp tức thì → sai.\n- **수리하다시피:** gần như → sai.\n- **수리한 나머지:** nguyên nhân tiêu cực → sai.'
+        grammarPoint: '-ê³  ìžˆë‹¤',
+        question: 'Chá»n cÃ¢u tá»± nhiÃªn nháº¥t cho nghÄ©a: "BÃ¢y giá» Minsu Ä‘ang uá»‘ng nÆ°á»›c."',
+        options: ['ì§€ê¸ˆ ë¯¼ìˆ˜ëŠ” ë¬¼ì„ ë§ˆì‹œê³  ìžˆì–´ìš”. (BÃ¢y giá» Minsu Ä‘ang uá»‘ng nÆ°á»›c.)', 'ì§€ê¸ˆ ë¯¼ìˆ˜ëŠ” ë¬¼ì„ ë§ˆì…” ìžˆì–´ìš”. (BÃ¢y giá» Minsu uá»‘ng nÆ°á»›c.)', 'ì§€ê¸ˆ ë¯¼ìˆ˜ëŠ” ë¬¼ì„ ë§ˆì‹œì–´ ìžˆì–´ìš”. (BÃ¢y giá» Minsu Ä‘ang uá»‘ng nÆ°á»›c.)', 'ì§€ê¸ˆ ë¯¼ìˆ˜ëŠ” ë¬¼ì„ ë§ˆì‹œì–´ìš”. (BÃ¢y giá» Minsu uá»‘ng nÆ°á»›c.)'],
+        correctAnswer: 'ì§€ê¸ˆ ë¯¼ìˆ˜ëŠ” ë¬¼ì„ ë§ˆì‹œê³  ìžˆì–´ìš”. (BÃ¢y giá» Minsu Ä‘ang uá»‘ng nÆ°á»›c.)',
+        explanation: 'Hanh dong dang xay ra ngay luc noi thi dung -ê³  ìžˆë‹¤.'
     },
     {
         id: 2,
         type: 'multiple-choice',
-        grammarPoint: 'V-(으)려던 참이다',
-        question: '가 : 지금 축구 결승전 중계하는데 텔레비전 안 보고 뭐 해요?\n나 : 그렇지 않아도 막 (       ).',
-        translationVi: 'A: Đang truyền hình trực tiếp trận chung kết bóng đá mà sao không xem TV?\nB: Tôi cũng đang định xem đây, vừa đúng lúc định bật lên.',
-        options: ['보곤 했어요', '보고 말았어요', '볼 모양이었어요', '보려던 참이었어요'],
-        correctAnswer: '보려던 참이었어요',
-        explanation: '### ✅ Đáp án đúng\n\n**보려던 참이었어요** — ⏰ `V-(으)려던 참이다`: ý định vừa mới sắp sửa thực hiện\n\n⚡ **Hiểu nhanh:** "vừa định" → vừa đúng lúc đang định bật TV.\n\n---\n\n### ❌ Các đáp án sai\n\n- **보곤 했어요:** thói quen → sai.\n- **보고 말았어요:** kết quả không mong muốn → sai.\n- **볼 모양이었어요:** phỏng đoán về ý định quá khứ → sai.'
+        grammarPoint: 'NghÄ©a 1 vÃ  NghÄ©a 2 (-ê³  ìžˆë‹¤)',
+        question: 'CÃ¢u "Suji bÃ¢y giá» Ä‘ang Äƒn cÆ¡m" thuá»™c nghÄ©a nÃ o?',
+        options: ['NghÄ©a 1: hÃ nh Ä‘á»™ng Ä‘ang diá»…n ra', 'NghÄ©a 2: tráº¡ng thÃ¡i káº¿t quáº£ duy trÃ¬', 'NghÄ©a 3: má»‡nh lá»‡nh', 'NghÄ©a 4: quÃ¡ khá»©'],
+        correctAnswer: 'NghÄ©a 1: hÃ nh Ä‘á»™ng Ä‘ang diá»…n ra',
+        explanation: 'Dá»‹ch: "Suji bÃ¢y giá» Ä‘ang Äƒn cÆ¡m." CÃ³ ì§€ê¸ˆ vÃ  Ä‘á»™ng tá»« hÃ nh Ä‘á»™ng nÃªn lÃ  NghÄ©a 1.'
     },
     {
         id: 3,
         type: 'multiple-choice',
-        grammarPoint: 'V-기로 하다',
-        question: '가 : 이번 휴가에는 뭐 할 거예요?\n나 : 저는 친구들하고 제주도에 놀러 (       ).',
-        translationVi: 'A: Kỳ nghỉ lần này bạn sẽ làm gì?\nB: Tôi đã quyết định sẽ đi chơi đảo Jeju cùng với bạn bè.',
-        options: ['가는군요', '가나 봐요', '갈 만해요', '가기로 했어요'],
-        correctAnswer: '가기로 했어요',
-        explanation: '### ✅ Đáp án đúng\n\n**가기로 했어요** — ✅ `V-기로 하다`: quyết định, kế hoạch đã được đưa ra\n\n⚡ **Hiểu nhanh:** "đã quyết định" → thông báo kế hoạch: sẽ đi đảo Jeju.\n\n---\n\n### ❌ Các đáp án sai\n\n- **가는군요:** nhận ra → sai.\n- **가나 봐요:** phỏng đoán → sai.\n- **갈 만해요:** đáng để đi → sai.'
+        grammarPoint: 'NghÄ©a 1 vÃ  NghÄ©a 2 (-ê³  ìžˆë‹¤)',
+        question: 'CÃ¢u trong ngoáº·c (ì €ëŠ” ê·¸ ì‚¬ëžŒì„ ë¯¿ê³  ìžˆì–´ìš”.) thuá»™c nghÄ©a tiáº¿ng Viá»‡t nÃ o?',
+        options: ['NghÄ©a 1: hÃ nh Ä‘á»™ng Ä‘ang diá»…n ra', 'NghÄ©a 2: tráº¡ng thÃ¡i káº¿t quáº£ duy trÃ¬', 'NghÄ©a 3: phá»§ Ä‘á»‹nh', 'NghÄ©a 4: Ä‘á» nghá»‹'],
+        correctAnswer: 'NghÄ©a 2: tráº¡ng thÃ¡i káº¿t quáº£ duy trÃ¬',
+        explanation: 'Dá»‹ch: "TÃ´i Ä‘ang tin ngÆ°á»i Ä‘Ã³." Vá»›i ë¯¿ë‹¤, cÃ¢u nÃ y thá»ƒ hiá»‡n tráº¡ng thÃ¡i Ä‘ang tin (khÃ´ng pháº£i hÃ nh Ä‘á»™ng Ä‘ang diá»…n ra trá»±c tiáº¿p).'
     },
     {
         id: 4,
         type: 'multiple-choice',
-        grammarPoint: 'V-기는요',
-        question: '가 : 피아노를 정말 잘 치시네요.\n나 : 잘 (       ). 어렸을 때 아주 잠깐 배운 거예요.',
-        translationVi: 'A: Bạn chơi piano giỏi thật đấy.\nB: Giỏi gì đâu ạ. Tôi chỉ học một chút xíu hồi nhỏ thôi.',
-        options: ['치기는요', '치거든요', '치는데요', '쳐야지요'],
-        correctAnswer: '치기는요',
-        explanation: '### ✅ Đáp án đúng\n\n**치기는요** — 🙏 `V/A-기는요`: phủ định khiêm tốn lời khen "...gì đâu mà"\n\n⚡ **Hiểu nhanh:** "giỏi gì đâu" → khiêm tốn phủ nhận.\n\n---\n\n### ❌ Các đáp án sai\n\n- **치거든요:** giải thích lý do → sai.\n- **치는데요:** thông tin nền → sai.\n- **쳐야지요:** ý chí → sai.'
+        grammarPoint: 'NghÄ©a 1 vÃ  NghÄ©a 2 (-ê³  ìžˆë‹¤)',
+        question: 'CÃ¢u "ì €ëŠ” ê·¸ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì•Œê³  ìžˆì–´ìš”." thuá»™c nghÄ©a nÃ o?',
+        options: ['NghÄ©a 1: hÃ nh Ä‘á»™ng Ä‘ang diá»…n ra', 'NghÄ©a 2: tráº¡ng thÃ¡i káº¿t quáº£ duy trÃ¬', 'NghÄ©a 3: quÃ¡ khá»©', 'NghÄ©a 4: má»‡nh lá»‡nh'],
+        correctAnswer: 'NghÄ©a 2: tráº¡ng thÃ¡i káº¿t quáº£ duy trÃ¬',
+        explanation: 'Dá»‹ch: "TÃ´i biáº¿t máº­t kháº©u Ä‘Ã³." ì•Œë‹¤ + -ê³  ìžˆë‹¤ diá»…n táº£ tráº¡ng thÃ¡i Ä‘ang biáº¿t, nÃªn lÃ  NghÄ©a 2.'
     },
     {
         id: 5,
-        type: 'multiple-choice',
-        grammarPoint: 'V-도록',
-        question: '가 : 항상 아이들의 건강을 먼저 생각하시는 것 같아요.\n나 : 아이들이 건강하게 (       ) 잘 보살피는 게 부모의 일이잖아요.',
-        translationVi: 'A: Dường như chị lúc nào cũng nghĩ đến sức khỏe của các con trước.\nB: Chăm sóc tốt để các con lớn lên khỏe mạnh là việc của cha mẹ mà.',
-        options: ['자라던데', '자라든지', '자란다면', '자라도록'],
-        correctAnswer: '자라도록',
-        explanation: '### ✅ Đáp án đúng\n\n**자라도록** — 🎯 `V-도록`: mục đích hoặc kết quả mong muốn "để mà..."\n\n⚡ **Hiểu nhanh:** "để mà" → chăm sóc tốt để trẻ lớn lên khỏe mạnh.\n\n---\n\n### ❌ Các đáp án sai\n\n- **자라던데:** hồi tưởng → sai.\n- **자라든지:** liệt kê lựa chọn → sai.\n- **자란다면:** giả định → sai.'
+        type: 'fill-input',
+        grammarPoint: '-ê³  ìžˆë‹¤',
+        question: 'ê°€: ì§€ê¸ˆ ë­ í•´ìš”?\në‚˜: ì±…ì„ ____. (ì½ë‹¤)',
+        correctAnswer: 'ì½ê³  ìžˆì–´ìš”',
+        explanation: 'ì½ë‹¤ -> ì½ê³  ìžˆì–´ìš”.'
     },
     {
         id: 6,
-        type: 'multiple-choice',
-        grammarPoint: 'V-(으)ㄹ까 봐',
-        question: '가 : 연수 신청서를 내일까지 제출해야 하는데 알고 있어요?\n나 : 그럼요. 날짜를 (       ) 달력에 표시해 두었어요.',
-        translationVi: 'A: Bạn có biết phải nộp đơn đăng ký khóa đào tạo trước ngày mai không?\nB: Tất nhiên. Tôi đã đánh dấu vào lịch vì sợ quên mất ngày.',
-        options: ['넘길까 봐', '넘길지 말지', '넘길 뿐더러', '넘기기만 해도'],
-        correctAnswer: '넘길까 봐',
-        explanation: '### ✅ Đáp án đúng\n\n**넘길까 봐** — 😰 `V-(으)ㄹ까 봐`: lo lắng về khả năng tiêu cực, thực hiện hành động phòng ngừa\n\n⚡ **Hiểu nhanh:** "vì sợ sẽ" → lo lỡ mất ngày nên đánh dấu vào lịch.\n\n---\n\n### ❌ Các đáp án sai\n\n- **넘길지 말지:** phân vân → sai.\n- **넘길 뿐더러:** bổ sung → sai.\n- **넘기기만 해도:** điều kiện → sai.'
+        type: 'fill-input',
+        grammarPoint: '-ê³  ìžˆë‹¤',
+        question: 'ê°€: ì™œ ì „í™”ë¥¼ ì•ˆ ë°›ì•˜ì–´ìš”?\në‚˜: ì§€ê°‘ì„ ____. (ì°¾ë‹¤)',
+        correctAnswer: 'ì°¾ê³  ìžˆì–´ìš”',
+        explanation: 'ì°¾ë‹¤ -> ì°¾ê³  ìžˆì–´ìš”.'
     },
     {
         id: 7,
-        type: 'multiple-choice',
-        grammarPoint: 'V-(으)ㄹ걸 그랬다',
-        question: '가 : 어제 동창회에 왜 안 나왔어? 얼마 전에 귀국한 영호도 왔었는데.\n나 : 영호가 나왔어? 그럴 줄 알았으면 나도 (       ).',
-        translationVi: 'A: Sao hôm qua không đến buổi họp lớp? Yeongho mới về nước cũng đến đấy.\nB: Yeongho đến á? Biết thế thì mình cũng đã đi rồi.',
-        options: ['나갈까 해', '나가고 말았어', '나갈걸 그랬네', '나갈 수밖에 없네'],
-        correctAnswer: '나갈걸 그랬네',
-        explanation: '### ✅ Đáp án đúng\n\n**나갈걸 그랬네** — 😔 `V-(으)ㄹ걸 그랬다`: hối tiếc về việc không làm trong quá khứ\n\n⚡ **Hiểu nhanh:** "lẽ ra nên" → hối tiếc vì đã không đi.\n\n---\n\n### ❌ Các đáp án sai\n\n- **나갈까 해:** ý định tương lai → sai.\n- **나가고 말았어:** kết quả không mong muốn (thực tế không đi) → sai.\n- **나갈 수밖에 없네:** bắt buộc → sai.'
+        type: 'fill-input',
+        grammarPoint: '-ê³  ìžˆë‹¤',
+        question: 'ìš”ì¦˜ í•œêµ­ì–´ë¥¼ ì—´ì‹¬ížˆ ____. (ê³µë¶€í•˜ë‹¤)',
+        correctAnswer: 'ê³µë¶€í•˜ê³  ìžˆì–´ìš”',
+        explanation: 'ìš”ì¦˜ + -ê³  ìžˆë‹¤: hanh dong lap lai trong giai doan nay.'
     },
     {
         id: 8,
         type: 'multiple-choice',
-        grammarPoint: 'V-거든요',
-        question: '가 : 내일 공항에는 뭘 타고 갈 거예요?\n나 : 버스를 타고 갈 거예요. 버스 정류장이 저희 집에서 (       ).',
-        translationVi: 'A: Ngày mai bạn đi gì ra sân bay?\nB: Tôi sẽ đi xe buýt. Bến xe buýt gần nhà tôi lắm.',
-        options: ['가깝군요', '가깝다니요', '가까운데요', '가깝거든요'],
-        correctAnswer: '가깝거든요',
-        explanation: '### ✅ Đáp án đúng\n\n**가깝거든요** — 🔗 `V/A-거든요`: giải thích lý do (người nghe thường chưa biết)\n\n⚡ **Hiểu nhanh:** "(là vì)" → giải thích lý do chọn xe buýt.\n\n---\n\n### ❌ Các đáp án sai\n\n- **가깝군요:** nhận ra → sai.\n- **가깝다니요:** hỏi lại ngạc nhiên → sai.\n- **가까운데요:** thông tin nền → sai.'
+        grammarPoint: '-ê³  ìžˆë‹¤ (Phá»§ Ä‘á»‹nh)',
+        question: 'Chá»n cÃ¡ch viáº¿t Ä‘Ãºng cho nghÄ©a: "BÃ¢y giá» trá»i Ä‘ang khÃ´ng mÆ°a."',
+        options: ['ì§€ê¸ˆ ë¹„ê°€ ì˜¤ê³  ìžˆì§€ ì•Šì•„ìš”.', 'ì§€ê¸ˆ ë¹„ê°€ ì˜¤ê³  ì—†ì–´ìš”.', 'ì§€ê¸ˆ ë¹„ê°€ ì˜¤ê³  ì•ˆ ìžˆì–´ìš”.', 'ì§€ê¸ˆ ë¹„ê°€ ì™€ ìžˆì§€ ì•Šì•„ìš”.'],
+        correctAnswer: 'ì§€ê¸ˆ ë¹„ê°€ ì˜¤ê³  ìžˆì§€ ì•Šì•„ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ì§€ê¸ˆ ë¹„ê°€ ì˜¤ê³  ìžˆì§€ ì•Šì•„ìš”.**\n\n- Dá»‹ch tá»± nhiÃªn: **BÃ¢y giá» trá»i khÃ´ng mÆ°a / khÃ´ng Ä‘ang mÆ°a.**\n- Máº«u phá»§ Ä‘á»‹nh Ä‘Ãºng cá»§a **-ê³  ìžˆë‹¤** lÃ : **-ê³  ìžˆì§€ ì•Šë‹¤**.\n\n### ðŸ§  Ghi nhá»› nhanh\n\n- **ì˜¤ê³  ìžˆë‹¤**: Ä‘ang mÆ°a\n- **ì˜¤ê³  ìžˆì§€ ì•Šì•„ìš”**: khÃ´ng Ä‘ang mÆ°a\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **ì§€ê¸ˆ ë¹„ê°€ ì˜¤ê³  ì—†ì–´ìš”.**: sai cáº¥u trÃºc phá»§ Ä‘á»‹nh, khÃ´ng dÃ¹ng **ì—†ì–´ìš”** sau **-ê³ ** kiá»ƒu nÃ y.\n- **ì§€ê¸ˆ ë¹„ê°€ ì˜¤ê³  ì•ˆ ìžˆì–´ìš”.**: sai vÃ¬ khÃ´ng Ä‘áº·t **ì•ˆ** trá»±c tiáº¿p trÆ°á»›c **ìžˆì–´ìš”** trong máº«u nÃ y.\n- **ì§€ê¸ˆ ë¹„ê°€ ì™€ ìžˆì§€ ì•Šì•„ìš”.**: nghiÃªng vá» sáº¯c thÃ¡i tráº¡ng thÃ¡i káº¿t quáº£, khÃ´ng phÃ¹ há»£p Ã½ "Ä‘ang mÆ°a" trong ngá»¯ cáº£nh cÃ¢u nÃ y.'
     },
     {
         id: 9,
         type: 'multiple-choice',
-        grammarPoint: 'V-(으)려면',
-        question: '가 : 이 꽃을 잘 (       ) 어떻게 해야 해요?\n나 : 햇볕이 잘 드는 곳에 놓고, 물은 이틀에 한 번씩 주세요.',
-        translationVi: 'A: Để trồng hoa này cho tốt thì phải làm thế nào ạ?\nB: Đặt nó ở nơi có nhiều nắng và hai ngày tưới nước một lần.',
-        options: ['키우도록', '키우려면', '키우기에', '키울수록'],
-        correctAnswer: '키우려면',
-        explanation: '### ✅ Đáp án đúng\n\n**키우려면** — 🎯 `V-(으)려면`: nếu muốn/định... thì...\n\n⚡ **Hiểu nhanh:** "nếu muốn" → nếu muốn trồng tốt thì phải làm gì?\n\n---\n\n### ❌ Các đáp án sai\n\n- **키우dorok:** mục đích → không dùng trong câu hỏi phương pháp.\n- **키우기에:** nguyên nhân → sai.\n- **키울수록:** tăng tiến → sai.'
+        grammarPoint: '-ê³  ê³„ì‹œë‹¤',
+        question: 'Chá»n cÃ¢u kÃ­nh ngá»¯ Ä‘Ãºng: "Ã”ng Ä‘ang Ä‘á»c bÃ¡o."',
+        options: ['í• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì„ ë³´ê³  ê³„ì„¸ìš”.', 'í• ì•„ë²„ì§€ëŠ” ì‹ ë¬¸ì„ ë³´ê³  ìžˆì–´ìš”.', 'í• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì´ ë³´ê³  ê³„ì„¸ìš”.', 'í• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì„ ë³´ê³  ìžˆìœ¼ì„¸ìš”.'],
+        correctAnswer: 'í• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì„ ë³´ê³  ê³„ì„¸ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**í• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì„ ë³´ê³  ê³„ì„¸ìš”.**\n\n- Dá»‹ch: **Ã”ng Ä‘ang Ä‘á»c bÃ¡o.**\n- Khi nÃ¢ng chá»§ ngá»¯ (Ã´ng/bÃ /tháº§y/cÃ´...), Æ°u tiÃªn dÃ¹ng **ê»˜ì„œ** + máº«u kÃ­nh ngá»¯ **-ê³  ê³„ì‹œë‹¤**.\n\n### ðŸ§  Ghi nhá»› nhanh\n\n- Trung tÃ­nh: **ë³´ê³  ìžˆì–´ìš”**\n- KÃ­nh ngá»¯ (nÃ¢ng chá»§ ngá»¯): **ë³´ê³  ê³„ì„¸ìš”**\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **í• ì•„ë²„ì§€ëŠ” ì‹ ë¬¸ì„ ë³´ê³  ìžˆì–´ìš”.**: dÃ¹ng **ì€/ëŠ”** vÃ  **-ê³  ìžˆì–´ìš”** (khÃ´ng sai ngá»¯ phÃ¡p), nhÆ°ng **khÃ´ng pháº£i dáº¡ng kÃ­nh ngá»¯ chuáº©n** mÃ  Ä‘á» yÃªu cáº§u.\n- **í• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì´ ë³´ê³  ê³„ì„¸ìš”.**: sai trá»£ tá»« tÃ¢n ngá»¯; á»Ÿ Ä‘Ã¢y pháº£i lÃ  **ì‹ ë¬¸ì„**.\n- **í• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì„ ë³´ê³  ìžˆìœ¼ì„¸ìš”.**: cÃ³ thá»ƒ gáº·p trong há»™i thoáº¡i, nhÆ°ng trong bÃ i nÃ y chá»n dáº¡ng chuáº©n dáº¡y há»c lÃ  **ë³´ê³  ê³„ì„¸ìš”**.'
     },
     {
         id: 10,
         type: 'multiple-choice',
-        grammarPoint: 'N만큼',
-        question: '가 : 전시회를 준비하느라고 고생이 많았겠군요.\n나 : 동료와 후배들이 많이 도와주어서 생각(       ) 힘들지는 않았어요.',
-        translationVi: 'A: Chắc anh đã vất vả nhiều để chuẩn bị triển lãm nhỉ.\nB: Vì được đồng nghiệp và hậu bối giúp nhiều nên cũng không vất vả như tôi nghĩ.',
-        options: ['이나', '만큼', '까지', '마저'],
-        correctAnswer: '만큼',
-        explanation: '### ✅ Đáp án đúng\n\n**만큼** — ⚖️ `N만큼`: so sánh mức độ "bằng/như"\n\n⚡ **Hiểu nhanh:** "như" → không vất vả như đã nghĩ.\n\n---\n\n### ❌ Các đáp án sai\n\n- **이나:** lựa chọn/số lượng → sai.\n- **까지:** phạm vi → sai.\n- **마저:** "đến cả" tiêu cực → sai.'
+        grammarPoint: '-ê³  ìžˆì—ˆë‹¤',
+        question: 'ì–´ì œ ì§‘ì— ì™”ì„ ë•Œ ë™ìƒì´ ____.',
+        options: ['ìžê³  ìžˆì—ˆì–´ìš”', 'ìž¤ê³  ìžˆì—ˆì–´ìš”', 'ìžê³  ìžˆì–´ìš”', 'ìžê² ì–´ìš”'],
+        correctAnswer: 'ìžê³  ìžˆì—ˆì–´ìš”',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ìžê³  ìžˆì—ˆì–´ìš” (lÃºc Ä‘Ã³ Ä‘ang ngá»§)**\n\n- Dá»‹ch: **LÃºc Ä‘Ã³ em Ä‘ang ngá»§.**\n- Bá»‘i cáº£nh quÃ¡ khá»©: **ì–´ì œ ... ì™”ì„ ë•Œ** (hÃ´m qua, khi tÃ´i vá» nhÃ ).\n- VÃ¬ váº­y cáº§n dÃ¹ng **-ê³  ìžˆì—ˆë‹¤** Ä‘á»ƒ diá»…n táº£ hÃ nh Ä‘á»™ng Ä‘ang diá»…n ra táº¡i má»™t thá»i Ä‘iá»ƒm trong quÃ¡ khá»©.\n\n### ðŸ§  Ghi nhá»› nhanh\n\n- Hiá»‡n táº¡i tiáº¿p diá»…n: **-ê³  ìžˆì–´ìš”**\n- QuÃ¡ khá»© tiáº¿p diá»…n: **-ê³  ìžˆì—ˆì–´ìš”**\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **ìž¤ê³  ìžˆì—ˆì–´ìš”**: sai cáº¥u trÃºc, khÃ´ng ghÃ©p quÃ¡ khá»© kiá»ƒu nÃ y vá»›i **-ê³  ìžˆì—ˆì–´ìš”**.\n- **ìžê³  ìžˆì–´ìš”**: lÃ  hiá»‡n táº¡i tiáº¿p diá»…n, khÃ´ng khá»›p ngá»¯ cáº£nh quÃ¡ khá»©.\n- **ìžê² ì–´ìš”**: diá»…n táº£ Ã½ Ä‘oÃ¡n/Ã½ chÃ­ tÆ°Æ¡ng lai, khÃ´ng phÃ¹ há»£p ngá»¯ cáº£nh cÃ¢u.'
     },
     {
         id: 11,
-        type: 'multiple-choice',
-        grammarPoint: 'V-는 수가 있다',
-        question: '가 : 전화로 예약을 하고 식당에 갔는데 예약이 안 되어 있더라고요.\n나 : 그랬어요? 전화로 예약하면 가끔 (       ).',
-        translationVi: 'A: Tôi đặt bàn qua điện thoại rồi đến nhà hàng, thế mà họ bảo chưa được đặt.\nB: Vậy á? Đặt qua điện thoại thỉnh thoảng cũng có trường hợp bị nhầm lẫn.',
-        options: ['잘못된 줄 몰랐어요', '잘못될 리가 없어요', '잘못될 수밖에 없어요', '잘못되는 수가 있어요'],
-        correctAnswer: '잘못되는 수가 있어요',
-        explanation: '### ✅ Đáp án đúng\n\n**잘못되는 수가 있어요** — 📊 `V-는 수가 있다`: thỉnh thoảng cũng có thể xảy ra\n\n⚡ **Hiểu nhanh:** "cũng có trường hợp" → đặt qua điện thoại thỉnh thoảng bị sai sót.\n\n---\n\n### ❌ Các đáp án sai\n\n- **잘못된 줄 몰랐어요:** không biết là sai → sai.\n- **잘못될 리가 없어요:** phủ định mạnh → trái nghĩa.\n- **잘못될 수밖에 없어요:** bắt buộc → sai.'
+        type: 'fill-input',
+        grammarPoint: 'ÄÃºng/Sai + sá»­a lá»—i (-ê³  ìžˆë‹¤)',
+        question: 'CÃ¢u sau sai. HÃ£y viáº¿t láº¡i cho Ä‘Ãºng:\në‚ ì”¨ê°€ ì¶¥ê³  ìžˆì–´ìš”.',
+        correctAnswer: ['ë‚ ì”¨ê°€ ì¶”ì›Œìš”.', 'ë‚ ì”¨ê°€ ì¶”ì›Œìš”'],
+        explanation: '### âœ… CÃ¢u Ä‘Ãºng\n\n**ë‚ ì”¨ê°€ ì¶”ì›Œìš”.**\n\n### ðŸ§  VÃ¬ sao sai\n\n- **ì¶¥ë‹¤** lÃ  tÃ­nh tá»« (tráº¡ng thÃ¡i), khÃ´ng dÃ¹ng vá»›i máº«u tiáº¿n hÃ nh **-ê³  ìžˆë‹¤** trong cÃ¢u nÃ y.\n- VÃ¬ váº­y khÃ´ng nÃ³i **ì¶¥ê³  ìžˆì–´ìš”**.'
     },
     {
         id: 12,
-        type: 'multiple-choice',
-        grammarPoint: 'V-기만 해도',
-        question: '가 : 오랜만에 야외에 나오니까 기분이 아주 상쾌하군요.\n나 : 네. 시내를 조금 (       ) 공기가 정말 다르네요.',
-        translationVi: 'A: Lâu rồi mới ra ngoài trời nên tâm trạng thật sảng khoái.\nB: Vâng. Chỉ cần ra khỏi trung tâm một chút thôi là không khí đã khác hẳn rồi.',
-        options: ['벗어나듯이', '벗어나나 마나', '벗어나기만 해도', '벗어났을 정도로'],
-        correctAnswer: '벗어나기만 해도',
-        explanation: '### ✅ Đáp án đúng\n\n**벗어나기만 해도** — ⚡ `V-기만 해도`: chỉ cần thực hiện thôi là kết quả đã xảy ra\n\n⚡ **Hiểu nhanh:** "chỉ cần... thôi là" → ra ngoài một chút, không khí đã khác.\n\n---\n\n### ❌ Các đáp án sai\n\n- **벗어나듯이:** so sánh → sai.\n- **벗어나나 마나:** vô ích → sai.\n- **벗어났을 정도로:** mức độ → sai.'
+        type: 'fill-input',
+        grammarPoint: 'ÄÃºng/Sai + sá»­a lá»—i (-ê³  ìžˆë‹¤)',
+        question: 'CÃ¢u sau sai. HÃ£y viáº¿t láº¡i cho Ä‘Ãºng:\ní• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì„ ë³´ê³  ìžˆìœ¼ì„¸ìš”.',
+        correctAnswer: ['í• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì„ ë³´ê³  ê³„ì„¸ìš”.', 'í• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì„ ë³´ê³  ê³„ì„¸ìš”'],
+        explanation: '### âœ… CÃ¢u Ä‘Ãºng\n\n**í• ì•„ë²„ì§€ê»˜ì„œ ì‹ ë¬¸ì„ ë³´ê³  ê³„ì„¸ìš”.**\n\n### ðŸ§  VÃ¬ sao sai\n\n- Vá»›i chá»§ ngá»¯ cáº§n kÃ­nh ngá»¯, dáº¡ng chuáº©n lÃ  **-ê³  ê³„ì‹œë‹¤**.\n- VÃ¬ váº­y Ä‘á»•i **ë³´ê³  ìžˆìœ¼ì„¸ìš”** thÃ nh **ë³´ê³  ê³„ì„¸ìš”** trong bÃ i nÃ y.'
     },
     {
         id: 13,
-        type: 'multiple-choice',
-        grammarPoint: 'V-았/었을걸요',
-        question: '가 : 지금쯤이면 공항에 도착했을까요?\n나 : 아마 (       ). 출발한 지 벌써 두 시간이나 지났잖아요.',
-        translationVi: 'A: Giờ này chắc họ đến sân bay chưa nhỉ?\nB: Chắc là đến rồi. Đã xuất phát được hai tiếng rồi còn gì.',
-        options: ['도착했군요', '도착했는데요', '도착했을걸요', '도착했으니까요'],
-        correctAnswer: '도착했을걸요',
-        explanation: '### ✅ Đáp án đúng\n\n**도착했을걸요** — 🔮 `V-았/었을걸요`: phỏng đoán về sự việc quá khứ, nhẹ nhàng thân mật\n\n⚡ **Hiểu nhanh:** "chắc là đã" → phỏng đoán dựa trên (đã xuất phát 2 tiếng).\n\n---\n\n### ❌ Các đáp án sai\n\n- **도착했군요:** nhận ra → sai.\n- **도착했는데요:** thông tin nền → sai.\n- **도착했으니까요:** lý do → sai.'
+        type: 'fill-input',
+        grammarPoint: 'ÄÃºng/Sai + sá»­a lá»—i (-ê³  ìžˆë‹¤)',
+        question: 'CÃ¢u sau sai. HÃ£y viáº¿t láº¡i cho Ä‘Ãºng:\nëˆˆì´ ë‚´ë ¸ê³  ìžˆì—ˆì–´ìš”.',
+        correctAnswer: ['ëˆˆì´ ë‚´ë¦¬ê³  ìžˆì—ˆì–´ìš”.', 'ëˆˆì´ ë‚´ë¦¬ê³  ìžˆì—ˆì–´ìš”'],
+        explanation: '### âœ… CÃ¢u Ä‘Ãºng\n\n**ëˆˆì´ ë‚´ë¦¬ê³  ìžˆì—ˆì–´ìš”.**\n\n### ðŸ§  VÃ¬ sao sai\n\n- QuÃ¡ khá»© tiáº¿p diá»…n dÃ¹ng máº«u **-ê³  ìžˆì—ˆë‹¤**.\n- KhÃ´ng ghÃ©p kiá»ƒu **ë‚´ë ¸ê³  ìžˆì—ˆì–´ìš”**; dáº¡ng Ä‘Ãºng lÃ  **ë‚´ë¦¬ê³  ìžˆì—ˆì–´ìš”**.'
     },
     {
         id: 14,
         type: 'multiple-choice',
-        grammarPoint: 'V-던데요',
-        question: '가 : 혹시 이 대리 봤어요? 급히 의논할 사항이 있는데 자리에 없네요.\n나 : 아까 1층에서 손님을 (       ).',
-        translationVi: 'A: Anh có thấy Trợ lý Lee không? Có việc cần bàn gấp mà anh ấy không có.\nB: Lúc nãy tôi thấy anh ấy đang gặp khách ở tầng 1.',
-        options: ['만나던데요', '만나야지요', '만나려고요', '만나고말고요'],
-        correctAnswer: '만나던데요',
-        explanation: '### ✅ Đáp án đúng\n\n**만나던데요** — 📝 `V-던데요`: hồi tưởng và kể lại sự việc đã trực tiếp chứng kiến\n\n⚡ **Hiểu nhanh:** "tôi thấy đang" → kể lại điều đã thấy.\n\n---\n\n### ❌ Các đáp án sai\n\n- **만나야지요:** ý chí → sai.\n- **만나려고요:** ý định → sai.\n- **만나고말고요:** khẳng định mạnh → sai.'
+        grammarPoint: '-ê³  ìžˆë‹¤',
+        question: 'Chá»n cÃ¡ch viáº¿t Ä‘Ãºng cho nghÄ©a: "Suji Ä‘ang Ä‘á»™i mÅ© Ä‘á»."',
+        options: ['ì“°ê³  ìžˆì–´ìš”.', 'ì¨ ìžˆì–´ìš”.', 'ì“°ê³  ìžˆì—ˆì–´ìš”.', 'ì¼ì–´ìš”.'],
+        correctAnswer: 'ì“°ê³  ìžˆì–´ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ì“°ê³  ìžˆì–´ìš”.**\n\n- Dá»‹ch: **(Suji) Ä‘ang Ä‘á»™i mÅ© Ä‘á».**\n- Vá»›i ngá»¯ cáº£nh hiá»‡n táº¡i Ä‘ang diá»…n ra, dÃ¹ng máº«u **-ê³  ìžˆë‹¤**.\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **ì¨ ìžˆì–´ìš”.**: khÃ´ng dÃ¹ng máº«u nÃ y trong cÃ¢u má»¥c tiÃªu cá»§a bÃ i.\n- **ì“°ê³  ìžˆì—ˆì–´ìš”.**: lÃ  quÃ¡ khá»© tiáº¿p diá»…n, khÃ´ng khá»›p nghÄ©a hiá»‡n táº¡i.\n- **ì¼ì–´ìš”.**: lÃ  quÃ¡ khá»© Ä‘Æ¡n (Ä‘Ã£ Ä‘á»™i), khÃ´ng pháº£i Ä‘ang Ä‘á»™i.'
     },
     {
         id: 15,
-        type: 'multiple-choice',
-        grammarPoint: 'V-기만 하면 되다',
-        question: '가 : 어떤 장갑으로 사다 줄까요? 원하는 것이 있어요?\n나 : 특별히 원하는 것은 없어요. 그냥 (       ).',
-        translationVi: 'A: Tôi mua cho bạn loại găng tay nào? Có loại nào bạn muốn không?\nB: Không có yêu cầu đặc biệt. Chỉ cần nó ấm là được.',
-        options: ['따뜻할 텐데요', '따뜻할 뿐이에요', '따뜻할 리가 없어요', '따뜻하기만 하면 돼요'],
-        correctAnswer: '따뜻하기만 하면 돼요',
-        explanation: '### ✅ Đáp án đúng\n\n**따뜻하기만 하면 돼요** — ✅ `V/A-기만 하면 되다`: điều kiện tối thiểu "chỉ cần... là được"\n\n⚡ **Hiểu nhanh:** "chỉ cần... là được" → điều kiện tối thiểu: chỉ cần ấm.\n\n---\n\n### ❌ Các đáp án sai\n\n- **따뜻할 텐데요:** phỏng đoán → sai.\n- **따뜻할 뿐이에요:** chỉ có thế → sai.\n- **따뜻할 리가 없어요:** phủ định mạnh → sai.'
+        type: 'fill-input',
+        grammarPoint: '-ê³  ìžˆë‹¤',
+        question: 'ì €ëŠ” ì¹œêµ¬ì˜ ë§ì„ ____. (ë¯¿ë‹¤)',
+        correctAnswer: 'ë¯¿ê³  ìžˆì–´ìš”',
+        explanation: 'ë¯¿ë‹¤ + -ê³  ìžˆë‹¤: trang thai dang tin.'
     },
+
+    // ===== PHAN B: -A/EO ITDA (15 CAU) =====
     {
         id: 16,
         type: 'multiple-choice',
-        grammarPoint: 'V-(으)나 마나',
-        question: '가 : 형한테도 내일 같이 놀러 가자고 할까?\n나 : (       ) 안 갈 거야. 내일 시험이 있다고 했거든.',
-        translationVi: 'A: Hay là mình rủ anh trai mai đi chơi cùng nhé?\nB: Hỏi cũng như không thôi, anh ấy sẽ không đi. Mai có bài thi mà.',
-        options: ['물어보다시피', '물어보느라고', '물어보나 마나', '물어볼 뿐만 아니라'],
-        correctAnswer: '물어보나 마나',
-        explanation: '### ✅ Đáp án đúng\n\n**물어보나 마나** — 🔀 `V-(으)나 마나`: dù có làm hay không kết quả cũng không thay đổi, vô ích\n\n⚡ **Hiểu nhanh:** "hỏi hay không cũng vậy" → dù hỏi hay không, anh ấy cũng không đi.\n\n---\n\n### ❌ Các đáp án sai\n\n- **물어보다시피:** "như" → sai.\n- **물어보느라고:** lý do → sai.\n- **물어볼 뿐만 아니라:** bổ sung → sai.'
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'ì§€ìˆ˜ ì”¨ëŠ” ì˜ìžì— ____.',
+        options: ['ì•‰ì•„ ìžˆì–´ìš”.', 'ì•‰ê³  ìžˆì–´ìš”.', 'ì•‰ì•„ìš”.', 'ì•‰ì•˜ì–´ìš”.'],
+        correctAnswer: 'ì•‰ì•„ ìžˆì–´ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ì§€ìˆ˜ ì”¨ëŠ” ì˜ìžì— ì•‰ì•„ ìžˆì–´ìš”.**\n\n- Dá»‹ch: **Jisu Ä‘ang ngá»“i trÃªn gháº¿.**\n- Vá»›i tÆ° tháº¿ Ä‘ang duy trÃ¬, dÃ¹ng máº«u **-ì•„/ì–´ ìžˆë‹¤**.\n\n### ðŸ§  Ghi nhá»› nhanh\n\n- TÆ° tháº¿ hiá»‡n táº¡i: **ì•‰ì•„ ìžˆì–´ìš”** (Ä‘ang ngá»“i)\n- TÆ° tháº¿ quÃ¡ khá»©: **ì•‰ì•„ ìžˆì—ˆì–´ìš”** (Ä‘Ã£ ngá»“i)\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **ì•‰ê³  ìžˆì–´ìš”.**: khÃ´ng dÃ¹ng máº«u nÃ y cho nghÄ©a tÆ° tháº¿ duy trÃ¬ trong bÃ i.\n- **ì•‰ì•„ìš”.**: hiá»‡n táº¡i Ä‘Æ¡n, khÃ´ng nháº¥n tráº¡ng thÃ¡i Ä‘ang duy trÃ¬.\n- **ì•‰ì•˜ì–´ìš”.**: quÃ¡ khá»© Ä‘Æ¡n (Ä‘Ã£ ngá»“i), khÃ´ng Ä‘Ãºng Ã½ cÃ¢u.'
+    },
+    {
+        id: 17,
+        type: 'multiple-choice',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'Chá»n cÃ¡ch viáº¿t Ä‘Ãºng cho nghÄ©a: "Tháº§y giÃ¡o Ä‘ang Ä‘á»©ng trÆ°á»›c lá»›p há»c."',
+        options: ['ì„ ìƒë‹˜ì€ êµì‹¤ ì•žì— ì„œ ìžˆì–´ìš”.', 'ì„ ìƒë‹˜ì€ êµì‹¤ ì•žì— ì„œê³  ìžˆì–´ìš”.', 'ì„ ìƒë‹˜ì€ êµì‹¤ ì•žì— ì„œìš”.', 'ì„ ìƒë‹˜ì€ êµì‹¤ ì•žì— ì„°ì–´ìš”.'],
+        correctAnswer: 'ì„ ìƒë‹˜ì€ êµì‹¤ ì•žì— ì„œ ìžˆì–´ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ì„ ìƒë‹˜ì€ êµì‹¤ ì•žì— ì„œ ìžˆì–´ìš”.**\n\n- Dá»‹ch: **Tháº§y giÃ¡o Ä‘ang Ä‘á»©ng trÆ°á»›c lá»›p há»c.**\n- Vá»›i tÆ° tháº¿ Ä‘á»©ng Ä‘ang duy trÃ¬, dÃ¹ng máº«u **-ì•„/ì–´ ìžˆë‹¤**.\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **ì„ ìƒë‹˜ì€ êµì‹¤ ì•žì— ì„œê³  ìžˆì–´ìš”.**: khÃ´ng dÃ¹ng máº«u **-ê³  ìžˆë‹¤** cho nghÄ©a tÆ° tháº¿ duy trÃ¬.\n- **ì„ ìƒë‹˜ì€ êµì‹¤ ì•žì— ì„œìš”.**: hiá»‡n táº¡i Ä‘Æ¡n, khÃ´ng nháº¥n tráº¡ng thÃ¡i Ä‘ang duy trÃ¬.\n- **ì„ ìƒë‹˜ì€ êµì‹¤ ì•žì— ì„°ì–´ìš”.**: quÃ¡ khá»© Ä‘Æ¡n (Ä‘Ã£ Ä‘á»©ng), khÃ´ng Ä‘Ãºng Ã½ cÃ¢u.'
+    },
+    {
+        id: 18,
+        type: 'multiple-choice',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'Chá»n cÃ¡ch viáº¿t Ä‘Ãºng cho nghÄ©a: "Em bÃ© Ä‘ang náº±m trÃªn giÆ°á»ng."',
+        options: ['ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ„ì›Œ ìžˆì–´ìš”.', 'ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ•ê³  ìžˆì–´ìš”.', 'ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ„ì›Œìš”.', 'ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ„ì› ì–´ìš”.'],
+        correctAnswer: 'ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ„ì›Œ ìžˆì–´ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ„ì›Œ ìžˆì–´ìš”.**\n\n- Dá»‹ch: **Em bÃ© Ä‘ang náº±m trÃªn giÆ°á»ng.**\n- Vá»›i tÆ° tháº¿ Ä‘ang duy trÃ¬ (náº±m), dÃ¹ng máº«u **-ì•„/ì–´ ìžˆë‹¤**.\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ•ê³  ìžˆì–´ìš”.**: khÃ´ng dÃ¹ng máº«u **-ê³  ìžˆë‹¤** cho nghÄ©a tÆ° tháº¿ duy trÃ¬ trong bÃ i nÃ y.\n- **ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ„ì›Œìš”.**: hiá»‡n táº¡i Ä‘Æ¡n, khÃ´ng nháº¥n tráº¡ng thÃ¡i Ä‘ang duy trÃ¬.\n- **ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ„ì› ì–´ìš”.**: quÃ¡ khá»© Ä‘Æ¡n (Ä‘Ã£ náº±m), khÃ´ng Ä‘Ãºng Ã½ cÃ¢u.'
+    },
+    {
+        id: 19,
+        type: 'multiple-choice',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'Chá»n cÃ¡ch viáº¿t Ä‘Ãºng cho nghÄ©a: "Trong lá»›p chá»‰ cÃ²n láº¡i hai há»c sinh."',
+        options: ['êµì‹¤ì— í•™ìƒì´ ë‘ ëª…ë§Œ ë‚¨ì•„ ìžˆì–´ìš”.', 'êµì‹¤ì— í•™ìƒì´ ë‘ ëª…ë§Œ ë‚¨ê³  ìžˆì–´ìš”.', 'êµì‹¤ì— í•™ìƒì´ ë‘ ëª…ë§Œ ë‚¨ì•„ìš”.', 'êµì‹¤ì— í•™ìƒì´ ë‘ ëª…ë§Œ ë‚¨ì•˜ì–´ìš”.'],
+        correctAnswer: 'êµì‹¤ì— í•™ìƒì´ ë‘ ëª…ë§Œ ë‚¨ì•„ ìžˆì–´ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**êµì‹¤ì— í•™ìƒì´ ë‘ ëª…ë§Œ ë‚¨ì•„ ìžˆì–´ìš”.**\n\n- Dá»‹ch: **Trong lá»›p chá»‰ cÃ²n láº¡i hai há»c sinh.**\n- Vá»›i nghÄ©a tráº¡ng thÃ¡i "cÃ²n láº¡i vÃ  Ä‘ang á»Ÿ Ä‘Ã³", dÃ¹ng **ë‚¨ì•„ ìžˆë‹¤**.\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **êµì‹¤ì— í•™ìƒì´ ë‘ ëª…ë§Œ ë‚¨ê³  ìžˆì–´ìš”.**: khÃ´ng dÃ¹ng **-ê³  ìžˆë‹¤** cho nghÄ©a tráº¡ng thÃ¡i cÃ²n láº¡i trong máº«u nÃ y.\n- **êµì‹¤ì— í•™ìƒì´ ë‘ ëª…ë§Œ ë‚¨ì•„ìš”.**: hiá»‡n táº¡i Ä‘Æ¡n, khÃ´ng nháº¥n tráº¡ng thÃ¡i duy trÃ¬.\n- **êµì‹¤ì— í•™ìƒì´ ë‘ ëª…ë§Œ ë‚¨ì•˜ì–´ìš”.**: quÃ¡ khá»© Ä‘Æ¡n, khÃ´ng nháº¥n tráº¡ng thÃ¡i hiá»‡n táº¡i.'
+    },
+    {
+        id: 20,
+        type: 'multiple-choice',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'Chá»n cÃ¡ch viáº¿t Ä‘Ãºng cho nghÄ©a: "Em trai tÃ´i Ä‘Ã£ sang HÃ n Quá»‘c (vÃ  hiá»‡n Ä‘ang á»Ÿ Ä‘Ã³)."',
+        options: ['ë™ìƒì€ ì§€ê¸ˆ í•œêµ­ì— ê°€ ìžˆì–´ìš”.', 'ë™ìƒì€ ì§€ê¸ˆ í•œêµ­ì— ê°€ê³  ìžˆì–´ìš”.', 'ë™ìƒì€ ì§€ê¸ˆ í•œêµ­ì— ê°€ìš”.', 'ë™ìƒì€ ì§€ê¸ˆ í•œêµ­ì— ê°”ì–´ìš”.'],
+        correctAnswer: 'ë™ìƒì€ ì§€ê¸ˆ í•œêµ­ì— ê°€ ìžˆì–´ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ë™ìƒì€ ì§€ê¸ˆ í•œêµ­ì— ê°€ ìžˆì–´ìš”.**\n\n- Dá»‹ch: **Em trai tÃ´i Ä‘Ã£ sang HÃ n Quá»‘c vÃ  hiá»‡n Ä‘ang á»Ÿ Ä‘Ã³.**\n- Vá»›i nghÄ©a "Ä‘Ã£ Ä‘i Ä‘áº¿n nÆ¡i Ä‘Ã³ vÃ  Ä‘ang á»Ÿ Ä‘Ã³", dÃ¹ng máº«u **ê°€ ìžˆë‹¤** (thuá»™c nhÃ³m **-ì•„/ì–´ ìžˆë‹¤**).\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **ë™ìƒì€ ì§€ê¸ˆ í•œêµ­ì— ê°€ê³  ìžˆì–´ìš”.**: nghÄ©a lÃ  **Ä‘ang trÃªn Ä‘Æ°á»ng Ä‘i sang HÃ n**, khÃ´ng pháº£i Ä‘Ã£ á»Ÿ Ä‘Ã³.\n- **ë™ìƒì€ ì§€ê¸ˆ í•œêµ­ì— ê°€ìš”.**: hiá»‡n táº¡i Ä‘Æ¡n/thÃ³i quen, khÃ´ng thá»ƒ hiá»‡n tráº¡ng thÃ¡i Ä‘Ã£ Ä‘áº¿n vÃ  Ä‘ang á»Ÿ.\n- **ë™ìƒì€ ì§€ê¸ˆ í•œêµ­ì— ê°”ì–´ìš”.**: chá»‰ nÃ³i Ä‘Ã£ Ä‘i, khÃ´ng nháº¥n tráº¡ng thÃ¡i hiá»‡n Ä‘ang á»Ÿ Ä‘Ã³.'
+    },
+    {
+        id: 21,
+        type: 'multiple-choice',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'Chá»n cÃ¡ch viáº¿t Ä‘Ãºng cho nghÄ©a: "Báº¡n tÃ´i Ä‘Ã£ Ä‘áº¿n trÆ°á»ng tá»« sá»›m (vÃ  Ä‘ang á»Ÿ Ä‘Ã³)."',
+        options: ['ì¹œêµ¬ëŠ” ë²Œì¨ í•™êµì— ì™€ ìžˆì–´ìš”.', 'ì¹œêµ¬ëŠ” ë²Œì¨ í•™êµì— ì˜¤ê³  ìžˆì–´ìš”.', 'ì¹œêµ¬ëŠ” ë²Œì¨ í•™êµì— ì™€ìš”.', 'ì¹œêµ¬ëŠ” ë²Œì¨ í•™êµì— ì™”ì–´ìš”.'],
+        correctAnswer: 'ì¹œêµ¬ëŠ” ë²Œì¨ í•™êµì— ì™€ ìžˆì–´ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ì¹œêµ¬ëŠ” ë²Œì¨ í•™êµì— ì™€ ìžˆì–´ìš”.**\n\n- Dá»‹ch: **Báº¡n tÃ´i Ä‘Ã£ Ä‘áº¿n trÆ°á»ng tá»« sá»›m vÃ  hiá»‡n Ä‘ang á»Ÿ Ä‘Ã³.**\n- Vá»›i nghÄ©a "Ä‘Ã£ Ä‘áº¿n rá»“i vÃ  Ä‘ang á»Ÿ Ä‘Ã³", dÃ¹ng **ì™€ ìžˆë‹¤**.\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **ì¹œêµ¬ëŠ” ë²Œì¨ í•™êµì— ì˜¤ê³  ìžˆì–´ìš”.**: nghÄ©a lÃ  Ä‘ang trÃªn Ä‘Æ°á»ng Ä‘áº¿n, chÆ°a nháº¥n tráº¡ng thÃ¡i Ä‘Ã£ cÃ³ máº·t á»Ÿ trÆ°á»ng.\n- **ì¹œêµ¬ëŠ” ë²Œì¨ í•™êµì— ì™€ìš”.**: hiá»‡n táº¡i Ä‘Æ¡n/thÃ³i quen.\n- **ì¹œêµ¬ëŠ” ë²Œì¨ í•™êµì— ì™”ì–´ìš”.**: chá»‰ nÃªu sá»± kiá»‡n Ä‘Ã£ Ä‘áº¿n, khÃ´ng nháº¥n tráº¡ng thÃ¡i Ä‘ang á»Ÿ Ä‘Ã³.'
+    },
+    {
+        id: 22,
+        type: 'fill-input',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'Äiá»n vÃ o chá»— trá»‘ng:\ní•™ìƒë“¤ì´ ìš´ë™ìž¥ì— ____. (ì„œë‹¤)',
+        correctAnswer: 'ì„œ ìžˆì–´ìš”',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ì„œ ìžˆì–´ìš”**\n\n- HoÃ n chá»‰nh: **í•™ìƒë“¤ì´ ìš´ë™ìž¥ì— ì„œ ìžˆì–´ìš”.**\n- DÃ¹ng **-ì•„/ì–´ ìžˆë‹¤** Ä‘á»ƒ diá»…n táº£ tÆ° tháº¿ Ä‘ang duy trÃ¬ (Ä‘á»©ng).'
+    },
+    {
+        id: 23,
+        type: 'fill-input',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'Äiá»n vÃ o chá»— trá»‘ng:\nì•„ê¸°ê°€ ì¹¨ëŒ€ì— ____. (ëˆ•ë‹¤)',
+        correctAnswer: 'ëˆ„ì›Œ ìžˆì–´ìš”',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ëˆ„ì›Œ ìžˆì–´ìš”**\n\n- HoÃ n chá»‰nh: **ì•„ê¸°ê°€ ì¹¨ëŒ€ì— ëˆ„ì›Œ ìžˆì–´ìš”.**\n- Vá»›i tÆ° tháº¿ náº±m Ä‘ang duy trÃ¬, dÃ¹ng **-ì•„/ì–´ ìžˆë‹¤**.'
+    },
+    {
+        id: 24,
+        type: 'fill-input',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'Äiá»n vÃ o chá»— trá»‘ng:\nêµì‹¤ì— ë‘ ëª…ë§Œ ____. (ë‚¨ë‹¤)',
+        correctAnswer: 'ë‚¨ì•„ ìžˆì–´ìš”',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ë‚¨ì•„ ìžˆì–´ìš”**\n\n- HoÃ n chá»‰nh: **êµì‹¤ì— ë‘ ëª…ë§Œ ë‚¨ì•„ ìžˆì–´ìš”.**\n- **ë‚¨ì•„ ìžˆë‹¤** diá»…n táº£ tráº¡ng thÃ¡i cÃ²n láº¡i vÃ  Ä‘ang duy trÃ¬.'
+    },
+    {
+        id: 25,
+        type: 'fill-input',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'Äiá»n vÃ o chá»— trá»‘ng:\nêµì‹¤ ë¬¸ì´ ____. (ì—´ë¦¬ë‹¤)',
+        correctAnswer: ['ì—´ë ¤ ìžˆì–´ìš”', 'ì—´ë ¤ ìžˆì–´ìš”.'],
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ì—´ë ¤ ìžˆì–´ìš”**\n\n- HoÃ n chá»‰nh: **êµì‹¤ ë¬¸ì´ ì—´ë ¤ ìžˆì–´ìš”.**\n- Dá»‹ch: **Cá»­a lá»›p há»c Ä‘ang má»Ÿ.**\n- ÄÃ¢y lÃ  tráº¡ng thÃ¡i káº¿t quáº£ Ä‘ang duy trÃ¬, nÃªn dÃ¹ng **-ì•„/ì–´ ìžˆë‹¤**.'
+    },
+    {
+        id: 26,
+        type: 'fill-input',
+        grammarPoint: 'ÄÃºng/Sai + sá»­a lá»—i (-ì•„/ì–´ ìžˆë‹¤)',
+        question: 'CÃ¢u sau sai. HÃ£y viáº¿t láº¡i cho Ä‘Ãºng:\nì§€ê¸ˆ ì˜ìˆ˜ëŠ” ì˜ìžì— ì•‰ê³  ìžˆì–´ìš”.',
+        correctAnswer: ['ì§€ê¸ˆ ì˜ìˆ˜ëŠ” ì˜ìžì— ì•‰ì•„ ìžˆì–´ìš”.', 'ì§€ê¸ˆ ì˜ìˆ˜ëŠ” ì˜ìžì— ì•‰ì•„ ìžˆì–´ìš”'],
+        explanation: '### âœ… CÃ¢u Ä‘Ãºng\n\n**ì§€ê¸ˆ ì˜ìˆ˜ëŠ” ì˜ìžì— ì•‰ì•„ ìžˆì–´ìš”.**\n\n### ðŸ§  VÃ¬ sao sai\n\n- Máº«u tÆ° tháº¿ duy trÃ¬ vá»›i **ì•‰ë‹¤** lÃ  **ì•‰ì•„ ìžˆë‹¤**.\n- VÃ¬ váº­y khÃ´ng dÃ¹ng **ì•‰ê³  ìžˆì–´ìš”** trong ngá»¯ cáº£nh nÃ y.'
+    },
+    {
+        id: 27,
+        type: 'fill-input',
+        grammarPoint: 'ÄÃºng/Sai + sá»­a lá»—i (-ì•„/ì–´ ìžˆë‹¤)',
+        question: 'CÃ¢u sau sai. HÃ£y viáº¿t láº¡i cho Ä‘Ãºng:\nì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ•ê³  ìžˆì–´ìš”.',
+        correctAnswer: ['ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ„ì›Œ ìžˆì–´ìš”.', 'ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ„ì›Œ ìžˆì–´ìš”'],
+        explanation: '### âœ… CÃ¢u Ä‘Ãºng\n\n**ì•„ê¸°ëŠ” ì¹¨ëŒ€ì— ëˆ„ì›Œ ìžˆì–´ìš”.**\n\n### ðŸ§  VÃ¬ sao sai\n\n- Vá»›i tÆ° tháº¿ náº±m Ä‘ang duy trÃ¬, dÃ¹ng **ëˆ„ì›Œ ìžˆë‹¤**.\n- Dáº¡ng **ëˆ•ê³  ìžˆì–´ìš”** khÃ´ng phÃ¹ há»£p má»¥c tiÃªu ngá»¯ phÃ¡p cá»§a cÃ¢u nÃ y.'
+    },
+    {
+        id: 28,
+        type: 'fill-input',
+        grammarPoint: '-ê³  ìžˆë‹¤',
+        question: 'Viáº¿t cÃ¢u tiáº¿ng HÃ n cho nghÄ©a sau:\n"HÆ°Æ¡ng Ä‘ang Ä‘Ã³ng cá»­a."',
+        correctAnswer: ['íì—‰ì€ ë¬¸ì„ ë‹«ê³  ìžˆì–´ìš”.', 'íì—‰ì€ ë¬¸ì„ ë‹«ê³  ìžˆì–´ìš”', 'íì—‰ì€ ë¬¸ì„ ë‹«ê³  ìžˆìŠµë‹ˆë‹¤.', 'íì—‰ì€ ë¬¸ì„ ë‹«ê³  ìžˆìŠµë‹ˆë‹¤'],
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n- **íì—‰ì€ ë¬¸ì„ ë‹«ê³  ìžˆì–´ìš”.**\n- **íì—‰ì€ ë¬¸ì„ ë‹«ê³  ìžˆìŠµë‹ˆë‹¤.**\n\n- Dá»‹ch: **HÆ°Æ¡ng Ä‘ang Ä‘Ã³ng cá»­a.**\n- ÄÃ¢y lÃ  hÃ nh Ä‘á»™ng Ä‘ang diá»…n ra ngay lÃºc nÃ³i, nÃªn dÃ¹ng **-ê³  ìžˆë‹¤** vá»›i Ä‘á»™ng tá»« **ë‹«ë‹¤**.\n- CÃ³ thá»ƒ dÃ¹ng cáº£ Ä‘uÃ´i lá»‹ch sá»± thÃ¢n máº­t **-ì•„ìš”/ì–´ìš”** vÃ  Ä‘uÃ´i trang trá»ng **-ã…‚ë‹ˆë‹¤**.'
+    },
+    {
+        id: 29,
+        type: 'multiple-choice',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤ vs -ê³  ìžˆë‹¤',
+        question: 'Chá»n cÃ¡ch viáº¿t Ä‘Ãºng cho nghÄ©a: "CÃ¡c há»c sinh Ä‘ang Ä‘á»©ng thÃ nh hÃ ng."',
+        options: ['í•™ìƒë“¤ì€ ì¤„ì— ì„œ ìžˆì–´ìš”.', 'í•™ìƒë“¤ì€ ì¤„ì— ì„œê³  ìžˆì–´ìš”.', 'í•™ìƒë“¤ì€ ì¤„ì— ì„œì–´ìš”.', 'í•™ìƒë“¤ì€ ì¤„ì— ì„°ì–´ìš”.'],
+        correctAnswer: 'í•™ìƒë“¤ì€ ì¤„ì— ì„œ ìžˆì–´ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**í•™ìƒë“¤ì€ ì¤„ì— ì„œ ìžˆì–´ìš”.**\n\n- Dá»‹ch: **CÃ¡c há»c sinh Ä‘ang Ä‘á»©ng thÃ nh hÃ ng.**\n- Vá»›i tÆ° tháº¿ Ä‘ang duy trÃ¬ (Ä‘á»©ng), Æ°u tiÃªn **-ì•„/ì–´ ìžˆë‹¤**.\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **í•™ìƒë“¤ì€ ì¤„ì— ì„œê³  ìžˆì–´ìš”.**: khÃ´ng phÃ¹ há»£p máº«u tÆ° tháº¿ duy trÃ¬ trong bÃ i.\n- **í•™ìƒë“¤ì€ ì¤„ì— ì„œì–´ìš”.**: chia Ä‘á»™ng tá»« khÃ´ng tá»± nhiÃªn trong ngá»¯ cáº£nh nÃ y.\n- **í•™ìƒë“¤ì€ ì¤„ì— ì„°ì–´ìš”.**: quÃ¡ khá»© Ä‘Æ¡n (Ä‘Ã£ Ä‘á»©ng), khÃ´ng nháº¥n tráº¡ng thÃ¡i hiá»‡n táº¡i.'
+    },
+    {
+        id: 30,
+        type: 'multiple-choice',
+        grammarPoint: '-ì•„/ì–´ ìžˆë‹¤',
+        question: 'CÃ¢u nÃ o Ä‘Ãºng trong ngá»¯ cáº£nh: "TÃ´i Ä‘Ã£ Ä‘áº¿n trÆ°á»ng tá»« trÆ°á»›c (vÃ  Ä‘ang á»Ÿ trÆ°á»ng)."?',
+        options: ['ì €ëŠ” í•™êµì— ì™€ ìžˆì–´ìš”.', 'ì €ëŠ” í•™êµì— ì˜¤ê³  ìžˆì–´ìš”.', 'ì €ëŠ” í•™êµì— ì™€ìš”.', 'ì €ëŠ” í•™êµì— ê°”ì–´ìš”.'],
+        correctAnswer: 'ì €ëŠ” í•™êµì— ì™€ ìžˆì–´ìš”.',
+        explanation: '### âœ… ÄÃ¡p Ã¡n Ä‘Ãºng\n\n**ì €ëŠ” í•™êµì— ì™€ ìžˆì–´ìš”.**\n\n- Dá»‹ch: **TÃ´i Ä‘Ã£ Ä‘áº¿n trÆ°á»ng tá»« trÆ°á»›c vÃ  hiá»‡n Ä‘ang á»Ÿ trÆ°á»ng.**\n- Máº«u **ì™€ ìžˆë‹¤** nháº¥n máº¡nh tráº¡ng thÃ¡i Ä‘Ã£ Ä‘áº¿n vÃ  Ä‘ang á»Ÿ Ä‘Ã³.\n\n### âŒ VÃ¬ sao cÃ¡c Ä‘Ã¡p Ã¡n khÃ¡c sai\n\n- **ì €ëŠ” í•™êµì— ì˜¤ê³  ìžˆì–´ìš”.**: nghÄ©a lÃ  Ä‘ang trÃªn Ä‘Æ°á»ng Ä‘áº¿n trÆ°á»ng.\n- **ì €ëŠ” í•™êµì— ì™€ìš”.**: hiá»‡n táº¡i Ä‘Æ¡n/thÃ³i quen.\n- **ì €ëŠ” í•™êµì— ê°”ì–´ìš”.**: chá»‰ nÃªu quÃ¡ khá»© Ä‘Ã£ Ä‘i, khÃ´ng nháº¥n tráº¡ng thÃ¡i Ä‘ang á»Ÿ Ä‘Ã³.'
     }
 ];
+

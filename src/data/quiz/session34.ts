@@ -247,10 +247,10 @@ export const quizQuestions: Question[] = [
     {
         id: 28,
         type: 'fill-input',
-        grammarPoint: 'Đúng/Sai + sửa lỗi (-아/어 있다)',
-        question: 'Câu sau sai. Hãy viết lại cho đúng:\n교실에 학생이 남고 있어요.',
-        correctAnswer: ['교실에 학생이 남아 있어요.', '교실에 학생이 남아 있어요'],
-        explanation: '### ✅ Câu đúng\n\n**교실에 학생이 남아 있어요.**\n\n### 🧠 Vì sao sai\n\n- Với nghĩa "còn lại và đang ở đó", dùng **남아 있다**.\n- Vì vậy sửa **남고 있어요** thành **남아 있어요**.'
+        grammarPoint: '-고 있다',
+        question: 'Viết câu tiếng Hàn cho nghĩa sau:\n"Hương đang đóng cửa."',
+        correctAnswer: ['흐엉은 문을 닫고 있어요.', '흐엉은 문을 닫고 있어요', '흐엉은 문을 닫고 있습니다.', '흐엉은 문을 닫고 있습니다'],
+        explanation: '### ✅ Đáp án đúng\n\n- **흐엉은 문을 닫고 있어요.**\n- **흐엉은 문을 닫고 있습니다.**\n\n- Dịch: **Hương đang đóng cửa.**\n- Đây là hành động đang diễn ra ngay lúc nói, nên dùng **-고 있다** với động từ **닫다**.\n- Có thể dùng cả đuôi lịch sự thân mật **-아요/어요** và đuôi trang trọng **-ㅂ니다**.'
     },
     {
         id: 29,
