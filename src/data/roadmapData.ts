@@ -56,8 +56,8 @@ const sessionContentMap: { [key: number]: string[] } = {
     31: ['-아/어야 되다'], // Buổi 31 (11/03) - Học ngữ pháp -아/어야 되다
     32: ['-아/어도 되다'], // Buổi 32 (13/03)
     33: ['-고 있다', '-아/어 있다'], // Buổi 33 (16/03)
-    34: ['Định ngữ của động từ -는'], // Buổi 34 (19/03)
-    35: [], // Buổi 35 - Tháng 3 (chưa có học)
+    34: ['Định ngữ hiện tại của động từ -는'], // Buổi 34 (19/03)
+    35: ['Định ngữ hiện tại của tính từ -은', 'Định ngữ quá khứ của động từ -은'], // Buổi 35
 };
 
 export const EXAM_DATE = '2026-04-11';
