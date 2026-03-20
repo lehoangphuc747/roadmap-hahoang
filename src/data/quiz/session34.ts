@@ -173,10 +173,10 @@ export const quizQuestions: Question[] = [
         id: 19,
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다',
-        question: '교실에 학생이 두 명만 ____.',
-        options: ['남아 있어요. (đang còn lại)', '남고 있어요. (đang còn - sai mẫu)', '남아요. (còn lại)', '남았어요. (đã còn lại)'],
-        correctAnswer: '남아 있어요. (đang còn lại)',
-        explanation: '남다 -> 남아 있다: con o lai.'
+        question: 'Chọn cách viết đúng cho nghĩa: "Trong lớp chỉ còn lại hai học sinh."',
+        options: ['교실에 학생이 두 명만 남아 있어요.', '교실에 학생이 두 명만 남고 있어요.', '교실에 학생이 두 명만 남아요.', '교실에 학생이 두 명만 남았어요.'],
+        correctAnswer: '교실에 학생이 두 명만 남아 있어요.',
+        explanation: '### ✅ Đáp án đúng\n\n**교실에 학생이 두 명만 남아 있어요.**\n\n- Dịch: **Trong lớp chỉ còn lại hai học sinh.**\n- Với nghĩa trạng thái "còn lại và đang ở đó", dùng **남아 있다**.\n\n### ❌ Vì sao các đáp án khác sai\n\n- **교실에 학생이 두 명만 남고 있어요.**: không dùng **-고 있다** cho nghĩa trạng thái còn lại trong mẫu này.\n- **교실에 학생이 두 명만 남아요.**: hiện tại đơn, không nhấn trạng thái duy trì.\n- **교실에 학생이 두 명만 남았어요.**: quá khứ đơn, không nhấn trạng thái hiện tại.'
     },
     {
         id: 20,
@@ -191,83 +191,83 @@ export const quizQuestions: Question[] = [
         id: 21,
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다',
-        question: '친구는 벌써 학교에 ____.',
-        options: ['와 있어요. (đã đến và đang ở đó)', '오고 있어요. (đang đến)', '와요. (đến)', '왔어요. (đã đến)'],
-        correctAnswer: '와 있어요. (đã đến và đang ở đó)',
-        explanation: '와 있다 nhan manh trang thai da den va dang o do.'
+        question: 'Chọn cách viết đúng cho nghĩa: "Bạn tôi đã đến trường từ sớm (và đang ở đó)."',
+        options: ['친구는 벌써 학교에 와 있어요.', '친구는 벌써 학교에 오고 있어요.', '친구는 벌써 학교에 와요.', '친구는 벌써 학교에 왔어요.'],
+        correctAnswer: '친구는 벌써 학교에 와 있어요.',
+        explanation: '### ✅ Đáp án đúng\n\n**친구는 벌써 학교에 와 있어요.**\n\n- Dịch: **Bạn tôi đã đến trường từ sớm và hiện đang ở đó.**\n- Với nghĩa "đã đến rồi và đang ở đó", dùng **와 있다**.\n\n### ❌ Vì sao các đáp án khác sai\n\n- **친구는 벌써 학교에 오고 있어요.**: nghĩa là đang trên đường đến, chưa nhấn trạng thái đã có mặt ở trường.\n- **친구는 벌써 학교에 와요.**: hiện tại đơn/thói quen.\n- **친구는 벌써 학교에 왔어요.**: chỉ nêu sự kiện đã đến, không nhấn trạng thái đang ở đó.'
     },
     {
         id: 22,
         type: 'fill-input',
         grammarPoint: '-아/어 있다',
-        question: '학생들이 운동장에 ____. (서다)',
+        question: 'Điền vào chỗ trống:\n학생들이 운동장에 ____. (서다)',
         correctAnswer: '서 있어요',
-        explanation: '서다 -> 서 있어요.'
+        explanation: '### ✅ Đáp án đúng\n\n**서 있어요**\n\n- Hoàn chỉnh: **학생들이 운동장에 서 있어요.**\n- Dùng **-아/어 있다** để diễn tả tư thế đang duy trì (đứng).'
     },
     {
         id: 23,
         type: 'fill-input',
         grammarPoint: '-아/어 있다',
-        question: '아기가 침대에 ____. (눕다)',
+        question: 'Điền vào chỗ trống:\n아기가 침대에 ____. (눕다)',
         correctAnswer: '누워 있어요',
-        explanation: '눕다 -> 누워 있어요.'
+        explanation: '### ✅ Đáp án đúng\n\n**누워 있어요**\n\n- Hoàn chỉnh: **아기가 침대에 누워 있어요.**\n- Với tư thế nằm đang duy trì, dùng **-아/어 있다**.'
     },
     {
         id: 24,
         type: 'fill-input',
         grammarPoint: '-아/어 있다',
-        question: '교실에 두 명만 ____. (남다)',
+        question: 'Điền vào chỗ trống:\n교실에 두 명만 ____. (남다)',
         correctAnswer: '남아 있어요',
-        explanation: '남다 -> 남아 있어요.'
+        explanation: '### ✅ Đáp án đúng\n\n**남아 있어요**\n\n- Hoàn chỉnh: **교실에 두 명만 남아 있어요.**\n- **남아 있다** diễn tả trạng thái còn lại và đang duy trì.'
     },
     {
         id: 25,
         type: 'fill-input',
         grammarPoint: '-아/어 있다',
-        question: '민수는 지금 부산에 ____. (가다)',
-        correctAnswer: '가 있어요',
-        explanation: '가다 -> 가 있어요 (da di den do va dang o do).'
+        question: 'Điền vào chỗ trống:\n교실 문이 ____. (열리다)',
+        correctAnswer: ['열려 있어요', '열려 있어요.'],
+        explanation: '### ✅ Đáp án đúng\n\n**열려 있어요**\n\n- Hoàn chỉnh: **교실 문이 열려 있어요.**\n- Dịch: **Cửa lớp học đang mở.**\n- Đây là trạng thái kết quả đang duy trì, nên dùng **-아/어 있다**.'
     },
     {
         id: 26,
         type: 'fill-input',
-        grammarPoint: 'True/False + Sua loi (-아/어 있다)',
-        question: 'Cau sau sai. Hay viet lai cho dung: 지금 영수는 의자에 앉고 있어요. (trang thai)',
+        grammarPoint: 'Đúng/Sai + sửa lỗi (-아/어 있다)',
+        question: 'Câu sau sai. Hãy viết lại cho đúng:\n지금 영수는 의자에 앉고 있어요.',
         correctAnswer: ['지금 영수는 의자에 앉아 있어요.', '지금 영수는 의자에 앉아 있어요'],
-        explanation: 'Mo ta trang thai thi dung 앉아 있다.'
+        explanation: '### ✅ Câu đúng\n\n**지금 영수는 의자에 앉아 있어요.**\n\n### 🧠 Vì sao sai\n\n- Mẫu tư thế duy trì với **앉다** là **앉아 있다**.\n- Vì vậy không dùng **앉고 있어요** trong ngữ cảnh này.'
     },
     {
         id: 27,
         type: 'fill-input',
-        grammarPoint: 'True/False + Sua loi (-아/어 있다)',
-        question: 'Cau sau sai. Hay viet lai cho dung: 아기는 침대에 눕고 있어요. (trang thai)',
+        grammarPoint: 'Đúng/Sai + sửa lỗi (-아/어 있다)',
+        question: 'Câu sau sai. Hãy viết lại cho đúng:\n아기는 침대에 눕고 있어요.',
         correctAnswer: ['아기는 침대에 누워 있어요.', '아기는 침대에 누워 있어요'],
-        explanation: 'Mo ta trang thai thi dung 누워 있다.'
+        explanation: '### ✅ Câu đúng\n\n**아기는 침대에 누워 있어요.**\n\n### 🧠 Vì sao sai\n\n- Với tư thế nằm đang duy trì, dùng **누워 있다**.\n- Dạng **눕고 있어요** không phù hợp mục tiêu ngữ pháp của câu này.'
     },
     {
         id: 28,
         type: 'fill-input',
-        grammarPoint: 'True/False + Sua loi (-아/어 있다)',
-        question: 'Cau sau sai. Hay viet lai cho dung: 교실에 학생이 남고 있어요.',
+        grammarPoint: 'Đúng/Sai + sửa lỗi (-아/어 있다)',
+        question: 'Câu sau sai. Hãy viết lại cho đúng:\n교실에 학생이 남고 있어요.',
         correctAnswer: ['교실에 학생이 남아 있어요.', '교실에 학생이 남아 있어요'],
-        explanation: '남다 -> 남아 있다.'
+        explanation: '### ✅ Câu đúng\n\n**교실에 학생이 남아 있어요.**\n\n### 🧠 Vì sao sai\n\n- Với nghĩa "còn lại và đang ở đó", dùng **남아 있다**.\n- Vì vậy sửa **남고 있어요** thành **남아 있어요**.'
     },
     {
         id: 29,
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다 vs -고 있다',
-        question: 'Trang thai tu the: 학생들은 줄에 ____.',
-        options: ['서 있어요. (đang đứng)', '서고 있어요. (đang đứng - sai mẫu)', '서어요. (đứng - sai chia)', '섰어요. (đã đứng)'],
-        correctAnswer: '서 있어요. (đang đứng)',
-        explanation: 'Voi tu the dang duy tri, uu tien -아/어 있다.'
+        question: 'Chọn cách viết đúng cho nghĩa: "Các học sinh đang đứng thành hàng."',
+        options: ['학생들은 줄에 서 있어요.', '학생들은 줄에 서고 있어요.', '학생들은 줄에 서어요.', '학생들은 줄에 섰어요.'],
+        correctAnswer: '학생들은 줄에 서 있어요.',
+        explanation: '### ✅ Đáp án đúng\n\n**학생들은 줄에 서 있어요.**\n\n- Dịch: **Các học sinh đang đứng thành hàng.**\n- Với tư thế đang duy trì (đứng), ưu tiên **-아/어 있다**.\n\n### ❌ Vì sao các đáp án khác sai\n\n- **학생들은 줄에 서고 있어요.**: không phù hợp mẫu tư thế duy trì trong bài.\n- **학생들은 줄에 서어요.**: chia động từ không tự nhiên trong ngữ cảnh này.\n- **학생들은 줄에 섰어요.**: quá khứ đơn (đã đứng), không nhấn trạng thái hiện tại.'
     },
     {
         id: 30,
         type: 'multiple-choice',
         grammarPoint: '-아/어 있다',
-        question: 'Cau nao dung trong ngu canh "Ban da den truoc va dang o truong"?',
-        options: ['저는 학교에 와 있어요. (Tôi đã đến trường trước và đang ở trường.)', '저는 학교에 오고 있어요. (Tôi đang đến trường.)', '저는 학교에 와요. (Tôi đến trường.)', '저는 학교에 왔고 있어요. (Tôi đã đến và đang - sai cấu trúc)'],
-        correctAnswer: '저는 학교에 와 있어요. (Tôi đã đến trường trước và đang ở trường.)',
-        explanation: 'Da den truoc va dang o do thi dung 와 있어요.'
+        question: 'Câu nào đúng trong ngữ cảnh: "Tôi đã đến trường từ trước (và đang ở trường)."?',
+        options: ['저는 학교에 와 있어요.', '저는 학교에 오고 있어요.', '저는 학교에 와요.', '저는 학교에 갔어요.'],
+        correctAnswer: '저는 학교에 와 있어요.',
+        explanation: '### ✅ Đáp án đúng\n\n**저는 학교에 와 있어요.**\n\n- Dịch: **Tôi đã đến trường từ trước và hiện đang ở trường.**\n- Mẫu **와 있다** nhấn mạnh trạng thái đã đến và đang ở đó.\n\n### ❌ Vì sao các đáp án khác sai\n\n- **저는 학교에 오고 있어요.**: nghĩa là đang trên đường đến trường.\n- **저는 학교에 와요.**: hiện tại đơn/thói quen.\n- **저는 학교에 갔어요.**: chỉ nêu quá khứ đã đi, không nhấn trạng thái đang ở đó.'
     }
 ];
